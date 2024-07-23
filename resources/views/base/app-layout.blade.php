@@ -13,10 +13,11 @@
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
 
-<body class="antialiased font-Inter">
+<body
+    class="antialiased font-Inter bg-[length:30px_30px] bg-gradient-to-r from-gray-500/10 from-5% to-transparent to-5%">
 
     {{-- The navbar with `sticky` and `full-width` --}}
-    <x-nav class="bg-red-600 dark:bg-base-100 border-none" sticky full-width>
+    <x-nav class="bg-red-700 dark:bg-base-100 shadow-md shadow-gray-500 border-none" sticky full-width>
         <x-slot:brand>
             {{-- Drawer toggle for "main-drawer" --}}
             <label for="main-drawer" class="lg:hidden mr-3 text-white">
@@ -35,7 +36,7 @@
             <x-dropdown class="hidden lg:flex">
                 <x-slot:trigger>
                     <x-button label="Kategori" icon="phosphor.squares-four" icon-right="phosphor.caret-down"
-                        class="btn-sm bg-red-600 border-none text-white hover:bg-red-700 dark:bg-base-100 dark:hover:bg-gray-500/30 hidden lg:flex" />
+                        class="btn-sm bg-red-700 border-none shadow-none text-white hover:bg-red-800 dark:bg-base-100 dark:hover:bg-gray-500/30 hidden lg:flex" />
                 </x-slot:trigger>
                 <div class="flex">
                     <div>
@@ -76,7 +77,7 @@
             <x-button label="FAQ" link="###" class="btn-ghost btn-sm hidden lg:flex text-white" responsive />
             <x-input wire:model="product" icon-right="phosphor.magnifying-glass" placeholder="Cari Produk"
                 class="text-black input-sm input-error dark:input-primary rounded-full" />
-            <x-theme-toggle class="btn btn-sm btn-circle btn-ghost text-white" />
+            <x-theme-toggle class="hidden md:grid btn btn-sm btn-circle btn-ghost text-white" />
         </x-slot:actions>
     </x-nav>
 
@@ -101,7 +102,9 @@
 
             {{-- Activates the menu item when a route matches the `link` property --}}
             <x-menu class="w-64">
-                <x-menu-sub title="Advertising" icon="cui.cib-google-ads">
+                <x-menu-separator title="PT. ALFAJRI CREATIVE AGENCY" class="text-xs" />
+                <x-menu-separator />
+                <x-menu-sub title="Advertising" icon="cui.cib-google-ads" class="border-r border-white">
                     <x-menu-item title="Print A3+" icon="cui.cil-print" />
                     <x-menu-item title="Large Format" icon="cui.cib-sprint" />
                     <x-menu-item title="DTF Print" icon="cui.cil-print" />
@@ -111,7 +114,6 @@
                     <x-menu-item title="Stationary" icon="cui.cil-barcode" />
                 </x-menu-sub>
                 <x-menu-sub title="Graphic Design" icon="cui.cil-pen-nib">
-                    <x-menu-item title="Wifi" icon="o-wifi" />
                     <x-menu-item title="Digital Design" icon="cui.cil-braille" />
                     <x-menu-item title="Branding" icon="cui.cil-bullhorn" />
                     <x-menu-item title="Product Packaging" icon="phosphor.package" />
@@ -124,6 +126,8 @@
                     <x-menu-item title="Video Production" icon="phosphor.video" />
                     <x-menu-item title="Google Ads" icon="phosphor.google-logo" />
                 </x-menu-sub>
+                <x-menu-separator />
+                <x-menu-item title="Theme" icon="o-swatch" @click="$dispatch('mary-toggle-theme')" />
             </x-menu>
         </x-slot:sidebar>
 
