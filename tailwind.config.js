@@ -9,12 +9,13 @@ export default {
 	theme: {
 		extend: {
 			fontFamily: {
-				'Inter': ['Inter']
+				'Inter': ['Inter'],
+				'DK': ['Playwrite DK Loopet']
 			}
 		},
 	},
 	plugins: [
-		require("daisyui")
+		require("daisyui"),
 	],
 	darkMode: 'class'
 }
