@@ -80,7 +80,9 @@
             <x-button label="Status Order" link="{{ route('status-order') }}"
                 class="btn-ghost btn-sm hidden lg:flex text-white {{ Route::current()->uri == 'status-order' ? 'bg-red-800 dark:bg-zinc-50/10' : '' }}"
                 responsive />
-            <x-button label="FAQ" link="###" class="btn-ghost btn-sm hidden lg:flex text-white" responsive />
+            <x-button label="FAQ" link="{{ route('faq') }}"
+                class="btn-ghost btn-sm hidden lg:flex text-white {{ Route::current()->uri == 'faq' ? 'bg-red-800 dark:bg-zinc-50/10' : '' }}"
+                responsive />
             <x-input wire:model="product" icon-right="phosphor.magnifying-glass" placeholder="Cari Produk"
                 class="text-black input-sm input-error dark:input-primary rounded-full" />
             <x-theme-toggle class="hidden md:grid btn btn-sm btn-circle btn-ghost text-white" />
@@ -136,7 +138,7 @@
                 <x-menu-item title="Tentang Kami" icon="phosphor.users-four" link="{{ route('about-us') }}" />
                 <x-menu-item title="Kontak" icon="phosphor.phone" link="{{ route('contact') }}" />
                 <x-menu-item title="Status Order" icon="phosphor.bag" link="{{ route('status-order') }}" />
-                <x-menu-item title="FAQ" icon="phosphor.question" />
+                <x-menu-item title="FAQ" icon="phosphor.question" link="{{ route('faq') }}" />
                 <x-menu-separator />
                 <x-menu-item title="Theme" icon="o-swatch" @click="$dispatch('mary-toggle-theme')" />
             </x-menu>
