@@ -1,13 +1,17 @@
-<div>
+<div">
     <div>
         <x-carousel :slides="$slides" />
     </div>
     <div class="flex justify-center mt-10 md:mt-20">
-        <span class="text-white text-4xl font-bold tracking-wide">We Deliver Your <span
-                class="font-DK">Story</span></span>
+        <span
+            class="text-white text-4xl font-bold tracking-wide z-[1] before:md:w-[450px] before:md:h-[450px] before:w-[300px] before:h-[300px] before:bg-orange-800/60 before:dark:bg-zinc-600/40 before:-z-[1] before:absolute before:rounded-full before:translate-x-[120%] before:-translate-y-[10%] before:md:translate-x-[160%]">
+            We Deliver Your
+            <span class="font-DK">Story</span>
+        </span>
     </div>
     <div class="flex flex-col justify-center items-center mt-40 md:mt-72 squares">
-        <span class="text-white text-xl md:text-4xl font-bold tracking-wide">VALUE OF ALFAJRI CREATIVE AGENCY</span>
+        <span class="text-white text-xl md:text-4xl font-bold tracking-wide z-[1]">VALUE OF ALFAJRI CREATIVE
+            AGENCY</span>
         <div class="mt-5 md:mt-10 flex gap-5 md:gap-20">
             <div class="flex flex-col items-center gap-4">
                 <x-icon name="phosphor.shield-check"
@@ -27,7 +31,7 @@
         </div>
     </div>
     <div class="grid grid-cols-12 gap-5 mt-32 md:mt-72">
-        <x-card class="col-span-12 md:col-span-6 rounded-none dark:rounded-xl dark:shadow-2xl dark:shadow-white">
+        <x-card class="col-span-12 md:col-span-6 rounded-none dark:rounded-xl dark:shadow-lg dark:shadow-white">
             <x-slot:title>
                 <span class="text-4xl font-extrabold text-red-700 dark:text-white">OUR STORY</span>
             </x-slot:title>
@@ -47,7 +51,7 @@
                     class="btn-error rounded-none text-white bg-red-700 mt-5" />
             </x-slot:actions>
         </x-card>
-        <x-card class="col-span-12 md:col-span-6 rounded-none dark:rounded-xl dark:shadow-2xl dark:shadow-white">
+        <x-card class="col-span-12 md:col-span-6 rounded-none dark:rounded-xl dark:shadow-lg dark:shadow-white">
             <x-slot:title>
                 <span class="text-4xl font-extrabold text-red-700 dark:text-white">TESTIMONI</span>
             </x-slot:title>
@@ -68,12 +72,13 @@
             </x-slot:actions>
         </x-card>
     </div>
-    <div class="h-screen flex flex-col justify-center items-center gap-5">
-        <span class="max-w-[900px] text-white dark:text-amber-200 text-2xl italic tracking-wide">
+    <div class="h-screen flex flex-col justify-center items-center gap-5 relative">
+        <span
+            class="max-w-[900px] text-white dark:text-amber-200 text-2xl italic tracking-wide z-10 before:md:w-[450px] before:md:h-[450px] before:w-[400px] before:h-[400px] before:bg-orange-800/60 before:dark:bg-zinc-600/40 before:-z-[1] before:absolute before:rounded-full before:md:-translate-x-[90%] before:md:-translate-y-[30%] before:-translate-x-[80%] before:-translate-y-[15%]">
             In the journey of life, we encounter many things that shape our story. Each experience holds intrinsic
             value, teaching us lessons that guide our decisions and shape our perspectives. Every decision reflects our
             values-integrity, growth, and creativity-building a narrative that resonates with others.
         </span>
         <span class="font-semibold text-2xl italic">-ALFAJRI CREATIVE AGENCY</span>
     </div>
-</div>
+    </div>

@@ -15,10 +15,10 @@
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
 
-<body class="antialiased font-Inter dark:bg-gradient-to-r kotak">
+<body class="antialiased font-Inter dark:bg-gradient-to-r kotak overflow-x-clip">
 
     {{-- The navbar with `sticky` and `full-width` --}}
-    <x-nav class="bg-red-700 dark:bg-base-100 shadow-md shadow-black/40 dark:shadow-gray-500/20  border-none" sticky
+    <x-nav class="bg-red-700 dark:bg-base-100 shadow-md shadow-black/40 dark:shadow-gray-500/20 border-none z-20" sticky
         full-width>
         <x-slot:brand>
             {{-- Drawer toggle for "main-drawer" --}}
