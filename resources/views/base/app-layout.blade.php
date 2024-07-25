@@ -72,7 +72,8 @@
                 </div>
             </x-dropdown>
             <x-button label="Tentang Kami" link="{{ route('about-us') }}"
-                class="btn-ghost btn-sm hidden lg:flex text-white" responsive />
+                class="btn-ghost btn-sm hidden lg:flex text-white {{ Route::current()->uri == 'about-us' ? 'bg-red-800 dark:bg-zinc-50/10' : '' }}"
+                responsive />
             <x-button label="Kontak" link="###" class="btn-ghost btn-sm hidden lg:flex text-white" responsive />
             <x-button label="Status Order" link="###" class="btn-ghost btn-sm hidden lg:flex text-white"
                 responsive />
@@ -103,7 +104,7 @@
             @endif
 
             {{-- Activates the menu item when a route matches the `link` property --}}
-            <x-menu class="w-64">
+            <x-menu class="w-64" activate-by-route>
                 <x-menu-separator title="PT. ALFAJRI CREATIVE AGENCY" class="text-xs" />
                 <x-menu-separator />
                 <x-menu-sub title="Advertising" icon="cui.cib-google-ads" class="border-r border-white">
@@ -128,6 +129,11 @@
                     <x-menu-item title="Video Production" icon="phosphor.video" />
                     <x-menu-item title="Google Ads" icon="phosphor.google-logo" />
                 </x-menu-sub>
+                <x-menu-separator />
+                <x-menu-item title="Tentang Kami" icon="phosphor.users-four" link="{{ route('about-us') }}" />
+                <x-menu-item title="Kontak" icon="phosphor.phone" />
+                <x-menu-item title="Status Order" icon="phosphor.bag" />
+                <x-menu-item title="FAQ" icon="phosphor.question" />
                 <x-menu-separator />
                 <x-menu-item title="Theme" icon="o-swatch" @click="$dispatch('mary-toggle-theme')" />
             </x-menu>
