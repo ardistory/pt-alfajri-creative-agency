@@ -74,8 +74,11 @@
             <x-button label="Tentang Kami" link="{{ route('about-us') }}"
                 class="btn-ghost btn-sm hidden lg:flex text-white {{ Route::current()->uri == 'about-us' ? 'bg-red-800 dark:bg-zinc-50/10' : '' }}"
                 responsive />
-            <x-button label="Kontak" link="###" class="btn-ghost btn-sm hidden lg:flex text-white" responsive />
-            <x-button label="Status Order" link="###" class="btn-ghost btn-sm hidden lg:flex text-white"
+            <x-button label="Kontak" link="{{ route('contact') }}"
+                class="btn-ghost btn-sm hidden lg:flex text-white {{ Route::current()->uri == 'contact' ? 'bg-red-800 dark:bg-zinc-50/10' : '' }}"
+                responsive />
+            <x-button label="Status Order" link="{{ route('status-order') }}"
+                class="btn-ghost btn-sm hidden lg:flex text-white {{ Route::current()->uri == 'status-order' ? 'bg-red-800 dark:bg-zinc-50/10' : '' }}"
                 responsive />
             <x-button label="FAQ" link="###" class="btn-ghost btn-sm hidden lg:flex text-white" responsive />
             <x-input wire:model="product" icon-right="phosphor.magnifying-glass" placeholder="Cari Produk"
@@ -131,8 +134,8 @@
                 </x-menu-sub>
                 <x-menu-separator />
                 <x-menu-item title="Tentang Kami" icon="phosphor.users-four" link="{{ route('about-us') }}" />
-                <x-menu-item title="Kontak" icon="phosphor.phone" />
-                <x-menu-item title="Status Order" icon="phosphor.bag" />
+                <x-menu-item title="Kontak" icon="phosphor.phone" link="{{ route('contact') }}" />
+                <x-menu-item title="Status Order" icon="phosphor.bag" link="{{ route('status-order') }}" />
                 <x-menu-item title="FAQ" icon="phosphor.question" />
                 <x-menu-separator />
                 <x-menu-item title="Theme" icon="o-swatch" @click="$dispatch('mary-toggle-theme')" />
@@ -220,7 +223,7 @@
                                     </div>
                                 </div>
                                 <div class="mt-3 flex items-center gap-2">
-                                    <x-icon name="phosphor.phone" class="w-5 h-5" />
+                                    <x-icon name="phosphor.whatsapp-logo" class="w-5 h-5" />
                                     <div>
                                         <p class="text-xs">0821 2313 1995</p>
                                     </div>
