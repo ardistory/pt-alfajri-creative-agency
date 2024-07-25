@@ -3,8 +3,7 @@
         <x-carousel :slides="$slides" />
     </div>
     <div class="flex justify-center mt-10 md:mt-20">
-        <span
-            class="text-white text-4xl font-bold tracking-wide z-[1] before:md:w-[450px] before:md:h-[450px] before:w-[300px] before:h-[300px] before:bg-orange-800/60 before:dark:bg-zinc-600/40 before:-z-[1] before:absolute before:rounded-full before:translate-x-[120%] before:-translate-y-[10%] before:md:translate-x-[160%]">
+        <span class="text-white text-4xl font-bold tracking-wide">
             We Deliver Your
             <span class="font-DK">Story</span>
         </span>
@@ -31,7 +30,7 @@
         </div>
     </div>
     <div class="grid grid-cols-12 gap-5 mt-32 md:mt-72">
-        <x-card class="col-span-12 md:col-span-6 rounded-none dark:rounded-xl dark:shadow-lg dark:shadow-white">
+        <x-card class="col-span-12 md:col-span-6 rounded-none dark:rounded-xl dark:shadow-sm dark:shadow-white">
             <x-slot:title>
                 <span class="text-4xl font-extrabold text-red-700 dark:text-white">OUR STORY</span>
             </x-slot:title>
@@ -51,7 +50,7 @@
                     class="btn-error rounded-none text-white bg-red-700 mt-5" />
             </x-slot:actions>
         </x-card>
-        <x-card class="col-span-12 md:col-span-6 rounded-none dark:rounded-xl dark:shadow-lg dark:shadow-white">
+        <x-card class="col-span-12 md:col-span-6 rounded-none dark:rounded-xl dark:shadow-sm dark:shadow-white">
             <x-slot:title>
                 <span class="text-4xl font-extrabold text-red-700 dark:text-white">TESTIMONI</span>
             </x-slot:title>

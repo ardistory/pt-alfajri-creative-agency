@@ -15,8 +15,7 @@
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
 
-<body class="antialiased font-Inter dark:bg-gradient-to-r kotak overflow-x-clip">
-
+<body class="antialiased font-Inter dark:bg-gradient-to-r {{ Route::current()->uri != '/' ? 'kotak-polos' : 'kotak' }}">
     {{-- The navbar with `sticky` and `full-width` --}}
     <x-nav class="bg-red-700 dark:bg-base-100 shadow-md shadow-black/40 dark:shadow-gray-500/20 border-none z-20" sticky
         full-width>
@@ -28,7 +27,8 @@
 
             {{-- Brand --}}
             <div class="flex flex-col justify-center items-center">
-                <x-button label="LOGO" icon="phosphor.package" class="btn-outline btn-sm text-white" />
+                <x-button label="LOGO" icon="phosphor.package" link="{{ route('home-page') }}"
+                    class="btn-outline btn-sm text-white" />
                 <span class="font-semibold text-[9px] drop-shadow-md text-white">PT. ALFAJRI CREATIVE AGENCY</span>
             </div>
         </x-slot:brand>
@@ -71,8 +71,8 @@
                     </div>
                 </div>
             </x-dropdown>
-            <x-button label="Tentang Kami" link="###" class="btn-ghost btn-sm hidden lg:flex text-white"
-                responsive />
+            <x-button label="Tentang Kami" link="{{ route('about-us') }}"
+                class="btn-ghost btn-sm hidden lg:flex text-white" responsive />
             <x-button label="Kontak" link="###" class="btn-ghost btn-sm hidden lg:flex text-white" responsive />
             <x-button label="Status Order" link="###" class="btn-ghost btn-sm hidden lg:flex text-white"
                 responsive />
