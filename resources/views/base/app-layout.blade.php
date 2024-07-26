@@ -42,7 +42,7 @@
                 </x-slot:trigger>
                 <div class="flex">
                     <div>
-                        <x-menu-item title="Advertising" icon="cui.cib-google-ads" />
+                        <x-menu-item title="Advertising" icon="cui.cib-google-ads" link="{{ route('advertising') }}" />
                         <x-menu-separator />
                         <x-menu-item title="Print A3+" icon="cui.cil-print" />
                         <x-menu-item title="Large Format" icon="cui.cib-sprint" />
@@ -53,7 +53,8 @@
                         <x-menu-item title="Stationary" icon="cui.cil-barcode" />
                     </div>
                     <div>
-                        <x-menu-item title="Graphic Design" icon="cui.cil-pen-nib" />
+                        <x-menu-item title="Graphic Design" icon="cui.cil-pen-nib"
+                            link="{{ route('graphic-design') }}" />
                         <x-menu-separator />
                         <x-menu-item title="Digital Design" icon="cui.cil-braille" />
                         <x-menu-item title="Branding" icon="cui.cil-bullhorn" />
@@ -63,7 +64,8 @@
                         <x-menu-item title="Design Website" icon="phosphor.google-chrome-logo" />
                     </div>
                     <div>
-                        <x-menu-item title="Digital Marketing" icon="phosphor.storefront" />
+                        <x-menu-item title="Digital Marketing" icon="phosphor.storefront"
+                            link="{{ route('digital-marketing') }}" />
                         <x-menu-separator />
                         <x-menu-item title="Sosial Media Management : IG & Tiktok" icon="phosphor.instagram-logo" />
                         <x-menu-item title="Video Production" icon="phosphor.video" />
