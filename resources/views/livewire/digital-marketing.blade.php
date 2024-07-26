@@ -37,7 +37,7 @@
         <div class="flex flex-col items-center gap-4 col-span-1 row-span-1">
             <x-icon name="phosphor.instagram-logo"
                 class="w-20 h-20 md:w-24 md:h-24 bg-red-700 text-white p-2 rounded-full" />
-            <span class="text-black dark:text-white text-2xl font-bold">Sosial Media Management : IG & Tiktok</span>
+            <span class="text-black dark:text-white text-2xl font-bold">Sosial Media Management</span>
         </div>
         <div class="flex flex-col items-center gap-4 col-span-1 row-span-1">
             <x-icon name="phosphor.video" class="w-20 h-20 md:w-24 md:h-24 bg-red-700 text-white p-2 rounded-full" />
