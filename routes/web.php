@@ -1,22 +1,32 @@
 <?php
 
+use App\Http\Middleware\Authenticate;
 use App\Livewire\AboutUs;
 use App\Livewire\Advertising;
 use App\Livewire\Contact;
+use App\Livewire\Dashboard;
 use App\Livewire\DigitalMarketing;
 use App\Livewire\Fallback;
 use App\Livewire\Faq;
 use App\Livewire\GraphicDesign;
 use App\Livewire\HomePage;
 use App\Livewire\ListProduct;
+use App\Livewire\Login;
 use App\Livewire\StatusOrder;
 use Illuminate\Support\Facades\Route;
 
-Route::get('/list-product/{category}/{product}', ListProduct::class);
+
+Route::middleware([Authenticate::class])->group(function () {
+});
+Route::get('/dashboard', Dashboard::class)->name('dashboard');
+
+Route::get('/login', Login::class)->name('login');
 
 Route::get('/advertising', Advertising::class)->name('advertising');
 Route::get('/graphic-design', GraphicDesign::class)->name('graphic-design');
 Route::get('/digital-marketing', DigitalMarketing::class)->name('digital-marketing');
+
+Route::get('/list-product/{category}/{product}', ListProduct::class);
 
 Route::get('/', HomePage::class)->name('home-page');
 Route::get('/about-us', AboutUs::class)->name('about-us');

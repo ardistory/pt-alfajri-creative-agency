@@ -2,6 +2,7 @@
 
 namespace App\Livewire;
 
+use Livewire\Attributes\Title;
 use Livewire\Component;
 
 class ListProduct extends Component
@@ -15,6 +16,7 @@ class ListProduct extends Component
         $this->productSelected = $product;
     }
 
+    #[Title('Produk')]
     public function render()
     {
         return view('livewire.list-product');

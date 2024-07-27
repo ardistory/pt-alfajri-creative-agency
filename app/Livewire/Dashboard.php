@@ -5,11 +5,11 @@ namespace App\Livewire;
 use Livewire\Attributes\Title;
 use Livewire\Component;
 
-class Fallback extends Component
+class Dashboard extends Component
 {
-    #[Title('Error')]
+    #[Title('Dashboard')]
     public function render()
     {
-        return view('livewire.fallback');
+        return view('livewire.dashboard');
     }
 }
