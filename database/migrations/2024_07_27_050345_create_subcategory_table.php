@@ -11,13 +11,12 @@ return new class extends Migration {
     public function up(): void
     {
         Schema::create('subcategory', function (Blueprint $table) {
-            $table->id();
+            $table->string('slug')->primary();
             $table->string('name');
-            $table->string('slug');
-            $table->integer('category_id');
+            $table->string('category_slug');
             $table->timestamps();
 
-            $table->foreign('category_id')->on('category')->references('id');
+            $table->foreign('category_slug')->on('category')->references('slug');
         });
     }
 

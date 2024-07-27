@@ -7,5 +7,10 @@ use Illuminate\Database\Eloquent\Model;
 
 class Product extends Model
 {
-    use HasFactory;
+    protected $table = 'product';
+    protected $keyType = 'int';
+    protected $primaryKey = 'id';
+    public $incrementing = true;
+    public $timestamps = true;
+    protected $guarded = [];
 }

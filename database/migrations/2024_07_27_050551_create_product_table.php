@@ -15,12 +15,12 @@ return new class extends Migration {
             $table->string('name');
             $table->text('description');
             $table->string('img');
-            $table->integer('category_id');
-            $table->integer('subcategory_id');
+            $table->string('category_slug');
+            $table->string('subcategory_slug');
             $table->timestamps();
 
-            $table->foreign('category_id')->on('category')->references('id');
-            $table->foreign('subcategory_id')->on('subcategory')->references('id');
+            $table->foreign('category_slug')->on('category')->references('slug');
+            $table->foreign('subcategory_slug')->on('subcategory')->references('slug');
         });
     }
 
