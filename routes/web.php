@@ -7,8 +7,11 @@ use App\Livewire\DigitalMarketing;
 use App\Livewire\Faq;
 use App\Livewire\GraphicDesign;
 use App\Livewire\HomePage;
+use App\Livewire\ListProduct;
 use App\Livewire\StatusOrder;
 use Illuminate\Support\Facades\Route;
+
+Route::get('/list-product/{category}/{product}', ListProduct::class);
 
 Route::get('/advertising', Advertising::class)->name('advertising');
 Route::get('/graphic-design', GraphicDesign::class)->name('graphic-design');

@@ -44,32 +44,47 @@
                     <div>
                         <x-menu-item title="Advertising" icon="cui.cib-google-ads" link="{{ route('advertising') }}" />
                         <x-menu-separator />
-                        <x-menu-item title="Print A3+" icon="cui.cil-print" />
-                        <x-menu-item title="Large Format" icon="cui.cib-sprint" />
-                        <x-menu-item title="DTF Print" icon="cui.cil-print" />
-                        <x-menu-item title="Merchandise" icon="cui.cil-casino" />
-                        <x-menu-item title="Katalog & Buku" icon="cui.cil-book" />
-                        <x-menu-item title="Flyer & Brochure" icon="cui.cil-browser" />
-                        <x-menu-item title="Stationary" icon="cui.cil-barcode" />
+                        <x-menu-item title="Print A3+" icon="cui.cil-print" link="/list-product/advertising/print-a3" />
+                        <x-menu-item title="Large Format" icon="cui.cib-sprint"
+                            link="/list-product/advertising/large-format" />
+                        <x-menu-item title="DTF Print" icon="cui.cil-print"
+                            link="/list-product/advertising/dtf-print" />
+                        <x-menu-item title="Merchandise" icon="cui.cil-casino"
+                            link="/list-product/advertising/merchandise" />
+                        <x-menu-item title="Katalog & Buku" icon="cui.cil-book"
+                            link="/list-product/advertising/katalog-buku" />
+                        <x-menu-item title="Flyer & Brochure" icon="cui.cil-browser"
+                            link="/list-product/advertising/flyer-brochure" />
+                        <x-menu-item title="Stationary" icon="cui.cil-barcode"
+                            link="/list-product/advertising/stationary" />
                     </div>
                     <div>
                         <x-menu-item title="Graphic Design" icon="cui.cil-pen-nib"
                             link="{{ route('graphic-design') }}" />
                         <x-menu-separator />
-                        <x-menu-item title="Digital Design" icon="cui.cil-braille" />
-                        <x-menu-item title="Branding" icon="cui.cil-bullhorn" />
-                        <x-menu-item title="Product Packaging" icon="phosphor.package" />
-                        <x-menu-item title="Company Profile" icon="phosphor.buildings" />
-                        <x-menu-item title="Katalog Product" icon="phosphor.bag-simple" />
-                        <x-menu-item title="Design Website" icon="phosphor.google-chrome-logo" />
+                        <x-menu-item title="Digital Design" icon="cui.cil-braille"
+                            link="/list-product/graphic-design/digital-design" />
+                        <x-menu-item title="Branding" icon="cui.cil-bullhorn"
+                            link="/list-product/graphic-design/branding" />
+                        <x-menu-item title="Product Packaging" icon="phosphor.package"
+                            link="/list-product/graphic-design/product-packaging" />
+                        <x-menu-item title="Company Profile" icon="phosphor.buildings"
+                            link="/list-product/graphic-design/company-profile" />
+                        <x-menu-item title="Katalog Product" icon="phosphor.bag-simple"
+                            link="/list-product/graphic-design/katalog-product" />
+                        <x-menu-item title="Design Website" icon="phosphor.google-chrome-logo"
+                            link="/list-product/graphic-design/design-website" />
                     </div>
                     <div>
                         <x-menu-item title="Digital Marketing" icon="phosphor.storefront"
                             link="{{ route('digital-marketing') }}" />
                         <x-menu-separator />
-                        <x-menu-item title="Sosial Media Management : IG & Tiktok" icon="phosphor.instagram-logo" />
-                        <x-menu-item title="Video Production" icon="phosphor.video" />
-                        <x-menu-item title="Google Ads" icon="phosphor.google-logo" />
+                        <x-menu-item title="Sosial Media Management : IG & Tiktok" icon="phosphor.instagram-logo"
+                            link="/list-product/digital-marketing/sosial-media-management" />
+                        <x-menu-item title="Video Production" icon="phosphor.video"
+                            link="/list-product/digital-marketing/video-production" />
+                        <x-menu-item title="Google Ads" icon="phosphor.google-logo"
+                            link="/list-product/digital-marketing/google-ads" />
                     </div>
                 </div>
             </x-dropdown>
