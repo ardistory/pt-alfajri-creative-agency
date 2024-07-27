@@ -36,10 +36,11 @@
             </x-slot:title>
 
             <span class="text-sm text-black dark:text-white">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam facilis dolorum tempore unde
-                praesentium iusto inventore excepturi cupiditate quibusdam, animi eos! Aliquid repellat fuga numquam
-                veritatis iste voluptatum ut eaque rem accusantium facere earum odio fugiat ullam excepturi blanditiis
-                illo tempore dolorem
+
+                Setiap kampanye kami adalah perjalanan unik yang penuh dengan kejutan. Melalui narasi yang menyenangkan,
+                kami tidak hanya membangun merek, tetapi juga membangun hubungan dengan pelanggan kami😂 Mengejar
+                keunggulan kreatif yang mengubah pandangan dan menciptakan pengalaman yang tak terlupakan bagi setiap
+                pelanggan yang kami layani😎
             </span>
 
             <x-slot:figure>
@@ -56,10 +57,11 @@
             </x-slot:title>
 
             <span class="text-sm text-black dark:text-white">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam facilis dolorum tempore unde
-                praesentium iusto inventore excepturi cupiditate quibusdam, animi eos! Aliquid repellat fuga numquam
-                veritatis iste voluptatum ut eaque rem accusantium facere earum odio fugiat ullam excepturi blanditiis
-                illo tempore dolorem
+
+                Kami menikmati berbagai sumber inspirasi. Membangkitkan rasa syukur dan tindakan yang positif. Kami
+                melihat berbagai keajaiban😂 di sekitar dan merasakan kegembiraan yang melampaui kata-kata. Dengan penuh
+                kehangatan, kami ingin membawa kehidupan ini menjadi perjalanan yang tak terlupakan, menciptakan jejak
+                dan yang memancarkan cahaya dalam hati setiap orang😍
             </span>
 
             <x-slot:figure>

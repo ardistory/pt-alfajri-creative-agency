@@ -4,6 +4,7 @@ use App\Livewire\AboutUs;
 use App\Livewire\Advertising;
 use App\Livewire\Contact;
 use App\Livewire\DigitalMarketing;
+use App\Livewire\Fallback;
 use App\Livewire\Faq;
 use App\Livewire\GraphicDesign;
 use App\Livewire\HomePage;
@@ -22,3 +23,5 @@ Route::get('/about-us', AboutUs::class)->name('about-us');
 Route::get('/contact', Contact::class)->name('contact');
 Route::get('/status-order', StatusOrder::class)->name('status-order');
 Route::get('/faq', Faq::class)->name('faq');
+
+Route::fallback(Fallback::class);
