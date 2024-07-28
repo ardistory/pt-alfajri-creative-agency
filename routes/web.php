@@ -35,7 +35,7 @@ Route::get('/advertising', Advertising::class)->name('advertising');
 Route::get('/graphic-design', GraphicDesign::class)->name('graphic-design');
 Route::get('/digital-marketing', DigitalMarketing::class)->name('digital-marketing');
 
-Route::get('/list-product/{category}/{product}', ListProduct::class);
+Route::get('/list-product/{category}/{subcategory}', ListProduct::class);
 
 Route::get('/', HomePage::class)->name('home-page');
 Route::get('/about-us', AboutUs::class)->name('about-us');

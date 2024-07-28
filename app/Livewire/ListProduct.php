@@ -2,23 +2,40 @@
 
 namespace App\Livewire;
 
+use App\Models\Product;
+use App\Models\SubCategory;
 use Livewire\Attributes\Title;
 use Livewire\Component;
 
 class ListProduct extends Component
 {
-    public string $categorySelected;
-    public string $productSelected;
+    public string $category;
+    public string $subcategory;
 
-    public function mount($category, $product)
+    public function mount($category, $subcategory)
     {
-        $this->categorySelected = $category;
-        $this->productSelected = $product;
+        $this->category = $category;
+        $this->subcategory = $subcategory;
+    }
+
+    public function getTitle()
+    {
+        return SubCategory::query()->where('subcategory.slug', '=', $this->subcategory)->get();
+    }
+
+    public function getProductFromUrl()
+    {
+        return Product::query()->where('category_slug', '=', $this->category)
+            ->where('subcategory_slug', '=', $this->subcategory)
+            ->get();
     }
 
     #[Title('Produk')]
     public function render()
     {
-        return view('livewire.list-product');
+        return view('livewire.list-product', [
+            'products' => $this->getProductFromUrl(),
+            'title' => $this->getTitle()
+        ]);
     }
 }
