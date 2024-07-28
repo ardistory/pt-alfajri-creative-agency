@@ -77,7 +77,7 @@ class Dashboard extends Component
     public function getHeadersProduct(): array
     {
         return [
-            ['key' => 'id', 'label' => '#'],
+            ['key' => 'id', 'label' => '#', 'sortable' => false],
             ['key' => 'name', 'label' => 'Nama'],
             ['key' => 'description', 'label' => 'Deskripsi'],
             ['key' => 'img', 'label' => 'Gambar'],
@@ -140,9 +140,15 @@ class Dashboard extends Component
         $this->reset(['name', 'description', 'img', 'category', 'subCategory']);
     }
 
-    public function delete($id)
+    public function delete($productId)
     {
-        $this->info($id);
+        $namaFile = Product::find($productId)->img;
+
+        if (Product::find($productId)->deleteOrFail()) {
+            Storage::disk('local')->delete('public/img-product/' . $namaFile);
+
+            $this->error('Hapus produk berhasil');
+        }
     }
 
     public function clear()

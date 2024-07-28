@@ -21,7 +21,7 @@
     </x-header>
     @if (count($products) > 0)
         <x-card class="shadow-xl">
-            <x-table :headers="$headersProduct" :rows="$products" striped with-pagination>
+            <x-table :headers="$headersProduct" :rows="$products" :sort-by="$sortBy" striped with-pagination>
                 @scope('cell_id', $product)
                     {{ $loop->index + 1 }}
                 @endscope
@@ -49,10 +49,8 @@
 
                 @scope('actions', $product)
                     <div class="flex gap-2">
-                        <x-button icon="phosphor.pencil" wire:click="edit({{ $product->id }})" spinner="edit"
-                            class="btn-sm btn-primary text-white" />
-                        <x-button icon="o-trash" wire:click="delete({{ $product->id }})" spinner="delete"
-                            class="btn-sm btn-primary text-white" />
+                        <x-button icon="o-trash" wire:click="delete({{ $product->id }})"
+                            class="btn-sm btn-error text-white" />
                     </div>
                 @endscope
             </x-table>
