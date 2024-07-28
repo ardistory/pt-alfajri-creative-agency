@@ -5,18 +5,31 @@ namespace App\Livewire;
 use App\Models\Category;
 use App\Models\Product;
 use App\Models\SubCategory;
+use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Collection;
+use Illuminate\Pagination\LengthAwarePaginator;
 use Livewire\Attributes\Title;
 use Livewire\Component;
+use Livewire\WithPagination;
 use Mary\Traits\Toast;
 
 class Dashboard extends Component
 {
     use Toast;
+    use WithPagination;
+
+    public string $search = '';
+    public array $sortBy = ['column' => 'name', 'direction' => 'asc'];
+    public bool $showDrawerAdd = false;
 
     public function getTotalCategory(): int
     {
         return count(Category::all());
+    }
+
+    public function getCategory(): Collection
+    {
+        return Category::all();
     }
 
     public function getTotalSubCategory(): int
@@ -24,12 +37,30 @@ class Dashboard extends Component
         return count(SubCategory::all());
     }
 
+    public function getSubCategory(): Collection
+    {
+        return SubCategory::all();
+    }
+
     public function getTotalProduct(): int
     {
         return count(Product::all());
     }
 
-    public function getHeaders(): array
+    public function getProducts(): LengthAwarePaginator
+    {
+        return Product::query()
+            ->when($this->search, function (Builder $builder) {
+                return $builder->where('product.name', 'like', "%$this->search%");
+            })
+            ->orderBy(...array_values($this->sortBy))
+            ->join('category', 'product.category_slug', '=', 'category.slug')
+            ->join('subcategory', 'product.subcategory_slug', '=', 'subcategory.slug')
+            ->select('product.id', 'product.name', 'product.description', 'product.img', 'category.name as category_name', 'subcategory.name as subcategory_name')
+            ->paginate(5);
+    }
+
+    public function getHeadersProduct(): array
     {
         return [
             ['key' => 'id', 'label' => '#'],
@@ -41,14 +72,6 @@ class Dashboard extends Component
         ];
     }
 
-    public function getProducts(): Collection
-    {
-        return Product::join('category', 'product.category_slug', '=', 'category.slug')
-            ->join('subcategory', 'product.subcategory_slug', '=', 'subcategory.slug')
-            ->select('product.id', 'product.name', 'product.description', 'product.img', 'category.name as category_name', 'subcategory.name as subcategory_name')
-            ->get();
-    }
-
     public function delete($id)
     {
         $this->info($id);
@@ -58,7 +81,7 @@ class Dashboard extends Component
     public function render()
     {
         return view('livewire.dashboard', [
-            'headers' => $this->getHeaders(),
+            'headersProduct' => $this->getHeadersProduct(),
             'products' => $this->getProducts(),
             'totalCategory' => $this->getTotalCategory(),
             'totalSubCategory' => $this->getTotalSubCategory(),
