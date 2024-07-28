@@ -21,6 +21,10 @@ class Dashboard extends Component
     public string $search = '';
     public array $sortBy = ['column' => 'name', 'direction' => 'asc'];
     public bool $showDrawerAdd = false;
+    public string $nameProduct = '';
+    public string $descriptionProduct = '';
+    public string $categoryProduct = '';
+    public string $subCategoryProduct = '';
 
     public function getTotalCategory(): int
     {
@@ -72,6 +76,42 @@ class Dashboard extends Component
         ];
     }
 
+    public function getListCategory()
+    {
+        return [
+            [
+                'name' => 'Advertising',
+                'slug' => 'advertising'
+            ],
+            [
+                'name' => 'Graphic Design',
+                'slug' => 'graphic-design'
+            ],
+            [
+                'name' => 'Digital Marketing',
+                'slug' => 'digital-marketing'
+            ]
+        ];
+    }
+
+    public function getListSubCategory()
+    {
+        $listSubCategory = [];
+        $temp = SubCategory::join('category', 'category.slug', '=', 'subcategory.category_slug')
+            ->where('category.slug', 'like', '%' . $this->categoryProduct . '%')
+            ->select('subcategory.name', 'subcategory.slug')
+            ->get();
+
+        foreach ($temp as $value) {
+            $listSubCategory[] = [
+                'slug' => $value['slug'],
+                'name' => $value['name']
+            ];
+        }
+
+        return $listSubCategory;
+    }
+
     public function delete($id)
     {
         $this->info($id);
@@ -86,6 +126,8 @@ class Dashboard extends Component
             'totalCategory' => $this->getTotalCategory(),
             'totalSubCategory' => $this->getTotalSubCategory(),
             'totalProduct' => $this->getTotalProduct(),
+            'listCategory' => $this->getListCategory(),
+            'listSubCategory' => $this->getListSubCategory()
         ]);
     }
 }

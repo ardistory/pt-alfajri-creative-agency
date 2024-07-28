@@ -67,6 +67,17 @@
     @endif
 
     <x-drawer wire:model="showDrawerAdd" class="w-11/12 lg:w-1/3">
-        <div>...</div>
+        <x-form wire:submit="save" no-separator>
+            <x-input label="Nama Produk" wire:model="name" />
+            <x-input label="Deskripsi Produk" wire:model="name" />
+            <x-file wire:model="file" label="Gambar" />
+            <x-select label="Category" :options="$listCategory" option-value="slug" option-label="name"
+                icon="phosphor.bookmarks" wire:model.live="categoryProduct" />
+            <x-select label="SubCategory" :options="$listSubCategory" option-value="slug" option-label="name"
+                icon="phosphor.bookmark-simple" wire:model="subCategoryProduct" />
+            <x-slot:actions>
+                <x-button label="Tambah Produk" class="btn-primary" type="submit" spinner="save" />
+            </x-slot:actions>
+        </x-form>
     </x-drawer>
 </div>
