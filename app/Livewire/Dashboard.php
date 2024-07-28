@@ -8,8 +8,11 @@ use App\Models\SubCategory;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Collection;
 use Illuminate\Pagination\LengthAwarePaginator;
+use Illuminate\Support\Facades\Storage;
 use Livewire\Attributes\Title;
+use Livewire\Attributes\Validate;
 use Livewire\Component;
+use Livewire\WithFileUploads;
 use Livewire\WithPagination;
 use Mary\Traits\Toast;
 
@@ -17,14 +20,21 @@ class Dashboard extends Component
 {
     use Toast;
     use WithPagination;
+    use WithFileUploads;
 
     public string $search = '';
     public array $sortBy = ['column' => 'name', 'direction' => 'asc'];
     public bool $showDrawerAdd = false;
-    public string $nameProduct = '';
-    public string $descriptionProduct = '';
-    public string $categoryProduct = '';
-    public string $subCategoryProduct = '';
+    #[Validate('required|min:3')]
+    public string $name = '';
+    #[Validate('required|min:3')]
+    public string $description = '';
+    #[Validate('image|max:2048')]
+    public $img;
+    #[Validate('required|min:3')]
+    public string $category = '';
+    #[Validate('required|min:3')]
+    public string $subCategory = '';
 
     public function getTotalCategory(): int
     {
@@ -98,7 +108,7 @@ class Dashboard extends Component
     {
         $listSubCategory = [];
         $temp = SubCategory::join('category', 'category.slug', '=', 'subcategory.category_slug')
-            ->where('category.slug', 'like', '%' . $this->categoryProduct . '%')
+            ->where('category.slug', 'like', '%' . $this->category . '%')
             ->select('subcategory.name', 'subcategory.slug')
             ->get();
 
@@ -112,9 +122,37 @@ class Dashboard extends Component
         return $listSubCategory;
     }
 
+    public function addProduct()
+    {
+        $data = $this->validate();
+        $fileName = $data['img']->getClientOriginalName();
+
+        $product = Product::create([
+            'name' => $data['name'],
+            'description' => $data['description'],
+            'img' => $fileName,
+            'category_slug' => $data['category'],
+            'subcategory_slug' => $data['subCategory']
+        ]);
+
+        $this->img->storePubliclyAs('img-product', $fileName, 'public');
+        $product ? $this->success('Tambah produk berhasil') : $this->error('Tambah produk gagal');
+        $this->reset(['name', 'description', 'img', 'category', 'subCategory']);
+    }
+
     public function delete($id)
     {
         $this->info($id);
+    }
+
+    public function clear()
+    {
+        $this->reset('search');
+    }
+
+    public function updatedSearch()
+    {
+        $this->resetPage();
     }
 
     #[Title('Dashboard')]

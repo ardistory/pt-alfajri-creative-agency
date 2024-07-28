@@ -31,7 +31,7 @@
                 @endscope
 
                 @scope('cell_description', $product)
-                    <div class="text-xs max-w-40">{{ $product->description }}</div>
+                    <div class="text-xs max-w-24">{{ $product->description }}</div>
                 @endscope
 
                 @scope('cell_img', $product)
@@ -58,8 +58,8 @@
             </x-table>
         </x-card>
     @else
-        <x-alert title="Produk tidak ditemukan!" description="silahkan coba key lain" icon="o-exclamation-triangle"
-            class="bg-base-100 border-none">
+        <x-alert title="Produk tidak ditemukan!" description="silahkan coba kata kunci lain"
+            icon="o-exclamation-triangle" class="bg-base-100 border-none shadow-xl">
             <x-slot:actions>
                 <x-button label="Clear filters" wire:click="clear" icon="o-x-mark" spinner />
             </x-slot:actions>
@@ -67,16 +67,18 @@
     @endif
 
     <x-drawer wire:model="showDrawerAdd" class="w-11/12 lg:w-1/3">
-        <x-form wire:submit="save" no-separator>
+        <x-form wire:submit="addProduct" no-separator>
             <x-input label="Nama Produk" wire:model="name" />
-            <x-input label="Deskripsi Produk" wire:model="name" />
-            <x-file wire:model="file" label="Gambar" />
+            <x-input label="Deskripsi Produk" wire:model="description" />
+            <x-file wire:model="file" label="Gambar" wire:model='img' />
             <x-select label="Category" :options="$listCategory" option-value="slug" option-label="name"
-                icon="phosphor.bookmarks" wire:model.live="categoryProduct" />
+                placeholder="Pilih category" placeholder-value="0" icon="phosphor.bookmarks"
+                wire:model.live="category" />
             <x-select label="SubCategory" :options="$listSubCategory" option-value="slug" option-label="name"
-                icon="phosphor.bookmark-simple" wire:model="subCategoryProduct" />
+                placeholder="Pilih subcategory" placeholder-value="0" icon="phosphor.bookmark-simple"
+                wire:model.live="subCategory" />
             <x-slot:actions>
-                <x-button label="Tambah Produk" class="btn-primary" type="submit" spinner="save" />
+                <x-button label="Tambah Produk" class="btn-primary" type="submit" spinner="addProduct" />
             </x-slot:actions>
         </x-form>
     </x-drawer>
