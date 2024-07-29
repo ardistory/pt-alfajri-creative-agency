@@ -15,6 +15,6 @@
             ini.</span>
     </div>
     <div class="col-span-7 md:col-span-4">
-        <img src="https://picsum.photos/700/400" class="rounded-3xl shadow-lg shadow-black">
+        <img src="{{ asset('assets/img/about-us-banner.png') }}" class="rounded-3xl shadow-lg shadow-black">
     </div>
 </div>
