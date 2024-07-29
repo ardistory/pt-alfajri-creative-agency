@@ -2,7 +2,7 @@
     <div class="grid grid-cols-7 mt-14 gap-5">
         <x-card class="col-span-3">
             <x-slot:figure>
-                <img src="https://picsum.photos/400/400" class="rounded-2xl" />
+                <img src="{{ asset('assets/img/digital-marketing-ilustrasi.svg') }}" class="rounded-2xl" />
             </x-slot:figure>
         </x-card>
         <div class="col-span-4 flex flex-col justify-center">

@@ -15,22 +15,22 @@ class HomePage extends Component
     {
         return [
             [
-                'image' => 'https://upload.wikimedia.org/wikipedia/commons/0/03/Galveston_Federal_Building_2009.jpg',
+                'image' => '/assets/img/advertising-banner.png',
                 'title' => 'ADVERTISING',
                 'description' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum quia voluptatum fugiat aliquid. Quo nobis ea quae sit praesentium iure repellendus ab natus perspiciatis, quidem tempore delectus rem dignissimos nisi laudantium provident accusamus commodi, cum minima.',
-                'url' => '/link/ke'
+                'url' => '/advertising'
             ],
             [
-                'image' => 'https://3.bp.blogspot.com/-KBoT-iZHeMk/Vwem3T3fyBI/AAAAAAAAF-I/IqBTYddZx9Q0Ixr9Z569079HamP6K2DMQ/s1600/shutterstock_71036287.jpg',
+                'image' => '/assets/img/graphic-design-banner.png',
                 'title' => 'GRAPHIC DESIGN',
                 'description' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum quia voluptatum fugiat aliquid. Quo nobis ea quae sit praesentium iure repellendus ab natus perspiciatis, quidem tempore delectus rem dignissimos nisi laudantium provident accusamus commodi, cum minima.',
-                'url' => '/link/ke'
+                'url' => '/graphic-design'
             ],
             [
-                'image' => 'https://media.architecturaldigest.com/photos/59a838a9a8a79c392f89eba2/master/w_1600%2Cc_limit/GettyImages-481686221.jpg',
+                'image' => '/assets/img/digital-marketing-banner.png',
                 'title' => 'DIGITAL MARKETING',
                 'description' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum quia voluptatum fugiat aliquid. Quo nobis ea quae sit praesentium iure repellendus ab natus perspiciatis, quidem tempore delectus rem dignissimos nisi laudantium provident accusamus commodi, cum minima.',
-                'url' => '/link/ke'
+                'url' => '/digital-marketing'
             ]
         ];
     }

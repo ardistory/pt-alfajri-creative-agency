@@ -29,11 +29,8 @@
                 </label>
 
                 {{-- Brand --}}
-                <div class="flex flex-col justify-center items-center">
-                    <x-button label="LOGO" icon="phosphor.package" link="{{ route('home-page') }}"
-                        class="btn-outline btn-sm text-white" />
-                    <span class="font-semibold text-[9px] drop-shadow-md text-white">PT. ALFAJRI CREATIVE AGENCY</span>
-                </div>
+                <a wire:navigate href="{{ route('home-page') }}"><img src="{{ asset('assets/img/main-logo.png') }}"
+                        class="w-32"></a>
             </x-slot:brand>
 
             {{-- Right side actions --}}

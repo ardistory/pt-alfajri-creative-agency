@@ -1,6 +1,6 @@
 <div">
     <div>
-        <x-carousel :slides="$slides" />
+        <x-carousel :slides="$slides" without-indicators />
     </div>
     <div class="flex justify-center mt-10 md:mt-20">
         <span class="text-white text-4xl font-bold tracking-wide">
@@ -36,7 +36,6 @@
             </x-slot:title>
 
             <span class="text-sm text-black dark:text-white">
-
                 Setiap kampanye kami adalah perjalanan unik yang penuh dengan kejutan. Melalui narasi yang menyenangkan,
                 kami tidak hanya membangun merek, tetapi juga membangun hubungan dengan pelanggan kami😂 Mengejar
                 keunggulan kreatif yang mengubah pandangan dan menciptakan pengalaman yang tak terlupakan bagi setiap
@@ -44,7 +43,7 @@
             </span>
 
             <x-slot:figure>
-                <img src="https://picsum.photos/700/300" />
+                <img src="{{ asset('assets/img/our-story-banner.png') }}" />
             </x-slot:figure>
             <x-slot:actions>
                 <x-button icon-right="phosphor.paper-plane-right" label="Mulai Sekarang"
@@ -57,7 +56,6 @@
             </x-slot:title>
 
             <span class="text-sm text-black dark:text-white">
-
                 Kami menikmati berbagai sumber inspirasi. Membangkitkan rasa syukur dan tindakan yang positif. Kami
                 melihat berbagai keajaiban😂 di sekitar dan merasakan kegembiraan yang melampaui kata-kata. Dengan penuh
                 kehangatan, kami ingin membawa kehidupan ini menjadi perjalanan yang tak terlupakan, menciptakan jejak
@@ -65,7 +63,7 @@
             </span>
 
             <x-slot:figure>
-                <img src="https://picsum.photos/700/300" />
+                <img src="{{ asset('assets/img/testimoni-banner.png') }}" />
             </x-slot:figure>
             <x-slot:actions>
                 <x-button icon-right="phosphor.paper-plane-right" label="Mulai Sekarang"
