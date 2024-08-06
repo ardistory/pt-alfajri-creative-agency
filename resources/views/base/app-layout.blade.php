@@ -23,7 +23,7 @@
         class="antialiased font-Montserrat dark:bg-gradient-to-r {{ Route::current()->uri != '/' ? 'kotak-polos' : 'kotak' }}">
         {{-- The navbar with `sticky` and `full-width` --}}
         <x-nav
-            class="bg-red-700 dark:bg-base-100 shadow-md shadow-black/40 dark:shadow-gray-500/20 border-none z-20 !flex !justify-center"
+            class="bg-red-700 dark:bg-base-100 shadow-md shadow-black/40 dark:shadow-gray-500/20 border-none z-20 flex md:justify-center"
             sticky full-width>
             <x-slot:brand>
                 {{-- Drawer toggle for "main-drawer" --}}
@@ -32,7 +32,7 @@
                 </label>
 
                 {{-- Brand --}}
-                <a wire:navigate href="{{ route('home-page') }}"><img src="{{ asset('assets/img/main-logo.png') }}"
+                <a wire:navigate href="{{ route('home-page') }}"><img src="{{ asset('assets/img/old-logo.png') }}"
                         class="w-32"></a>
             </x-slot:brand>
 
@@ -186,8 +186,8 @@
 
             <x-slot:content>
                 {{ $slot }}
-                <div
-                    class="w-full h-56 bg-red-700 dark:bg-base-100 absolute left-0 flex justify-center gap-10 pt-[2%]">
+                <footer
+                    class="w-full h-auto bg-red-700 dark:bg-base-100 absolute left-0 flex flex-col md:flex-row justify-center gap-10 p-[2%]">
                     <div>
                         <div class="flex items-center gap-2">
                             <x-icon name="phosphor.paper-plane-tilt" class="text-white w-5 h-5" />
@@ -204,19 +204,22 @@
 
                         <ul class="mt-4 space-y-1 text-sm text-white">
                             <li>
-                                <a href="#" class="transition hover:opacity-75 text-xs">
+                                <a wire:navigate href="{{ route('advertising') }}"
+                                    class="transition hover:opacity-75 text-xs">
                                     Advertising
                                 </a>
                             </li>
 
                             <li>
-                                <a href="#" class="transition hover:opacity-75 text-xs">
+                                <a wire:navigate href="{{ route('graphic-design') }}"
+                                    class="transition hover:opacity-75 text-xs">
                                     Graphic Design
                                 </a>
                             </li>
 
                             <li>
-                                <a href="#" class="transition hover:opacity-75 text-xs">
+                                <a wire:navigate href="{{ route('digital-marketing') }}"
+                                    class="transition hover:opacity-75 text-xs">
                                     Digital Marketing
                                 </a>
                             </li>
@@ -257,7 +260,7 @@
                         <div class="flex flex-col gap-2">
                             <div class="text-white text-xs font-bold text-center">SUBSCRIBE NEWSLETTER</div>
                             <x-form>
-                                <x-input class="rounded-none text-xs input-error dark:input-primary !w-60"
+                                <x-input class="rounded-none text-xs input-error dark:input-primary md:!w-60"
                                     placeholder="KETIKAN ALAMAT EMAIL KAMU">
                                     <x-slot:append>
                                         <x-button icon="phosphor.paper-plane-tilt"
@@ -271,24 +274,24 @@
 
                             <div class="flex gap-2">
                                 <x-button icon="phosphor.instagram-logo"
-                                    class="btn-circle text-red-800 dark:text-white dark:shadow-lg dark:shadow-white"
+                                    class="btn-circle btn-sm text-red-800 dark:text-white dark:shadow-lg dark:shadow-white"
                                     tooltip-bottom="Instagram" />
                                 <x-button icon="phosphor.tiktok-logo"
-                                    class="btn-circle text-red-800 dark:text-white dark:shadow-lg dark:shadow-white"
+                                    class="btn-circle btn-sm text-red-800 dark:text-white dark:shadow-lg dark:shadow-white"
                                     tooltip-bottom="Tiktok" />
                                 <x-button icon="phosphor.shopping-bag"
-                                    class="btn-circle text-red-800 dark:text-white dark:shadow-lg dark:shadow-white"
+                                    class="btn-circle btn-sm text-red-800 dark:text-white dark:shadow-lg dark:shadow-white"
                                     tooltip-bottom="Shopee" />
                                 <x-button icon="phosphor.tote"
-                                    class="btn-circle text-red-800 dark:text-white dark:shadow-lg dark:shadow-white"
+                                    class="btn-circle btn-sm text-red-800 dark:text-white dark:shadow-lg dark:shadow-white"
                                     tooltip-bottom="Tokopedia" />
                                 <x-button icon="cui.cil-location-pin"
-                                    class="btn-circle text-red-800 dark:text-white dark:shadow-lg dark:shadow-white"
+                                    class="btn-circle btn-sm text-red-800 dark:text-white dark:shadow-lg dark:shadow-white"
                                     tooltip-bottom="Location" />
                             </div>
                         </div>
                     </div>
-                </div>
+                </footer>
             </x-slot:content>
         </x-main>
 
