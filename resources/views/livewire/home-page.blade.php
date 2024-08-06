@@ -1,6 +1,13 @@
 <div>
     <div class="mt-4">
-        <x-carousel :slides="$slides" without-indicators class="!h-[450px]" />
+        <x-carousel :slides="$slides" without-indicators class="!h-[450px]">
+            @scope('content', $slide)
+                <div class="bg-yellow-300 absolute left-0 md:left-5 bottom-0 md:bottom-5 w-full md:w-1/4 p-4 md:rounded-3xl">
+                    <p class="text-red-700 font-bold text-2xl">{{ $slide['title'] }}</p>
+                    <p class="text-xs font-medium mt-2">{{ $slide['description'] }}</p>
+                </div>
+            @endscope
+        </x-carousel>
     </div>
     <div class="flex justify-center mt-10 md:mt-20">
         <span class="text-white text-4xl font-bold tracking-wide">

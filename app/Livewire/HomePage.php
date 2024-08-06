@@ -17,19 +17,19 @@ class HomePage extends Component
             [
                 'image' => '/assets/img/advertising-banner.png',
                 'title' => 'ADVERTISING',
-                'description' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum quia voluptatum fugiat aliquid. Quo nobis ea quae sit praesentium iure repellendus ab natus perspiciatis, quidem tempore delectus rem dignissimos nisi laudantium provident accusamus commodi, cum minima.',
+                'description' => 'Kami mengkomunikasikan pesan untuk mempromosikan produk dan layanan. Dengan menggunakan STORY yang relevan, dapat membangun ikatan emosional dengan konsumen yang potensial.',
                 'url' => '/advertising'
             ],
             [
                 'image' => '/assets/img/graphic-design-banner.png',
                 'title' => 'GRAPHIC DESIGN',
-                'description' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum quia voluptatum fugiat aliquid. Quo nobis ea quae sit praesentium iure repellendus ab natus perspiciatis, quidem tempore delectus rem dignissimos nisi laudantium provident accusamus commodi, cum minima.',
+                'description' => 'Kami mengkomunikasikan pesan untuk mempromosikan produk dan layanan. Dengan menggunakan STORY yang relevan, dapat membangun ikatan emosional dengan konsumen yang potensial.',
                 'url' => '/graphic-design'
             ],
             [
                 'image' => '/assets/img/digital-marketing-banner.png',
                 'title' => 'DIGITAL MARKETING',
-                'description' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum quia voluptatum fugiat aliquid. Quo nobis ea quae sit praesentium iure repellendus ab natus perspiciatis, quidem tempore delectus rem dignissimos nisi laudantium provident accusamus commodi, cum minima.',
+                'description' => 'Kami mengkomunikasikan pesan untuk mempromosikan produk dan layanan. Dengan menggunakan STORY yang relevan, dapat membangun ikatan emosional dengan konsumen yang potensial.',
                 'url' => '/digital-marketing'
             ]
         ];
