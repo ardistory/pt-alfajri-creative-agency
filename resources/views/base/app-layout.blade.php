@@ -20,7 +20,8 @@
     <body
         class="antialiased font-Inter dark:bg-gradient-to-r {{ Route::current()->uri != '/' ? 'kotak-polos' : 'kotak' }}">
         {{-- The navbar with `sticky` and `full-width` --}}
-        <x-nav class="bg-red-700 dark:bg-base-100 shadow-md shadow-black/40 dark:shadow-gray-500/20 border-none z-20"
+        <x-nav
+            class="bg-red-700 dark:bg-base-100 shadow-md shadow-black/40 dark:shadow-gray-500/20 border-none z-20 !flex !justify-center"
             sticky full-width>
             <x-slot:brand>
                 {{-- Drawer toggle for "main-drawer" --}}
@@ -90,6 +91,7 @@
                         </div>
                     </div>
                 </x-dropdown>
+                <div class="bg-white w-[1px] h-5"></div>
                 <x-button label="Tentang Kami" link="{{ route('about-us') }}"
                     class="btn-ghost btn-sm hidden lg:flex text-white {{ Route::current()->uri == 'about-us' ? 'bg-red-800 dark:bg-zinc-50/10' : '' }}"
                     responsive />

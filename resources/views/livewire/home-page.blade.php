@@ -1,6 +1,6 @@
-<div">
-    <div>
-        <x-carousel :slides="$slides" without-indicators />
+<div>
+    <div class="mt-4">
+        <x-carousel :slides="$slides" without-indicators class="!h-[450px]" />
     </div>
     <div class="flex justify-center mt-10 md:mt-20">
         <span class="text-white text-4xl font-bold tracking-wide">
@@ -80,4 +80,4 @@
         </span>
         <span class="font-semibold text-2xl italic">-ALFAJRI CREATIVE AGENCY</span>
     </div>
-    </div>
+</div>
