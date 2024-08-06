@@ -10,6 +10,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Playwrite+DK+Loopet:wght@100..400&display=swap"
         rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
     <title>{{ isset($title) ? 'PT. ALFAJRI CREATIVE AGENCY' . ' - ' . $title : 'PT. ALFAJRI CREATIVE AGENCY' }}</title>
 
     @vite(['resources/css/app.css', 'resources/js/app.js'])
@@ -18,7 +20,7 @@
 @if (!in_array(Route::currentRouteName(), ['login', 'dashboard']))
 
     <body
-        class="antialiased font-Inter dark:bg-gradient-to-r {{ Route::current()->uri != '/' ? 'kotak-polos' : 'kotak' }}">
+        class="antialiased font-Montserrat dark:bg-gradient-to-r {{ Route::current()->uri != '/' ? 'kotak-polos' : 'kotak' }}">
         {{-- The navbar with `sticky` and `full-width` --}}
         <x-nav
             class="bg-red-700 dark:bg-base-100 shadow-md shadow-black/40 dark:shadow-gray-500/20 border-none z-20 !flex !justify-center"
@@ -184,125 +186,109 @@
 
             <x-slot:content>
                 {{ $slot }}
-                <footer class="bg-red-700 dark:bg-base-100 text-white absolute left-0 right-0">
-                    <div class="max-w-screen-xl px-4 py-16 sm:px-6 lg:px-8">
-                        <div class="lg:flex lg:items-start lg:gap-8">
+                <div
+                    class="w-full h-56 bg-red-700 dark:bg-base-100 absolute left-0 flex justify-center gap-10 pt-[2%]">
+                    <div>
+                        <div class="flex items-center gap-2">
+                            <x-icon name="phosphor.paper-plane-tilt" class="text-white w-5 h-5" />
+                            <h2 class="text-xs font-bold text-white">ABOUT ALFAJRI</h2>
+                        </div>
 
-                            <div class="mt-8 grid grid-cols-2 gap-8 lg:mt-0 lg:grid-cols-5 lg:gap-y-16">
-                                <div class="col-span-2">
-                                    <div>
-                                        <div class="flex items-center gap-2">
-                                            <x-icon name="phosphor.paper-plane-tilt" class="w-10 h-10" />
-                                            <h2 class="text-2xl font-bold text-white">ABOUT ALFAJRI</h2>
-                                        </div>
+                        <p class="text-xs mt-4 text-white max-w-72">
+                            PT Alfajri Creative Agency adalah perusahaan kreatif yang memberikan layanan
+                            Advertising, Graphic Design dan Digital Marketing.
+                        </p>
+                    </div>
+                    <div class="col-span-2 sm:col-span-1">
+                        <p class="text-white text-xs font-bold">SERVICES</p>
 
-                                        <p class="mt-4 text-white">
-                                            PT Alfajri Creative Agency adalah perusahaan kreatif yang memberikan layanan
-                                            Advertising, Graphic Design dan Digital Marketing.
-                                        </p>
-                                    </div>
-                                </div>
+                        <ul class="mt-4 space-y-1 text-sm text-white">
+                            <li>
+                                <a href="#" class="transition hover:opacity-75 text-xs">
+                                    Advertising
+                                </a>
+                            </li>
 
-                                <div class="col-span-2 lg:col-span-3 lg:flex lg:items-end">
-                                    <form class="w-full">
-                                        <label for="UserEmail" class="sr-only"> Email </label>
+                            <li>
+                                <a href="#" class="transition hover:opacity-75 text-xs">
+                                    Graphic Design
+                                </a>
+                            </li>
 
-                                        <x-input class="input-error dark:input-primary rounded-none"
-                                            placeholder="KETIKAN ALAMAT EMAIL KAMU">
-                                            <x-slot:label>
-                                                <span class="text-white">SUBSCRIBE NEWSLETTER</span>
-                                            </x-slot:label>
-                                            <x-slot:append>
-                                                <x-button icon="phosphor.paper-plane-right"
-                                                    class="btn-error dark:btn-primary rounded-none text-white" />
-                                            </x-slot:append>
-                                        </x-input>
-                                    </form>
-                                </div>
+                            <li>
+                                <a href="#" class="transition hover:opacity-75 text-xs">
+                                    Digital Marketing
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div>
+                        <div>
+                            <p class="text-white text-xs font-bold">KANTOR</p>
 
-                                <div class="col-span-2 sm:col-span-1">
-                                    <p class="font-medium text-white text-lg">Services</p>
-
-                                    <ul class="mt-3 space-y-4 text-sm text-white">
-                                        <li>
-                                            <a href="#" class="transition hover:opacity-75">
-                                                Advertising
-                                            </a>
-                                        </li>
-
-                                        <li>
-                                            <a href="#" class="transition hover:opacity-75"> Company
-                                                Graphic Design
-                                            </a>
-                                        </li>
-
-                                        <li>
-                                            <a href="#" class="transition hover:opacity-75"> Accounts
-                                                Digital Marketing
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </div>
-
-                                <div class="col-span-2 sm:col-span-1">
-                                    <div>
-                                        <p class="font-medium text-white text-lg">Kantor</p>
-
-                                        <p class="text-white text-sm mt-3">
-                                            Jalan Lembang Baru II No. 26, RT 03 / RW 09,
-                                            Sudirman
-                                            Barat,
-                                            Ciledug, Kota
-                                            Tangerang, 15151.</p>
-                                    </div>
-                                    <div class="mt-3 flex items-center gap-2">
-                                        <x-icon name="phosphor.clock" class="w-5 h-5" />
-                                        <div>
-                                            <p class="text-xs">Senin - Sabtu : 08.00 - 21.00</p>
-                                            <p class="text-xs">Minggu : 09.00 - 17.00</p>
-                                        </div>
-                                    </div>
-                                    <div class="mt-3 flex items-center gap-2">
-                                        <x-icon name="phosphor.whatsapp-logo" class="w-5 h-5" />
-                                        <div>
-                                            <p class="text-xs">0821 2313 1995</p>
-                                        </div>
-                                    </div>
-                                    <div class="mt-3 flex items-center gap-2">
-                                        <x-icon name="phosphor.envelope-simple" class="w-5 h-5" />
-                                        <div>
-                                            <p class="text-xs">alfajriproduction@gmail.com</p>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="col-span-2 sm:col-span-1">
-                                    <div>
-                                        <p class="font-medium text-white text-lg">Connect With Us</p>
-
-                                        <div class="flex gap-2">
-                                            <x-button icon="phosphor.instagram-logo"
-                                                class="btn-circle text-red-800 dark:text-white dark:shadow-lg dark:shadow-white"
-                                                tooltip-bottom="Instagram" />
-                                            <x-button icon="phosphor.tiktok-logo"
-                                                class="btn-circle text-red-800 dark:text-white dark:shadow-lg dark:shadow-white"
-                                                tooltip-bottom="Tiktok" />
-                                            <x-button icon="phosphor.shopping-bag"
-                                                class="btn-circle text-red-800 dark:text-white dark:shadow-lg dark:shadow-white"
-                                                tooltip-bottom="Shopee" />
-                                            <x-button icon="phosphor.tote"
-                                                class="btn-circle text-red-800 dark:text-white dark:shadow-lg dark:shadow-white"
-                                                tooltip-bottom="Tokopedia" />
-                                            <x-button icon="cui.cil-location-pin"
-                                                class="btn-circle text-red-800 dark:text-white dark:shadow-lg dark:shadow-white"
-                                                tooltip-bottom="Location" />
-                                        </div>
-                                    </div>
-                                </div>
+                            <p class="text-white text-xs mt-3 max-w-56">
+                                Jalan Lembang Baru II No. 26, RT 03 / RW 09,
+                                Sudirman
+                                Barat,
+                                Ciledug, Kota
+                                Tangerang, 15151.</p>
+                        </div>
+                        <div class="mt-3 flex items-center gap-2">
+                            <x-icon name="phosphor.clock" class="w-5 h-5 text-white" />
+                            <div>
+                                <p class="text-xs text-white">Senin - Sabtu : 08.00 - 21.00</p>
+                                <p class="text-xs text-white">Minggu : 09.00 - 17.00</p>
+                            </div>
+                        </div>
+                        <div class="mt-3 flex items-center gap-2">
+                            <x-icon name="phosphor.whatsapp-logo" class="w-5 h-5 text-white" />
+                            <div>
+                                <p class="text-xs text-white">0821 2313 1995</p>
+                            </div>
+                        </div>
+                        <div class="mt-3 flex items-center gap-2">
+                            <x-icon name="phosphor.envelope-simple" class="w-5 h-5 text-white" />
+                            <div>
+                                <p class="text-xs text-white">alfajriproduction@gmail.com</p>
                             </div>
                         </div>
                     </div>
-                </footer>
+                    <div class="flex flex-col gap-4">
+                        <div class="flex flex-col gap-2">
+                            <div class="text-white text-xs font-bold text-center">SUBSCRIBE NEWSLETTER</div>
+                            <x-form>
+                                <x-input class="rounded-none text-xs input-error dark:input-primary !w-60"
+                                    placeholder="KETIKAN ALAMAT EMAIL KAMU">
+                                    <x-slot:append>
+                                        <x-button icon="phosphor.paper-plane-tilt"
+                                            class="btn-error dark:btn-primary text-white !bg-red-950 dark:!bg-primary rounded-none" />
+                                    </x-slot:append>
+                                </x-input>
+                            </x-form>
+                        </div>
+                        <div class="flex flex-col gap-2 items-center">
+                            <p class="text-white text-xs font-bold">Connect With Us</p>
+
+                            <div class="flex gap-2">
+                                <x-button icon="phosphor.instagram-logo"
+                                    class="btn-circle text-red-800 dark:text-white dark:shadow-lg dark:shadow-white"
+                                    tooltip-bottom="Instagram" />
+                                <x-button icon="phosphor.tiktok-logo"
+                                    class="btn-circle text-red-800 dark:text-white dark:shadow-lg dark:shadow-white"
+                                    tooltip-bottom="Tiktok" />
+                                <x-button icon="phosphor.shopping-bag"
+                                    class="btn-circle text-red-800 dark:text-white dark:shadow-lg dark:shadow-white"
+                                    tooltip-bottom="Shopee" />
+                                <x-button icon="phosphor.tote"
+                                    class="btn-circle text-red-800 dark:text-white dark:shadow-lg dark:shadow-white"
+                                    tooltip-bottom="Tokopedia" />
+                                <x-button icon="cui.cil-location-pin"
+                                    class="btn-circle text-red-800 dark:text-white dark:shadow-lg dark:shadow-white"
+                                    tooltip-bottom="Location" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </x-slot:content>
         </x-main>
 

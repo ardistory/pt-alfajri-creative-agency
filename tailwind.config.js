@@ -11,7 +11,8 @@ export default {
 		extend: {
 			fontFamily: {
 				'Inter': ['Inter'],
-				'DK': ['Playwrite DK Loopet']
+				'DK': ['Playwrite DK Loopet'],
+				'Montserrat': ['Montserrat']
 			}
 		},
 	},
