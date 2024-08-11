@@ -19,7 +19,7 @@
 
 @if (!in_array(Route::currentRouteName(), ['login', 'dashboard', 'order-product']))
 
-    <body
+    <body x-data
         class="antialiased font-Montserrat dark:bg-gradient-to-r {{ Route::current()->uri != '/' ? 'kotak-polos' : 'kotak' }}">
         {{-- The navbar with `sticky` and `full-width` --}}
         <x-nav
@@ -107,7 +107,8 @@
                     class="btn-ghost btn-sm hidden lg:flex text-white {{ Route::current()->uri == 'faq' ? 'bg-red-800 dark:bg-zinc-50/10' : '' }}"
                     responsive />
                 <x-input wire:model="product" icon-right="phosphor.magnifying-glass" placeholder="Cari Produk"
-                    class="text-black input-sm input-error dark:input-primary rounded-full" />
+                    class="text-black input-sm input-error dark:input-primary rounded-full"
+                    @click.stop="$dispatch('mary-search-open')" />
                 <x-theme-toggle class="hidden md:grid btn btn-sm btn-circle btn-ghost text-white" />
             </x-slot:actions>
         </x-nav>
@@ -294,7 +295,7 @@
                 </footer>
             </x-slot:content>
         </x-main>
-
+        <x-spotlight />
         {{--  TOAST area --}}
         <x-toast />
     </body>
