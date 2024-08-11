@@ -13,6 +13,7 @@ use App\Livewire\GraphicDesign;
 use App\Livewire\HomePage;
 use App\Livewire\ListProduct;
 use App\Livewire\Login;
+use App\Livewire\OrderProduct;
 use App\Livewire\StatusOrder;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
@@ -20,6 +21,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::middleware([Authenticate::class])->group(function () {
     Route::get('/dashboard', Dashboard::class)->name('dashboard');
+    Route::get('/order-product', OrderProduct::class)->name('order-product');
     Route::get('/logout', function () {
         Auth::logout();
 

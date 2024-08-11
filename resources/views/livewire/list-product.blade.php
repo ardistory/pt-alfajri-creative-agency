@@ -12,7 +12,7 @@
                 <div class="text-xs mt-3">
                     {{ $product->description }}
                 </div>
-                <a href="" class="underline text-red-700 font-bold text-sm">Hubungi Kami</a>
+                <a href="#" class="underline text-red-700 font-bold text-sm">Hubungi Kami</a>
             </div>
         @endforeach
     </div>

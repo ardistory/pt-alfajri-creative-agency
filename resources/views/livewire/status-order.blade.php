@@ -1,5 +1,5 @@
 <div class="mt-5 mb-16 flex flex-col justify-center items-center">
-    {{-- <p class="text-red-600 dark:text-white text-xl font-bold">STATUS ORDER</p>
+    <p class="text-red-600 dark:text-white text-xl font-bold">STATUS ORDER</p>
     <x-form wire:submit="save" class="mt-5 w-96" no-separator>
         <x-input label="Nomor Invoice" class="input-error border-black/80 dark:input-primary" placeholder="OL-1995"
             wire:model="name" />
@@ -11,8 +11,8 @@
                 class="w-full mt-9 btn-error bg-red-600 dark:btn-primary text-white dark:text-black rounded-none"
                 type="submit" spinner="save" />
         </x-slot:actions>
-    </x-form> --}}
-    <div class="w-4/5">
+    </x-form>
+    <div class="w-4/5 hidden">
         <div class="bg-red-700 text-white px-6 py-2 flex items-center gap-3">
             <x-button class="btn-circle btn-sm bg-red-950 text-white border-none hover:bg-red-800"
                 icon="phosphor.arrow-left" responsive />

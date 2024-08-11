@@ -1,5 +1,5 @@
 <div>
-    <x-header title="Stats" />
+    <x-header title="Stats" separator />
     <div class="grid grid-cols-3 gap-5">
         <x-card class="shadow-xl">
             <x-stat title="Total Category" value="{{ $totalCategory }}" icon="phosphor.bookmarks" />
@@ -11,9 +11,10 @@
             <x-stat title="Total Produk" value="{{ $totalProduct }}" icon="phosphor.package" />
         </x-card>
     </div>
-    <x-header title="Produk" class="mt-10">
+    <x-header title="Produk" class="mt-10" separator>
         <x-slot:middle class="!justify-end">
-            <x-input icon="phosphor.magnifying-glass" placeholder="Cari produk" wire:model.live.debounce="search" />
+            <x-input icon="phosphor.magnifying-glass" placeholder="Cari produk" wire:model.live.debounce="search"
+                clearable />
         </x-slot:middle>
         <x-slot:actions>
             <x-button icon="o-plus" class="btn-primary" @click="$wire.showDrawerAdd = true" />

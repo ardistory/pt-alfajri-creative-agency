@@ -17,7 +17,7 @@
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
 
-@if (!in_array(Route::currentRouteName(), ['login', 'dashboard']))
+@if (!in_array(Route::currentRouteName(), ['login', 'dashboard', 'order-product']))
 
     <body
         class="antialiased font-Montserrat dark:bg-gradient-to-r {{ Route::current()->uri != '/' ? 'kotak-polos' : 'kotak' }}">
@@ -344,6 +344,8 @@
                 {{-- Activates the menu item when a route matches the `link` property --}}
                 <x-menu activate-by-route>
                     <x-menu-item title="Dashboard" icon="phosphor.gauge" link="{{ route('dashboard') }}" />
+                    <x-menu-item title="Order Produk" icon="phosphor.shopping-cart"
+                        link="{{ route('order-product') }}" />
                 </x-menu>
             </x-slot:sidebar>
 
