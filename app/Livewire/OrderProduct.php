@@ -27,7 +27,7 @@ class OrderProduct extends Component
     #[Validate('required', as: 'Detail Order')]
     public string $detailOrder = '';
     #[Validate('nullable')]
-    public ?string $noResi;
+    public ?string $noResi = '';
     public array $sortBy = ['column' => 'no_invoice', 'direction' => 'asc'];
     public bool $showDrawerEdit = false;
     public bool $showDrawerAdd = false;
