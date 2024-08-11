@@ -13,7 +13,9 @@ return new class extends Migration {
         Schema::create('order_product', function (Blueprint $table) {
             $table->id();
             $table->string('no_invoice');
-            $table->timestamp('tgl_order');
+            $table->timestamp('tgl_order1')->nullable();
+            $table->timestamp('tgl_order2')->nullable();
+            $table->timestamp('tgl_order3')->nullable();
             $table->string('name');
             $table->string('no_hp');
             $table->string('detail_order');

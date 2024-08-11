@@ -40,7 +40,7 @@ class OrderProduct extends Component
         return [
             ['key' => 'id', 'label' => '#', 'sortable' => false],
             ['key' => 'no_invoice', 'label' => 'No Invoice'],
-            ['key' => 'tgl_order', 'label' => 'Tgl Order'],
+            ['key' => 'tgl_order1', 'label' => 'Tgl Order'],
             ['key' => 'name', 'label' => 'Nama'],
             ['key' => 'no_hp', 'label' => 'Nomor HP'],
             ['key' => 'detail_order', 'label' => 'Detail Order'],
@@ -82,7 +82,7 @@ class OrderProduct extends Component
                 return $builder->where('order_product.no_invoice', 'like', "%$this->search%");
             })
             ->orderBy(...array_values($this->sortBy))
-            ->select('order_product.id', 'order_product.no_invoice', 'order_product.tgl_order', 'order_product.name', 'order_product.no_hp', 'order_product.detail_order', 'order_product.no_resi', 'order_product.tahap')
+            ->select('order_product.id', 'order_product.no_invoice', 'order_product.tgl_order1', 'order_product.name', 'order_product.no_hp', 'order_product.detail_order', 'order_product.no_resi', 'order_product.tahap')
             ->paginate(5);
     }
 
@@ -92,7 +92,7 @@ class OrderProduct extends Component
 
         $storeDataOrder = ModelsOrderProduct::create([
             'no_invoice' => $dataValid['noInvoice'],
-            'tgl_order' => Carbon::now(),
+            'tgl_order1' => Carbon::now(),
             'name' => $dataValid['name'],
             'no_hp' => $dataValid['noHandphone'],
             'detail_order' => $dataValid['detailOrder'],
@@ -132,9 +132,22 @@ class OrderProduct extends Component
 
     public function editOrder($orderId)
     {
-        ModelsOrderProduct::query()->where('id', '=', $orderId)->update([
-            'tahap' => $this->editTahap
-        ]);
+        if ($this->editTahap == 1) {
+            ModelsOrderProduct::query()->where('id', '=', $orderId)->update([
+                'tgl_order1' => Carbon::now(),
+                'tahap' => $this->editTahap
+            ]);
+        } elseif ($this->editTahap == 2) {
+            ModelsOrderProduct::query()->where('id', '=', $orderId)->update([
+                'tgl_order2' => Carbon::now(),
+                'tahap' => $this->editTahap
+            ]);
+        } elseif ($this->editTahap == 3) {
+            ModelsOrderProduct::query()->where('id', '=', $orderId)->update([
+                'tgl_order3' => Carbon::now(),
+                'tahap' => $this->editTahap
+            ]);
+        }
 
         $this->success('Edit order berhasil!');
     }
