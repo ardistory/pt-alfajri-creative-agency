@@ -62,7 +62,7 @@
     @endif
 
     <x-drawer wire:model="showDrawerEdit" class="w-11/12 lg:w-1/3">
-        <x-form wire:submit="editOrder" no-separator>
+        <x-form wire:submit="editOrder({{ $orderEdit['id'] ?? '' }})" no-separator>
             <x-input label="Nomor Invoice" value="{{ $orderEdit['no_invoice'] ?? '' }}" disabled />
             <x-input label="Tanggal Order" value="{{ $orderEdit['tgl_order'] ?? '' }}" disabled />
             <x-input label="Nama" value="{{ $orderEdit['name'] ?? '' }}" disabled />
@@ -71,7 +71,7 @@
                 disabled />
             <x-input label="Nomor Resi (Jika Barang Dikirim)" value="{{ $orderEdit['no_resi'] ?? '' }}" disabled />
             <x-select label="Tahap" :options="$tahap" option-value="value" option-label="desc"
-                placeholder="Update tahap" placeholder-value="0" icon="phosphor.stairs" />
+                placeholder="Update tahap" placeholder-value="0" icon="phosphor.stairs" wire:model='editTahap' />
             <x-slot:actions>
                 <x-button label="Edit Order" class="btn-primary" type="submit" spinner="editOrder" />
             </x-slot:actions>

@@ -33,6 +33,7 @@ class OrderProduct extends Component
     public bool $showDrawerAdd = false;
 
     public $orderEdit;
+    public int $editTahap;
 
     public function getHeaders(): array
     {
@@ -127,6 +128,15 @@ class OrderProduct extends Component
         $orderEdit = ModelsOrderProduct::findOrFail($orderId);
 
         $this->orderEdit = $orderEdit;
+    }
+
+    public function editOrder($orderId)
+    {
+        ModelsOrderProduct::query()->where('id', '=', $orderId)->update([
+            'tahap' => $this->editTahap
+        ]);
+
+        $this->success('Edit order berhasil!');
     }
 
     public function delete($orderId)
