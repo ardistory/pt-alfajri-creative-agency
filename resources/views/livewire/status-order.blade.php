@@ -47,7 +47,7 @@
         <div class="px-6 py-2 flex items-center gap-3 border-b-2 border-black/50">
             <p class="font-bold text-xl">STATUS PESANAN</p>
         </div>
-        <div class="p-6 translate-x-20 mt-5">
+        <div class="p-6 translate-x-10 md:translate-x-20 mt-5">
             {{-- 1 --}}
             @isset($orderProduct['tahap'])
                 <div class="@if ($orderProduct['tahap'] < 4 && $orderProduct['tahap'] > 0) @else hidden @endif">
