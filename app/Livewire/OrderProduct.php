@@ -40,7 +40,7 @@ class OrderProduct extends Component
         return [
             ['key' => 'id', 'label' => '#', 'sortable' => false],
             ['key' => 'no_invoice', 'label' => 'No Invoice'],
-            ['key' => 'tgl_order1', 'label' => 'Tgl Order'],
+            ['key' => 'tgl_order1', 'label' => 'Tanggal Order'],
             ['key' => 'name', 'label' => 'Nama'],
             ['key' => 'no_hp', 'label' => 'Nomor HP'],
             ['key' => 'detail_order', 'label' => 'Detail Order'],

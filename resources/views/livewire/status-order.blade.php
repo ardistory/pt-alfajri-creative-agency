@@ -30,7 +30,7 @@
                 <p>Detail Order</p>
                 <p class="relative">
                     No Resi
-                <p class="text-[8px] absolute -translate-y-4">*(Jika Barang Dikirim)</p>
+                <p class="text-[10px] absolute -translate-y-4">*(Jika Barang Dikirim)</p>
                 </p>
             </div>
             <div class="text-xs font-semibold space-y-3 col-span-3 md:col-span-4">
@@ -75,7 +75,7 @@
                                 'w-8 h-8 !-ms-[48px] -mb-7' => true, //icon
                             ])>
                                 <!-- ICON PENDING-->
-                                <x-mary-icon name="phosphor.check" @class(['ms-2 mt-1 w-4 h-4', 'text-base-100' => false]) />
+                                <x-mary-icon name="phosphor.check" class="ms-[2px] mt-[2px] w-7 h-7" />
                             </div>
                         </div>
 
@@ -121,7 +121,7 @@
                                 'w-8 h-8 !-ms-[48px] -mb-7' => true, //icon
                             ])>
                                 <!-- ICON PENDING-->
-                                <x-mary-icon name="phosphor.check" @class(['ms-2 mt-1 w-4 h-4', 'text-base-100' => false]) />
+                                <x-mary-icon name="phosphor.check" class="ms-[2px] mt-[2px] w-7 h-7" />
                             </div>
                         </div>
 
@@ -167,7 +167,7 @@
                                 'w-8 h-8 !-ms-[48px] -mb-7' => true, //icon
                             ])>
                                 <!-- ICON PENDING-->
-                                <x-mary-icon name="phosphor.check" @class(['ms-2 mt-1 w-4 h-4', 'text-base-100' => false]) />
+                                <x-mary-icon name="phosphor.check" class="ms-[2px] mt-[2px] w-7 h-7" />
                             </div>
                         </div>
 
