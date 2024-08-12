@@ -32,8 +32,9 @@
                 </label>
 
                 {{-- Brand --}}
-                <a wire:navigate href="{{ route('home-page') }}"><img src="{{ asset('assets/img/old-logo.png') }}"
-                        class="w-32"></a>
+                <a wire:navigate href="{{ route('home-page') }}">
+                    <img src="{{ asset('assets/img/old-logo.png') }}" class="w-24">
+                </a>
             </x-slot:brand>
 
             {{-- Right side actions --}}
