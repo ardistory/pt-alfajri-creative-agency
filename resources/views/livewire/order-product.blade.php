@@ -64,7 +64,7 @@
     <x-drawer wire:model="showDrawerEdit" class="w-11/12 lg:w-1/3">
         <x-form wire:submit="editOrder({{ $orderEdit['id'] ?? '' }})" no-separator>
             <x-input label="Nomor Invoice" value="{{ $orderEdit['no_invoice'] ?? '' }}" disabled />
-            <x-input label="Tanggal Order" value="{{ $orderEdit['tgl_order'] ?? '' }}" disabled />
+            <x-input label="Tanggal Order" value="{{ $orderEdit['tgl_order1'] ?? '' }}" disabled />
             <x-input label="Nama" value="{{ $orderEdit['name'] ?? '' }}" disabled />
             <x-input label="Nomor Handphone" value="{{ $orderEdit['no_hp'] ?? '' }}" disabled />
             <x-input label="Detail Order" prefix="get.paper.id/" value="{{ $orderEdit['detail_order'] ?? '' }}"
