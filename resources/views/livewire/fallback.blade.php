@@ -1,4 +1,5 @@
 <div class="mb-10">
+    <livewire:partials.loading />
     <style>
         .main_wrapper {
             display: flex;

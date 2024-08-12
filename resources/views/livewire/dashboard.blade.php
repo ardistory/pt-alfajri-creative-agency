@@ -1,4 +1,5 @@
 <div>
+    <livewire:partials.loading />
     <x-header title="Stats" separator />
     <div class="grid grid-cols-3 gap-5">
         <x-card class="shadow-xl">

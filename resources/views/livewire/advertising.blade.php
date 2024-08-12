@@ -1,4 +1,5 @@
 <div>
+    <livewire:partials.loading />
     <div class="grid grid-cols-7 mt-14 gap-5">
         <x-card class="col-span-3">
             <x-slot:figure>
