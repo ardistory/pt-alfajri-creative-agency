@@ -30,7 +30,7 @@
                 <p>Detail Order</p>
                 <p class="relative">
                     No Resi
-                <p class="text-[10px] absolute -translate-y-4">*(Jika Barang Dikirim)</p>
+                <p class="text-[11px] absolute -translate-y-4">*(Jika Barang Dikirim)</p>
                 </p>
             </div>
             <div class="text-xs font-semibold space-y-3 col-span-3 md:col-span-4">
