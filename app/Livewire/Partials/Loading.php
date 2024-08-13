@@ -8,7 +8,7 @@ class Loading extends Component
 {
     public function loadData()
     {
-        sleep(1);
+        true;
     }
 
     public function render()
