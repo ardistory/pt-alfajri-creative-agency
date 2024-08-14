@@ -10,14 +10,14 @@
 
             <x-slot:actions>
                 <x-button label="CEK STATUS ORDER"
-                    class="w-full mt-9 btn-error bg-red-600 dark:btn-primary text-white dark:text-black rounded-none"
+                    class="w-full mt-9 btn-error bg-red-600 dark:bg-primary dark:btn-primary text-white dark:text-black rounded-none"
                     type="submit" spinner="checkOrder" />
             </x-slot:actions>
         </x-form>
     </div>
     <div class="w-4/5 @if ($isValid) @else hidden @endif">
-        <div class="bg-red-700 text-white px-6 py-2 flex items-center gap-3">
-            <x-button class="btn-circle btn-sm bg-red-950 text-white border-none hover:bg-red-800"
+        <div class="bg-red-700 dark:bg-primary text-white px-6 py-2 flex items-center gap-3">
+            <x-button class="btn-circle btn-sm bg-red-950 dark:bg-blue-950 text-white border-none hover:bg-red-800"
                 icon="phosphor.arrow-left" wire:click='resetPage' responsive />
             <p class="font-semibold text-xl">ORDER TRACKING</p>
         </div>
@@ -60,16 +60,17 @@
 
                     <!-- WRAPPER THAT ALSO ACTS A LINE CONNECTOR -->
                     <div @class([
-                        'border-s-2 border-s-red-600 ps-8 py-3',
+                        'border-s-2 border-s-red-600 dark:border-s-primary ps-8 py-3',
                         '!border-s-primary' => false, //pending
                         'pt-0' => true, //first
                         '!border-s-0' => false, //last
                     ])>
                         <!-- BULLET -->
                         <div>
-                            <x-icon name="phosphor.paint-brush" class="w-9 h-9 text-red-600 absolute -translate-x-24" />
+                            <x-icon name="phosphor.paint-brush"
+                                class="w-9 h-9 text-red-600 dark:text-primary absolute -translate-x-24" />
                             <div @class([
-                                'w-4 h-4 -mb-5 -ms-[41px] rounded-full bg-red-600 text-white',
+                                'w-4 h-4 -mb-5 -ms-[41px] rounded-full bg-red-600 dark:bg-primary text-white',
                                 'bg-primary' => false, //pending
                                 '!-ms-[39px]' => true, //last
                                 'w-8 h-8 !-ms-[48px] -mb-7' => true, //icon
@@ -80,7 +81,7 @@
                         </div>
 
                         <!-- TITLE -->
-                        <div @class(['font-bold mb-1 text-red-600'])>
+                        <div @class(['font-bold mb-1 text-red-600 dark:text-primary'])>
                             {{ $orderProduct['formattedDate1'] ?? '' }}
                         </div>
 
@@ -106,16 +107,17 @@
 
                     <!-- WRAPPER THAT ALSO ACTS A LINE CONNECTOR -->
                     <div @class([
-                        'border-s-2 border-s-red-600 ps-8 py-3',
+                        'border-s-2 border-s-red-600 dark:border-s-primary ps-8 py-3',
                         '!border-s-primary' => false, //pending
                         'pt-0' => true, //first
                         '!border-s-0' => false, //last
                     ])>
                         <!-- BULLET -->
                         <div>
-                            <x-icon name="phosphor.gear" class="w-9 h-9 text-red-600 absolute -translate-x-24" />
+                            <x-icon name="phosphor.gear"
+                                class="w-9 h-9 text-red-600 dark:text-primary absolute -translate-x-24" />
                             <div @class([
-                                'w-4 h-4 -mb-5 -ms-[41px] rounded-full bg-red-600 text-white',
+                                'w-4 h-4 -mb-5 -ms-[41px] rounded-full bg-red-600 dark:bg-primary text-white',
                                 'bg-primary' => false, //pending
                                 '!-ms-[39px]' => false, //last
                                 'w-8 h-8 !-ms-[48px] -mb-7' => true, //icon
@@ -126,7 +128,7 @@
                         </div>
 
                         <!-- TITLE -->
-                        <div @class(['font-bold mb-1 text-red-600'])>
+                        <div @class(['font-bold mb-1 text-red-600 dark:text-primary'])>
                             {{ $orderProduct['formattedDate2'] ?? '' }}
                         </div>
 
@@ -159,9 +161,10 @@
                     ])>
                         <!-- BULLET -->
                         <div>
-                            <x-icon name="phosphor.package" class="w-9 h-9 text-red-600 absolute -translate-x-24" />
+                            <x-icon name="phosphor.package"
+                                class="w-9 h-9 text-red-600 dark:text-primary absolute -translate-x-24" />
                             <div @class([
-                                'w-4 h-4 -mb-5 -ms-[41px] rounded-full bg-red-600 text-white',
+                                'w-4 h-4 -mb-5 -ms-[41px] rounded-full bg-red-600 dark:bg-primary text-white',
                                 'bg-primary' => false, //pending
                                 '!-ms-[39px]' => true, //last
                                 'w-8 h-8 !-ms-[48px] -mb-7' => true, //icon
@@ -172,7 +175,7 @@
                         </div>
 
                         <!-- TITLE -->
-                        <div @class(['font-bold mb-1 text-red-600'])>
+                        <div @class(['font-bold mb-1 text-red-600 dark:text-primary'])>
                             {{ $orderProduct['formattedDate3'] ?? '' }}
                         </div>
 
