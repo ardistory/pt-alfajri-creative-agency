@@ -1,5 +1,4 @@
 <div class="grid grid-cols-7 mt-0 mb-7 md:mt-10 md:mb-16 gap-10">
-    <livewire:partials.loading />
     <div class="col-span-7 md:col-span-3 text-black dark:text-white flex flex-col justify-center">
         <span class="inline-block text-4xl font-bold">HUBUNGI KAMI</span>
         <div>

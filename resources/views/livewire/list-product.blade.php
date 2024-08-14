@@ -1,5 +1,4 @@
 <div class="mb-10">
-    <livewire:partials.loading />
     <div class="mb-10 flex justify-end">
         <span class="text-red-700 font-bold text-4xl">{{ $title[0]['name'] }}</span>
     </div>

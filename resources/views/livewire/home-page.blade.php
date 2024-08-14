@@ -1,5 +1,4 @@
 <div>
-    <livewire:partials.loading />
     <div class="mt-4">
         <x-carousel :slides="$slides" without-indicators class="!h-[450px]">
             @scope('content', $slide)

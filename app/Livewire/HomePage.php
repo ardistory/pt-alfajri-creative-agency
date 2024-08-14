@@ -3,10 +3,12 @@
 namespace App\Livewire;
 
 use Illuminate\Support\Collection;
+use Livewire\Attributes\Lazy;
 use Livewire\Attributes\Title;
 use Livewire\Component;
 use Mary\Traits\Toast;
 
+#[Lazy()]
 class HomePage extends Component
 {
     use Toast;

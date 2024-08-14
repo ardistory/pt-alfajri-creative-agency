@@ -4,11 +4,13 @@ namespace App\Livewire;
 
 use App\Models\OrderProduct;
 use Carbon\Carbon;
+use Livewire\Attributes\Lazy;
 use Livewire\Attributes\Title;
 use Livewire\Attributes\Validate;
 use Livewire\Component;
 use Mary\Traits\Toast;
 
+#[Lazy()]
 class StatusOrder extends Component
 {
     use Toast;

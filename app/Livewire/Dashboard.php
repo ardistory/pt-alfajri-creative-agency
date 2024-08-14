@@ -9,6 +9,7 @@ use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Collection;
 use Illuminate\Pagination\LengthAwarePaginator;
 use Illuminate\Support\Facades\Storage;
+use Livewire\Attributes\Lazy;
 use Livewire\Attributes\Title;
 use Livewire\Attributes\Validate;
 use Livewire\Component;
@@ -16,6 +17,7 @@ use Livewire\WithFileUploads;
 use Livewire\WithPagination;
 use Mary\Traits\Toast;
 
+#[Lazy()]
 class Dashboard extends Component
 {
     use Toast;

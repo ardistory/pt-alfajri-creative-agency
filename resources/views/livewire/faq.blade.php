@@ -1,5 +1,4 @@
 <div class="flex justify-center">
-    <livewire:partials.loading />
     <div class="max-w-4xl mt-10">
         <span class="text-red-600 text-xl font-bold">
             FREQUENTLY ASKED QUESTION (FAQ)

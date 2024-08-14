@@ -335,7 +335,7 @@
                     <x-list-item :item="$user" value="name" sub-value="email" no-separator no-hover
                         class="pt-2">
                         <x-slot:actions>
-                            <x-button icon="o-power" class="btn-circle btn-ghost btn-xs" tooltip-left="logoff"
+                            <x-button icon="o-power" class="btn-circle btn-ghost btn-xs" tooltip-left="Logout"
                                 no-wire-navigate link="/logout" />
                         </x-slot:actions>
                     </x-list-item>
