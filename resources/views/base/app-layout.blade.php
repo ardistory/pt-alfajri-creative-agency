@@ -85,7 +85,7 @@
                                 link="{{ route('digital-marketing') }}" />
                             <x-menu-separator />
                             <x-menu-item title="Sosial Media Management : IG & Tiktok" icon="phosphor.instagram-logo"
-                                link="/list-product/digital-marketing/sosial-media-management" />
+                                link="{{ route('sosial-media-management') }}" />
                             <x-menu-item title="Video Production" icon="phosphor.video"
                                 link="/list-product/digital-marketing/video-production" />
                             <x-menu-item title="Google Ads" icon="phosphor.google-logo"
@@ -155,21 +155,20 @@
                     </x-menu-sub>
                     <x-menu-sub title="Graphic Design" icon="cui.cil-pen-nib">
                         <x-menu-item title="Digital Design" icon="cui.cil-braille"
-                            link="/list-product/graphic-design/digital-design" />
-                        <x-menu-item title="Branding" icon="cui.cil-bullhorn"
-                            link="/list-product/graphic-design/branding" />
+                            link="{{ route('digital-design') }}" />
+                        <x-menu-item title="Branding" icon="cui.cil-bullhorn" link="{{ route('branding') }}" />
                         <x-menu-item title="Product Packaging" icon="phosphor.package"
-                            link="/list-product/graphic-design/product-packaging" />
+                            link="{{ route('product-packaging') }}" />
                         <x-menu-item title="Company Profile" icon="phosphor.buildings"
-                            link="/list-product/graphic-design/company-profile" />
+                            link="{{ route('company-profile') }}" />
                         <x-menu-item title="Katalog Product" icon="phosphor.bag-simple"
-                            link="/list-product/graphic-design/katalog-product" />
+                            link="{{ route('katalog-product') }}" />
                         <x-menu-item title="Design Website" icon="phosphor.google-chrome-logo"
-                            link="/list-product/graphic-design/design-website" />
+                            link="{{ route('design-website') }}" />
                     </x-menu-sub>
                     <x-menu-sub title="Digital Marketing" icon="phosphor.storefront">
                         <x-menu-item title="Sosial Media Management : IG & Tiktok" icon="phosphor.instagram-logo"
-                            link="/list-product/digital-marketing/sosial-media-management" />
+                            link="{{ route('sosial-media-management') }}" />
                         <x-menu-item title="Video Production" icon="phosphor.video"
                             link="/list-product/digital-marketing/video-production" />
                         <x-menu-item title="Google Ads" icon="phosphor.google-logo"

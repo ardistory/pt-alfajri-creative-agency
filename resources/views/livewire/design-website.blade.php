@@ -1,9 +1,9 @@
 <div>
     <div class="mb-32 relative">
         <img src="{{ asset('assets/img/design-website-banner.png') }}" alt="">
-        <div class="absolute z-10 bottom-28 left-28">
-            <p class="text-white font-bold text-4xl underline">DESIGN WEB</p>
-            <x-button class="btn-error bg-red-900 btn-sm mt-10 rounded-none">
+        <div class="absolute z-10 bottom-5 left-5 md:bottom-28 md:left-28">
+            <p class="text-white font-bold text-xl md:text-4xl underline">DESIGN WEB</p>
+            <x-button class="btn-error bg-red-900 btn-sm mt-3 md:mt-10 rounded-none">
                 <x-slot:label>
                     <span class="underline text-white">Mulai Sekarang</span>
                 </x-slot:label>
@@ -12,11 +12,11 @@
     </div>
     <div class="flex flex-col justify-center items-center gap-20 mb-32">
         <div>
-            <p class="text-center font-semibold text-4xl text-black">
+            <p class="text-center font-semibold text-xl md:text-4xl text-black">
                 UI (User Interface) dan UX (User Experience) adalah dua konsep yang penting dalam desain website
             </p>
         </div>
-        <div class="flex text-white gap-10">
+        <div class="flex flex-col md:flex-row text-white gap-10">
             <div class="bg-red-600 rounded-lg p-6 space-y-6">
                 <p class="underline font-semibold text-4xl text-center">USER INTERFACE</p>
                 <p>
@@ -37,11 +37,11 @@
     </div>
     <div class="text-black mb-32">
         <div class="mb-10">
-            <p class="text-4xl text-center font-medium">APA SAJA FUNGSI <span
-                    class="underline font-bold text-4xl">WEBSITE?</span>
+            <p class="text-xl md:text-4xl text-center font-medium">APA SAJA FUNGSI <span
+                    class="underline font-bold text-xl md:text-4xl">WEBSITE?</span>
             </p>
         </div>
-        <div class="flex gap-20">
+        <div class="flex flex-col md:flex-row gap-6 md:gap-20">
             <div class="space-y-8">
                 <div>
                     <p class="font-bold text-lg">
@@ -106,9 +106,9 @@
     <div class="relative flex items-center justify-center">
         <img src="{{ asset('assets/img/design-website-banner2.png') }}" alt="">
         <div class="flex flex-col justify-center items-center absolute bottom-10">
-            <p class="font-semibold text-2xl font-DK text-white">
+            <p class="font-semibold text-sm md:text-2xl font-DK text-white text-center">
                 "Bersinar di dunia digital dengan desain website yang inovatif dan adaptif.”</p>
-            <x-button class="btn-error bg-red-900 btn-sm mt-10 rounded-none">
+            <x-button class="btn-error bg-red-900 btn-sm mt-3 md:mt-10 rounded-none">
                 <x-slot:label>
                     <span class="underline text-white">Mulai Sekarang</span>
                 </x-slot:label>

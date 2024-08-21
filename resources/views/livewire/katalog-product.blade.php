@@ -1,5 +1,5 @@
 <div>
-    <div class="flex gap-10 items-center mb-32">
+    <div class="flex flex-col md:flex-row gap-10 items-center mb-32">
         <div>
             <img src="{{ asset('assets/img/katalog-product-banner.png') }}" alt="">
         </div>
@@ -16,7 +16,7 @@
             </p>
         </div>
     </div>
-    <div class="flex justify-evenly gap-10 text-black mb-20">
+    <div class="flex flex-col md:flex-row justify-evenly gap-10 text-black mb-20">
         <div>
             <p class="font-medium text-4xl">KEUNGGULAN MEMILIKI</p>
             <p class="underline font-bold text-4xl">PRODUCT CATALOG</p>
@@ -32,9 +32,9 @@
     <div class="mb-20">
         <img src="{{ asset('assets/img/katalog-product-banner3.png') }}" alt="">
     </div>
-    <div class="flex gap-10 items-center">
+    <div class="flex flex-col md:flex-row gap-10 items-center">
         <div class="flex flex-col items-center max-w-[550px] flex-[2]">
-            <p class="font-DK text-2xl">
+            <p class="font-DK text-2xl text-center">
                 Transforming Ideas into Stunning Catalogs
             </p>
             <x-button class="btn-error bg-red-900 btn-sm mt-10 rounded-none">

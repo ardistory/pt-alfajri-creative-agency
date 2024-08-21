@@ -20,6 +20,7 @@ use App\Livewire\ListProduct;
 use App\Livewire\Login;
 use App\Livewire\OrderProduct;
 use App\Livewire\ProductPackaging;
+use App\Livewire\SosialMediaManagement;
 use App\Livewire\StatusOrder;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
@@ -50,6 +51,7 @@ Route::get('/product-packaging', ProductPackaging::class)->name('product-packagi
 Route::get('/company-profile', CompanyProfile::class)->name('company-profile');
 Route::get('/katalog-product', KatalogProduct::class)->name('katalog-product');
 Route::get('/design-website', DesignWebsite::class)->name('design-website');
+Route::get('/sosial-media-management', SosialMediaManagement::class)->name('sosial-media-management');
 
 Route::get('/', HomePage::class)->name('home-page');
 Route::get('/about-us', AboutUs::class)->name('about-us');

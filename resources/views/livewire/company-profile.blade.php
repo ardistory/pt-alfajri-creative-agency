@@ -2,15 +2,15 @@
     <div class="relative mb-32">
         <img src="{{ asset('assets/img/company-profile-banner.png') }}" alt="">
         <div class="absolute z-10 right-5 bottom-5">
-            <p class="underline text-white text-5xl font-bold">COMPANY PROFILE</p>
-            <x-button class="btn-error bg-red-900 btn-sm mt-10 rounded-none float-right">
+            <p class="underline text-white text-xl md:text-5xl font-bold">COMPANY PROFILE</p>
+            <x-button class="btn-error bg-red-900 btn-sm mt-3 md:mt-10 rounded-none float-right">
                 <x-slot:label>
-                    <span class="underline text-white">Hubungi Kami</span>
+                    <span class="underline text-white">Mulai Sekarang</span>
                 </x-slot:label>
             </x-button>
         </div>
     </div>
-    <div class="flex gap-10 items-center mb-32">
+    <div class="flex flex-col md:flex-row gap-10 items-center mb-32">
         <div class="max-w-[500px] space-y-10 text-black">
             <p class="font-bold text-sm">
                 <span class="font-bold text-sm">Company Profile</span> adalah gambaran umum tentang sebuah perusahaan

@@ -7,11 +7,11 @@ use Livewire\Attributes\Title;
 use Livewire\Component;
 
 #[Lazy()]
-class DesignWebsite extends Component
+class SosialMediaManagement extends Component
 {
-    #[Title('Design Website')]
+    #[Title('Sosial Media Management')]
     public function render()
     {
-        return view('livewire.design-website');
+        return view('livewire.sosial-media-management');
     }
 }

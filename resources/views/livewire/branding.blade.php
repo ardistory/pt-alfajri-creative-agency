@@ -1,7 +1,7 @@
 <div>
     <div class="text-black flex flex-col gap-16 items-center mt-16 mb-32">
         <p class="font-medium text-5xl">APA ITU <span class="font-bold underline">BRANDING?</span></p>
-        <p class="font-medium text-md md:text-2xl max-w-[900px]">
+        <p class="font-medium text-md md:text-2xl max-w-[900px] text-center">
             Branding adalah proses yang dirancang untuk menciptakan citra atau identitas yang konsisten dan mudah
             dikenali bagi sebuah produk, layanan, perusahaan, atau organisasi. Tujuan utamanya adalah untuk membedakan
             entitas tersebut dari pesaingnya di pasar, menciptakan kesan positif di antara konsumen, dan membangun
@@ -80,7 +80,8 @@
         </div>
     </div>
     <div class="flex flex-col items-center justify-center mb-32">
-        <p class="font-DK text-3xl font-semibold">"Transforming Visions into Iconic Brands, Shaping the Future of
+        <p class="font-DK text-3xl font-semibold text-center">"Transforming Visions into Iconic Brands, Shaping the
+            Future of
             Success"</p>
         <x-button
             class="w-1/2 md:w-1/6 mt-20 py-2 btn-error bg-red-700 dark:bg-primary dark:btn-primary text-white dark:text-black rounded-none"
