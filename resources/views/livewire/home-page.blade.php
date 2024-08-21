@@ -20,18 +20,15 @@
             AGENCY</span>
         <div class="mt-5 md:mt-10 flex gap-5 md:gap-20">
             <div class="flex flex-col items-center gap-4">
-                <x-icon name="phosphor.shield-check"
-                    class="w-20 h-20 md:w-36 md:h-36 bg-white text-red-700 p-5 rounded-full" />
+                <img class="w-[150px] h-auto" src="{{ asset('assets/icon/trust-icon.png') }}" alt="">
                 <span class="text-white text-2xl">TRUST</span>
             </div>
             <div class="flex flex-col items-center gap-4">
-                <x-icon name="phosphor.plant"
-                    class="w-20 h-20 md:w-36 md:h-36 bg-white text-red-700 p-5 rounded-full" />
+                <img class="w-[150px] h-auto" src="{{ asset('assets/icon/growth-icon.png') }}" alt="">
                 <span class="text-white text-2xl">GROWTH</span>
             </div>
             <div class="flex flex-col items-center gap-4">
-                <x-icon name="phosphor.brain"
-                    class="w-20 h-20 md:w-36 md:h-36 bg-white text-red-700 p-5 rounded-full" />
+                <img class="w-[150px] h-auto" src="{{ asset('assets/icon/creative-icon.png') }}" alt="">
                 <span class="text-white text-2xl">CREATIVITY</span>
             </div>
         </div>
