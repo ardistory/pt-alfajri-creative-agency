@@ -8,6 +8,7 @@ use App\Livewire\Branding;
 use App\Livewire\CompanyProfile;
 use App\Livewire\Contact;
 use App\Livewire\Dashboard;
+use App\Livewire\DesignWebsite;
 use App\Livewire\DigitalDesign;
 use App\Livewire\DigitalMarketing;
 use App\Livewire\Fallback;
@@ -48,6 +49,7 @@ Route::get('/branding', Branding::class)->name('branding');
 Route::get('/product-packaging', ProductPackaging::class)->name('product-packaging');
 Route::get('/company-profile', CompanyProfile::class)->name('company-profile');
 Route::get('/katalog-product', KatalogProduct::class)->name('katalog-product');
+Route::get('/design-website', DesignWebsite::class)->name('design-website');
 
 Route::get('/', HomePage::class)->name('home-page');
 Route::get('/about-us', AboutUs::class)->name('about-us');
