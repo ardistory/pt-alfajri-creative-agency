@@ -5,11 +5,11 @@ namespace App\Livewire;
 use Livewire\Attributes\Title;
 use Livewire\Component;
 
-class DigitalDesign extends Component
+class Branding extends Component
 {
-    #[Title('Digital Design')]
+    #[Title('Branding')]
     public function render()
     {
-        return view('livewire.digital-design');
+        return view('livewire.branding');
     }
 }

@@ -4,6 +4,7 @@ use App\Http\Middleware\Authenticate;
 use App\Http\Middleware\RedirectIfAuthenticated;
 use App\Livewire\AboutUs;
 use App\Livewire\Advertising;
+use App\Livewire\Branding;
 use App\Livewire\Contact;
 use App\Livewire\Dashboard;
 use App\Livewire\DigitalDesign;
@@ -40,6 +41,7 @@ Route::get('/digital-marketing', DigitalMarketing::class)->name('digital-marketi
 
 Route::get('/list-product/{category}/{subcategory}', ListProduct::class);
 Route::get('/digital-design', DigitalDesign::class)->name('digital-design');
+Route::get('/branding', Branding::class)->name('branding');
 
 Route::get('/', HomePage::class)->name('home-page');
 Route::get('/about-us', AboutUs::class)->name('about-us');

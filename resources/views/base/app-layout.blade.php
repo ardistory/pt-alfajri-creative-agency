@@ -70,8 +70,7 @@
                             <x-menu-separator />
                             <x-menu-item title="Digital Design" icon="cui.cil-braille"
                                 link="{{ route('digital-design') }}" />
-                            <x-menu-item title="Branding" icon="cui.cil-bullhorn"
-                                link="/list-product/graphic-design/branding" />
+                            <x-menu-item title="Branding" icon="cui.cil-bullhorn" link="{{ route('branding') }}" />
                             <x-menu-item title="Product Packaging" icon="phosphor.package"
                                 link="/list-product/graphic-design/product-packaging" />
                             <x-menu-item title="Company Profile" icon="phosphor.buildings"
