@@ -16,6 +16,7 @@ use App\Livewire\HomePage;
 use App\Livewire\ListProduct;
 use App\Livewire\Login;
 use App\Livewire\OrderProduct;
+use App\Livewire\ProductPackaging;
 use App\Livewire\StatusOrder;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
@@ -42,6 +43,7 @@ Route::get('/digital-marketing', DigitalMarketing::class)->name('digital-marketi
 Route::get('/list-product/{category}/{subcategory}', ListProduct::class);
 Route::get('/digital-design', DigitalDesign::class)->name('digital-design');
 Route::get('/branding', Branding::class)->name('branding');
+Route::get('/product-packaging', ProductPackaging::class)->name('product-packaging');
 
 Route::get('/', HomePage::class)->name('home-page');
 Route::get('/about-us', AboutUs::class)->name('about-us');

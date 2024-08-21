@@ -72,7 +72,7 @@
                                 link="{{ route('digital-design') }}" />
                             <x-menu-item title="Branding" icon="cui.cil-bullhorn" link="{{ route('branding') }}" />
                             <x-menu-item title="Product Packaging" icon="phosphor.package"
-                                link="/list-product/graphic-design/product-packaging" />
+                                link="{{ route('product-packaging') }}" />
                             <x-menu-item title="Company Profile" icon="phosphor.buildings"
                                 link="/list-product/graphic-design/company-profile" />
                             <x-menu-item title="Katalog Product" icon="phosphor.bag-simple"
