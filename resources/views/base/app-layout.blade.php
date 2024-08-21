@@ -69,7 +69,7 @@
                                 link="{{ route('graphic-design') }}" />
                             <x-menu-separator />
                             <x-menu-item title="Digital Design" icon="cui.cil-braille"
-                                link="/list-product/graphic-design/digital-design" />
+                                link="{{ route('digital-design') }}" />
                             <x-menu-item title="Branding" icon="cui.cil-bullhorn"
                                 link="/list-product/graphic-design/branding" />
                             <x-menu-item title="Product Packaging" icon="phosphor.package"

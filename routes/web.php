@@ -6,6 +6,7 @@ use App\Livewire\AboutUs;
 use App\Livewire\Advertising;
 use App\Livewire\Contact;
 use App\Livewire\Dashboard;
+use App\Livewire\DigitalDesign;
 use App\Livewire\DigitalMarketing;
 use App\Livewire\Fallback;
 use App\Livewire\Faq;
@@ -38,6 +39,7 @@ Route::get('/graphic-design', GraphicDesign::class)->name('graphic-design');
 Route::get('/digital-marketing', DigitalMarketing::class)->name('digital-marketing');
 
 Route::get('/list-product/{category}/{subcategory}', ListProduct::class);
+Route::get('/digital-design', DigitalDesign::class)->name('digital-design');
 
 Route::get('/', HomePage::class)->name('home-page');
 Route::get('/about-us', AboutUs::class)->name('about-us');
