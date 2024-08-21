@@ -87,7 +87,7 @@
                             <x-menu-item title="Sosial Media Management : IG & Tiktok" icon="phosphor.instagram-logo"
                                 link="{{ route('sosial-media-management') }}" />
                             <x-menu-item title="Video Production" icon="phosphor.video"
-                                link="/list-product/digital-marketing/video-production" />
+                                link="{{ route('video-production') }}" />
                             <x-menu-item title="Google Ads" icon="phosphor.google-logo"
                                 link="/list-product/digital-marketing/google-ads" />
                         </div>
@@ -170,7 +170,7 @@
                         <x-menu-item title="Sosial Media Management : IG & Tiktok" icon="phosphor.instagram-logo"
                             link="{{ route('sosial-media-management') }}" />
                         <x-menu-item title="Video Production" icon="phosphor.video"
-                            link="/list-product/digital-marketing/video-production" />
+                            link="{{ route('video-production') }}" />
                         <x-menu-item title="Google Ads" icon="phosphor.google-logo"
                             link="/list-product/digital-marketing/google-ads" />
                     </x-menu-sub>
