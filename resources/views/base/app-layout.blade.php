@@ -76,7 +76,7 @@
                             <x-menu-item title="Company Profile" icon="phosphor.buildings"
                                 link="{{ route('company-profile') }}" />
                             <x-menu-item title="Katalog Product" icon="phosphor.bag-simple"
-                                link="/list-product/graphic-design/katalog-product" />
+                                link="{{ route('katalog-product') }}" />
                             <x-menu-item title="Design Website" icon="phosphor.google-chrome-logo"
                                 link="/list-product/graphic-design/design-website" />
                         </div>

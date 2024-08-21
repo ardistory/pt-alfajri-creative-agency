@@ -14,6 +14,7 @@ use App\Livewire\Fallback;
 use App\Livewire\Faq;
 use App\Livewire\GraphicDesign;
 use App\Livewire\HomePage;
+use App\Livewire\KatalogProduct;
 use App\Livewire\ListProduct;
 use App\Livewire\Login;
 use App\Livewire\OrderProduct;
@@ -46,6 +47,7 @@ Route::get('/digital-design', DigitalDesign::class)->name('digital-design');
 Route::get('/branding', Branding::class)->name('branding');
 Route::get('/product-packaging', ProductPackaging::class)->name('product-packaging');
 Route::get('/company-profile', CompanyProfile::class)->name('company-profile');
+Route::get('/katalog-product', KatalogProduct::class)->name('katalog-product');
 
 Route::get('/', HomePage::class)->name('home-page');
 Route::get('/about-us', AboutUs::class)->name('about-us');
