@@ -89,7 +89,7 @@
                             <x-menu-item title="Video Production" icon="phosphor.video"
                                 link="{{ route('video-production') }}" />
                             <x-menu-item title="Google Ads" icon="phosphor.google-logo"
-                                link="/list-product/digital-marketing/google-ads" />
+                                link="{{ route('google-ads') }}" />
                         </div>
                     </div>
                 </x-dropdown>
@@ -172,7 +172,7 @@
                         <x-menu-item title="Video Production" icon="phosphor.video"
                             link="{{ route('video-production') }}" />
                         <x-menu-item title="Google Ads" icon="phosphor.google-logo"
-                            link="/list-product/digital-marketing/google-ads" />
+                            link="{{ route('google-ads') }}" />
                     </x-menu-sub>
                     <x-menu-separator />
                     <x-menu-item title="Tentang Kami" icon="phosphor.users-four" link="{{ route('about-us') }}" />

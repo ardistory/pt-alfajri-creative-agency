@@ -13,6 +13,7 @@ use App\Livewire\DigitalDesign;
 use App\Livewire\DigitalMarketing;
 use App\Livewire\Fallback;
 use App\Livewire\Faq;
+use App\Livewire\GoogleAds;
 use App\Livewire\GraphicDesign;
 use App\Livewire\HomePage;
 use App\Livewire\KatalogProduct;
@@ -54,6 +55,7 @@ Route::get('/katalog-product', KatalogProduct::class)->name('katalog-product');
 Route::get('/design-website', DesignWebsite::class)->name('design-website');
 Route::get('/sosial-media-management', SosialMediaManagement::class)->name('sosial-media-management');
 Route::get('/video-production', VideoProduction::class)->name('video-production');
+Route::get('/google-ads', GoogleAds::class)->name('google-ads');
 
 Route::get('/', HomePage::class)->name('home-page');
 Route::get('/about-us', AboutUs::class)->name('about-us');
