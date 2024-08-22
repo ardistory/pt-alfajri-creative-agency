@@ -231,7 +231,7 @@
 
                             <p class="text-white text-xs mt-3 max-w-56">
                                 Jalan Lembang Baru II No. 26, RT 03 / RW 09,
-                                Sudirman
+                                Sudimara
                                 Barat,
                                 Ciledug, Kota
                                 Tangerang, 15151.</p>
@@ -275,19 +275,22 @@
                             <div class="flex gap-2">
                                 <x-button icon="phosphor.instagram-logo"
                                     class="btn-circle btn-sm text-red-800 dark:text-white dark:shadow-lg dark:shadow-white"
-                                    tooltip-bottom="Instagram" />
+                                    tooltip-bottom="Instagram"
+                                    link="https://www.instagram.com/alfajri_creative?igsh=cG0xejdoa2N4bHoy" external />
                                 <x-button icon="phosphor.tiktok-logo"
                                     class="btn-circle btn-sm text-red-800 dark:text-white dark:shadow-lg dark:shadow-white"
-                                    tooltip-bottom="Tiktok" />
+                                    tooltip-bottom="Tiktok"
+                                    link="https://www.tiktok.com/@alfajri_creative?_t=8nXQaXxIZQv&_r=1" external />
                                 <x-button icon="phosphor.shopping-bag"
                                     class="btn-circle btn-sm text-red-800 dark:text-white dark:shadow-lg dark:shadow-white"
-                                    tooltip-bottom="Shopee" />
+                                    tooltip-bottom="Shopee" link="https://shopee.co.id/alfajriprinting" external />
                                 <x-button icon="phosphor.tote"
                                     class="btn-circle btn-sm text-red-800 dark:text-white dark:shadow-lg dark:shadow-white"
-                                    tooltip-bottom="Tokopedia" />
+                                    tooltip-bottom="Tokopedia" link="https://tokopedia.link/MOlefHk8KKb" external />
                                 <x-button icon="cui.cil-location-pin"
                                     class="btn-circle btn-sm text-red-800 dark:text-white dark:shadow-lg dark:shadow-white"
-                                    tooltip-bottom="Location" />
+                                    tooltip-bottom="Location" link="https://maps.app.goo.gl/un9S66B5hWiFSqrHA"
+                                    external />
                             </div>
                         </div>
                     </div>

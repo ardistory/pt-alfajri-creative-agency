@@ -1,4 +1,4 @@
-<div class="flex justify-center">
+<div class="flex justify-center min-h-screen">
     <div class="max-w-4xl mt-10">
         <span class="text-red-600 text-xl font-bold">
             FREQUENTLY ASKED QUESTION (FAQ)
@@ -7,11 +7,11 @@
         <div x-data="{ isKetentuan: true }" class="grid grid-cols-5 mt-10 gap-5">
             <div class="flex flex-col gap-2 items-start col-span-1">
                 <button x-on:click="isKetentuan=true" :class="isKetentuan ? 'text-zinc-500' : ''"
-                    class="text-xs md:text-base font-bold">
+                    class="text-xs md:text-xl font-bold">
                     Ketentuan File
                 </button>
                 <button x-on:click="isKetentuan=false" :class="!isKetentuan ? 'text-zinc-500' : ''"
-                    class="text-xs md:text-base font-bold">
+                    class="text-xs md:text-xl font-bold">
                     Pesanan
                 </button>
             </div>

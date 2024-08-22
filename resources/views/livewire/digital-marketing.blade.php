@@ -1,10 +1,8 @@
 <div>
     <div class="grid grid-cols-7 mt-14 gap-5">
-        <x-card class="col-span-3">
-            <x-slot:figure>
-                <img src="{{ asset('assets/img/digital-marketing-ilustrasi.svg') }}" class="rounded-2xl" />
-            </x-slot:figure>
-        </x-card>
+        <div class="col-span-3">
+            <img src="{{ asset('assets/img/digital-marketing-ilustrasi.png') }}" class="rounded-2xl" />
+        </div>
         <div class="col-span-4 flex flex-col justify-center">
             <span class="inline-block text-4xl font-bold">
                 APA ITU <span class="underline">DIGITAL MARKETING?</span>
@@ -22,7 +20,9 @@
                 dunia digital yang terus berkembang.
             </span>
             <div class="flex justify-center">
-                <x-button class="btn-error bg-red-900 btn-sm mt-10 rounded-none">
+                <x-button class="btn-error bg-red-900 btn-sm mt-10 rounded-none"
+                    link="https://api.whatsapp.com/send/?phone=6282123131995&text&type=phone_number&app_absent=0"
+                    external>
                     <x-slot:label>
                         <span class="underline text-white">Hubungi Kami</span>
                     </x-slot:label>
@@ -35,17 +35,15 @@
     </div>
     <div class="mt-20 grid grid-cols-3 grid-rows-3 gap-7">
         <div class="flex flex-col items-center gap-4 col-span-1 row-span-1">
-            <x-icon name="phosphor.instagram-logo"
-                class="w-20 h-20 md:w-24 md:h-24 bg-red-700 text-white p-2 rounded-full" />
+            <img class="w-[100px] h-auto" src="{{ asset('assets/icon/digital-marketing-icon.png') }}" alt="">
             <span class="text-black dark:text-white text-2xl font-bold">Sosial Media Management</span>
         </div>
         <div class="flex flex-col items-center gap-4 col-span-1 row-span-1">
-            <x-icon name="phosphor.video" class="w-20 h-20 md:w-24 md:h-24 bg-red-700 text-white p-2 rounded-full" />
+            <img class="w-[100px] h-auto" src="{{ asset('assets/icon/digital-marketing-icon2.png') }}" alt="">
             <span class="text-black dark:text-white text-2xl font-bold">Video Production</span>
         </div>
         <div class="flex flex-col items-center gap-4 col-span-1 row-span-1">
-            <x-icon name="phosphor.google-logo"
-                class="w-20 h-20 md:w-24 md:h-24 bg-red-700 text-white p-2 rounded-full" />
+            <img class="w-[100px] h-auto" src="{{ asset('assets/icon/digital-marketing-icon3.png') }}" alt="">
             <span class="text-black dark:text-white text-2xl font-bold">Google Ads</span>
         </div>
     </div>

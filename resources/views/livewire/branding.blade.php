@@ -85,7 +85,8 @@
             Success"</p>
         <x-button
             class="w-1/2 md:w-1/6 mt-20 py-2 btn-error bg-red-700 dark:bg-primary dark:btn-primary text-white dark:text-black rounded-none"
-            type="submit" spinner="checkOrder">
+            type="submit" spinner="checkOrder"
+            link="https://api.whatsapp.com/send/?phone=6282123131995&text&type=phone_number&app_absent=0" external>
             <x-slot:label>
                 <span class="underline">Hubungi Kami</span>
             </x-slot:label>

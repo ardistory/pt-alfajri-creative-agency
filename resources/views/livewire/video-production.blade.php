@@ -54,7 +54,8 @@
                     Where Your Story Comes To Life.
                 </p>
             </div>
-            <x-button class="btn-error bg-red-900 btn-sm mt-10 rounded-none">
+            <x-button class="btn-error bg-red-900 btn-sm mt-10 rounded-none"
+                link="https://api.whatsapp.com/send/?phone=6282123131995&text&type=phone_number&app_absent=0" external>
                 <x-slot:label>
                     <span class="underline text-white">Hubungi Kami</span>
                 </x-slot:label>

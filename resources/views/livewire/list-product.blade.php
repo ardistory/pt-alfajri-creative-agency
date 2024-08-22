@@ -12,7 +12,8 @@
                 <div class="text-xs mt-3">
                     {{ $product->description }}
                 </div>
-                <a href="#" class="underline text-red-700 font-bold text-sm">Hubungi Kami</a>
+                <a href="https://api.whatsapp.com/send/?phone=6282123131995&text={{ $product->name }}&type=phone_number&app_absent=0"
+                    class="underline text-red-700 font-bold text-sm">Hubungi Kami</a>
             </div>
         @endforeach
     </div>
