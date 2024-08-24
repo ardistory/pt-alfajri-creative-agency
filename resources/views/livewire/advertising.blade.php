@@ -8,15 +8,17 @@
                 APA ITU <span class="underline">ADVERTISING?</span>
             </span>
             <span class="inline-block mt-4 font-semibold">
-                Advertising adalah suatu bentuk komunikasi yang digunakan untuk mempromosikan atau mengiklankan produk,
-                layanan, atau ide melalui berbagai media. Tujuan utama dari advertising adalah untuk menarik perhatian,
-                mempengaruhi perilaku, dan memotivasi untuk membeli produk atau menggunakan layanan yang diiklankan.
+                Advertising adalah bentuk komunikasi strategis yang dirancang untuk mempromosikan produk, layanan, atau
+                ide melalui berbagai media. Di perusahaan kami, kami mengkhususkan diri dalam menciptakan iklan yang
+                menarik dan efektif untuk menarik perhatian audiens, mempengaruhi perilaku mereka, dan memotivasi mereka
+                untuk membeli atau menggunakan produk dan layanan yang kami tawarkan.
             </span>
             <span class="inline-block mt-4 font-semibold">
-                Proses advertising melibatkan pembuatan pesan atau iklan yang menarik, strategi penempatan iklan di
-                media
-                yang tepat. Media yang digunakan dalam advertising dapat beragam, mulai dari cetak, televisi, hingga
-                platform digital seperti internet dan media sosial.
+                Kami mengembangkan pesan iklan yang menonjol dan menerapkan strategi penempatan iklan yang optimal di
+                berbagai media, termasuk cetak, televisi, serta platform digital seperti internet dan media sosial.
+                Dengan keahlian kami dalam advertising, kami memastikan bahwa setiap kampanye dirancang untuk mencapai
+                dampak maksimal dan hasil yang terukur, membantu bisnis Anda menjangkau audiens yang tepat dan
+                memaksimalkan potensi pertumbuhan.
             </span>
             <div class="flex justify-center">
                 <x-button class="btn-error bg-red-900 btn-sm mt-10 rounded-none"

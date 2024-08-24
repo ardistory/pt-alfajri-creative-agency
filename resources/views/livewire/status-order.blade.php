@@ -1,4 +1,4 @@
-<div class="mt-5 mb-16 flex flex-col justify-center items-center">
+<div class="flex flex-col justify-center items-center min-h-svh">
     <div class="@if ($isValid) hidden @else @endif">
         <p class="text-red-600 text-center dark:text-white text-xl font-bold">
             STATUS ORDER</p>

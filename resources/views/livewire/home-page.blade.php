@@ -1,4 +1,6 @@
-<div>
+<div class="relative">
+    <img class="w-auto h-[85%] absolute top-[10%] left-[50%] translate-x-[-50%]"
+        src="{{ asset('assets/img/paper-airplane.png') }}">
     <div class="mt-4">
         <x-carousel :slides="$slides" without-indicators class="!h-[450px]">
             @scope('content', $slide)
@@ -9,13 +11,13 @@
             @endscope
         </x-carousel>
     </div>
-    <div class="flex justify-center mt-10 md:mt-20">
+    <div class="flex justify-center mt-10 md:mt-[5%] z-10">
         <span class="text-white text-4xl font-bold tracking-wide">
             We Deliver Your
             <span class="font-DK">Story</span>
         </span>
     </div>
-    <div class="flex flex-col justify-center items-center mt-40 md:mt-72 squares">
+    <div class="flex flex-col justify-center items-center mt-40 md:mt-[20%] z-50">
         <span class="text-white text-xl md:text-4xl font-bold tracking-wide z-[1]">VALUE OF ALFAJRI CREATIVE
             AGENCY</span>
         <div class="mt-5 md:mt-10 flex gap-5 md:gap-20">
@@ -75,9 +77,9 @@
             </x-slot:actions>
         </x-card>
     </div>
-    <div class="h-screen flex flex-col justify-center items-center gap-5 relative">
+    <div class="h-screen flex flex-col justify-center items-center gap-5 relative -translate-y-[15%]">
         <span
-            class="max-w-[900px] text-white dark:text-amber-200 text-2xl italic tracking-wide z-10 before:md:w-[450px] before:md:h-[450px] before:w-[400px] before:h-[400px] before:bg-orange-800/60 before:dark:bg-zinc-600/40 before:-z-[1] before:absolute before:rounded-full before:md:-translate-x-[90%] before:md:-translate-y-[30%] before:-translate-x-[80%] before:-translate-y-[15%]">
+            class="max-w-[900px] text-white dark:text-amber-200 text-2xl italic tracking-wide z-10 before:md:w-[450px] before:left-0 before:md:h-[450px] before:w-[400px] before:h-[400px] before:bg-orange-800/60 before:dark:bg-zinc-600/40 before:-z-[1] before:absolute before:rounded-full before:md:-translate-x-[90%] before:md:-translate-y-[30%] before:-translate-x-[80%] before:-translate-y-[15%]">
             In the journey of life, we encounter many things that shape our story. Each experience holds intrinsic
             value, teaching us lessons that guide our decisions and shape our perspectives. Every decision reflects our
             values-integrity, growth, and creativity-building a narrative that resonates with others.

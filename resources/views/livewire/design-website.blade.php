@@ -12,12 +12,12 @@
     </div>
     <div class="flex flex-col justify-center items-center gap-20 mb-32">
         <div>
-            <p class="text-center font-semibold text-xl md:text-4xl text-black">
+            <p class="text-center font-semibold text-xl md:text-4xl text-black dark:text-white">
                 UI (User Interface) dan UX (User Experience) adalah dua konsep yang penting dalam desain website
             </p>
         </div>
         <div class="flex flex-col md:flex-row text-white gap-10">
-            <div class="bg-red-600 rounded-lg p-6 space-y-6">
+            <div class="bg-red-600 dark:bg-red-400 rounded-lg p-6 space-y-6">
                 <p class="underline font-semibold text-4xl text-center">USER INTERFACE</p>
                 <p>
                     UI singkatan dari User Interface (Antarmuka Pengguna). Ul merujuk pada titik interaksi antara
@@ -25,7 +25,7 @@
                     sesuatu yang pengguna lihat dan interaksikan pada layar saat menggunakan sebuah aplikasi, website,
                     atau perangkat.</p>
             </div>
-            <div class="bg-red-600 rounded-lg p-6 space-y-6">
+            <div class="bg-red-600 dark:bg-red-400 rounded-lg p-6 space-y-6">
                 <p class="underline font-semibold text-4xl text-center">USER INTERFACE</p>
                 <p>
                     UX adalah singkatan dari User Experience (Pengalaman Pengguna). Ini merujuk pada keseluruhan
@@ -35,7 +35,7 @@
             </div>
         </div>
     </div>
-    <div class="text-black mb-32">
+    <div class="text-black dark:text-white mb-32">
         <div class="mb-10">
             <p class="text-xl md:text-4xl text-center font-medium">APA SAJA FUNGSI <span
                     class="underline font-bold text-xl md:text-4xl">WEBSITE?</span>

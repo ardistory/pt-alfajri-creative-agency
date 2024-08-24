@@ -1,8 +1,8 @@
 <div>
     <div class="flex flex-col md:flex-row text-black gap-20 mb-32">
-        <div class="flex flex-col gap-8 flex-[1]">
+        <div class="flex gap-8 flex-[1] justify-center items-center">
             <div>
-                <p class="font-medium text-4xl">
+                <p class="font-medium text-4xl text-start">
                     APA ITU
                 </p>
                 <p class="underline text-4xl font-bold">
@@ -11,12 +11,12 @@
                 <p class="underline text-4xl font-bold">
                     MANAGEMENT?
                 </p>
-            </div>
-            <div>
-                <p class="max-w-[600px] font-medium">
-                    Social media management adalah proses merencanakan, melaksanakan, dan mengelola strategi pemasaran
+                <p class="max-w-[600px] font-medium mt-10">
+                    Social media management adalah proses merencanakan, melaksanakan, dan mengelola strategi
+                    pemasaran
                     serta interaksi di berbagai platform media sosial. Melibatkan pengelolaan konten yang diposting,
-                    seperti teks, gambar, dan video, serta berinteraksi aktif dengan pengikut dan audiens. Tujuan utama
+                    seperti teks, gambar, dan video, serta berinteraksi aktif dengan pengikut dan audiens. Tujuan
+                    utama
                     dari social media management adalah untuk membangun hubungan yang positif dengan audiens,
                     meningkatkan kesadaran brand, dan meningkatkan keterlibatan pengguna untuk menghasilkan dampak
                     positif terhadap bisnis, baik dalam hal pertumbuhan penjualan, pemahaman brand, atau dukungan

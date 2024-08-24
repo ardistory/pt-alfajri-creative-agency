@@ -4,19 +4,19 @@
             <img src="{{ asset('assets/img/katalog-product-banner.png') }}" alt="">
         </div>
         <div class="space-y-10">
-            <p class="font-medium text-sm">
+            <p class="font-medium text-lg">
                 <span class="font-bold">Product Catalog</span> merupakan kumpulan informasi yang lengkap tentang produk
                 atau layanan yang ditawarkan
                 oleh sebuah perusahaan. Biasanya, product catalog berbentuk dokumen atau publikasi yang berisi
                 deskripsi, spesifikasi, fitur, dan gambar produk secara detail.
             </p>
-            <p class="font-medium text-sm">
+            <p class="font-medium text-lg">
                 Tujuan utama dari product catalog adalah untuk mempermudah calon konsumen dalam menelusuri dan memahami
                 berbagai produk atau layanan yang tersedia dari perusahaan tersebut.
             </p>
         </div>
     </div>
-    <div class="flex flex-col md:flex-row justify-evenly gap-10 text-black mb-20">
+    <div class="flex flex-col md:flex-row justify-evenly gap-10 text-black dark:text-white mb-20">
         <div>
             <p class="font-medium text-4xl">KEUNGGULAN MEMILIKI</p>
             <p class="underline font-bold text-4xl">PRODUCT CATALOG</p>

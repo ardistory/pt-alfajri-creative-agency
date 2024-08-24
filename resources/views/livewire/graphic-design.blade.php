@@ -8,15 +8,16 @@
                 APA ITU <span class="underline">GRAPHIC DESIGN?</span>
             </span>
             <span class="inline-block mt-4 font-semibold">
-                Graphic design adalah proses menciptakan visual dan komunikasi dengan menggunakan elemen-elemen grafis
-                seperti gambar, teks, dan warna. Tujuan utama dari graphic design adalah untuk menyampaikan pesan atau
-                informasi secara visual dengan cara yang menarik dan efektif.
+                Graphic design adalah proses menciptakan elemen visual yang menarik dan efektif, seperti gambar, teks,
+                dan warna, untuk menyampaikan pesan dan informasi. Di Alfajri, graphic design tidak hanya bertujuan
+                untuk menyampaikan pesan secara visual, tetapi juga untuk membangun identitas merek yang kuat,
+                memvisualisasikan ide-ide kompleks, dan memberikan pengalaman visual yang memikat bagi audiens.
             </span>
             <span class="inline-block mt-4 font-semibold">
-                Graphic design juga berperan dalam membangun identitas merek, memvisualisasikan ide-ide kompleks, dan
-                menyediakan pengalaman visual yang memikat bagi pengguna atau audiens. Dengan adanya kemajuan teknologi,
-                bidang graphic design juga terus berkembang dan mengintegrasikan teknologi digital dalam proses
-                desainnya.
+                Dengan memanfaatkan teknologi terbaru dan pendekatan inovatif, kami memastikan bahwa setiap desain kami
+                mampu menarik perhatian dan memenuhi kebutuhan komunikasi visual klien. Bergabunglah dengan kami dan
+                lihat bagaimana graphic design dapat memperkuat merek Anda dan mencapai tujuan bisnis Anda dengan cara
+                yang menarik dan profesional.
             </span>
             <div class="flex justify-center">
                 <x-button class="btn-error bg-red-900 btn-sm mt-10 rounded-none"

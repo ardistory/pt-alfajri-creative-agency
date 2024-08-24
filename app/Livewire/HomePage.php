@@ -25,13 +25,13 @@ class HomePage extends Component
             [
                 'image' => '/assets/img/graphic-design-banner.png',
                 'title' => 'GRAPHIC DESIGN',
-                'description' => 'Kami mengkomunikasikan pesan untuk mempromosikan produk dan layanan. Dengan menggunakan STORY yang relevan, dapat membangun ikatan emosional dengan konsumen yang potensial.',
+                'description' => 'Kami memahami setiap desain memiliki tujuan untuk mengkomunikasikan STORY yang mendalam melalui gambar, grafik, dan layout.',
                 'url' => '/graphic-design'
             ],
             [
                 'image' => '/assets/img/digital-marketing-banner.png',
                 'title' => 'DIGITAL MARKETING',
-                'description' => 'Kami mengkomunikasikan pesan untuk mempromosikan produk dan layanan. Dengan menggunakan STORY yang relevan, dapat membangun ikatan emosional dengan konsumen yang potensial.',
+                'description' => 'Kami memanfaatkan platform digital untuk membangun STORY branding yang menarik. Melalui konten visual, naratif, dan strategi pemasaran.',
                 'url' => '/digital-marketing'
             ]
         ];

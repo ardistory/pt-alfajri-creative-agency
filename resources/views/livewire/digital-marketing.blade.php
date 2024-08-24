@@ -8,16 +8,17 @@
                 APA ITU <span class="underline">DIGITAL MARKETING?</span>
             </span>
             <span class="inline-block mt-4 font-semibold">
-                Digital marketing adalah pemasaran yang menggunakan platform dan teknologi digital. Mencakup berbagai
-                strategi dan taktik untuk menghubungi dan berinteraksi dengan audiens target secara online, sehingga
-                menciptakan kesadaran merek, mempromosikan produk atau layanan, dan menghasilkan penjualan atau
-                konversi.
+                Digital marketing adalah solusi pemasaran modern yang memanfaatkan platform dan teknologi digital untuk
+                menjangkau audiens target secara online. Di Alfajri, kami mengimplementasikan berbagai strategi dan
+                taktik digital untuk menciptakan kesadaran merek, mempromosikan produk atau layanan, dan meningkatkan
+                penjualan.
             </span>
             <span class="inline-block mt-4 font-semibold">
-                Digital marketing memanfaatkan data dan analisis untuk memahami perilaku konsumen dan mengukur
-                keberhasilan kampanye secara lebih akurat dibandingkan dengan metode pemasaran tradisional. Hal ini
-                memungkinkan perusahaan atau organisasi untuk lebih terlibat dan berinteraksi dengan audiens mereka di
-                dunia digital yang terus berkembang.
+                Kami menggunakan data dan analisis terkini untuk memahami perilaku konsumen dan mengukur keberhasilan
+                kampanye dengan presisi tinggi. Pendekatan kami memungkinkan perusahaan untuk terhubung secara lebih
+                mendalam dan efektif dengan audiens mereka di dunia digital yang terus berkembang. Dengan menggunakan
+                layanan digital marketing kami, Anda akan merasakan bagaimana strategi yang tepat dapat meningkatkan
+                visibilitas dan pertumbuhan bisnis Anda dengan cara yang inovatif dan terukur.
             </span>
             <div class="flex justify-center">
                 <x-button class="btn-error bg-red-900 btn-sm mt-10 rounded-none"

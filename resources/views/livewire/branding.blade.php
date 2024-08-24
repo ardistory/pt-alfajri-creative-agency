@@ -1,5 +1,5 @@
 <div>
-    <div class="text-black flex flex-col gap-16 items-center mt-16 mb-32">
+    <div class="text-black dark:text-white flex flex-col gap-16 items-center mt-16 mb-32">
         <p class="font-medium text-5xl">APA ITU <span class="font-bold underline">BRANDING?</span></p>
         <p class="font-medium text-md md:text-2xl max-w-[900px] text-center">
             Branding adalah proses yang dirancang untuk menciptakan citra atau identitas yang konsisten dan mudah
@@ -10,7 +10,7 @@
             target pasar mereka.</p>
     </div>
     <div class="mt-10 mb-40">
-        <div class="flex flex-col md:flex-row gap-10 text-black">
+        <div class="flex flex-col md:flex-row gap-10 text-black dark:text-white">
             <div class="text-5xl">
                 <p class="font-medium text-start md:text-end">APA SAJA MANFAAT</p>
                 <p class="underline font-bold text-starts md:text-end">BRANDING?</p>

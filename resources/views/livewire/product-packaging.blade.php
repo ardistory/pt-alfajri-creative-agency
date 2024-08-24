@@ -1,5 +1,5 @@
 <div>
-    <div class="text-black flex flex-col gap-16 items-center mt-16 mb-44">
+    <div class="text-black dark:text-white flex flex-col gap-16 items-center justify-center mt-16 mb-44">
         <p class="font-medium text-5xl">APA ITU <span class="font-bold underline">PACKAGING?</span></p>
         <p class="font-medium text-md md:text-2xl max-w-[900px]">
             Packaging adalah pada bagian luar produk yang memiliki fungsi lebih dari sekadar wadah, termasuk
@@ -8,9 +8,9 @@
             efektif tidak hanya menjaga produk selama penyimpanan dan transportasi tetapi juga menarik pembeli potensial
             melalui daya tarik visual dan label informatif.</p>
     </div>
-    <div class="flex gap-20 text-black justify-end mb-[10%]">
+    <div class="flex gap-20 text-black dark:text-white justify-end mb-64">
         <div class="absolute left-0 -z-10">
-            <img class="opacity-25 md:opacity-100 w-96" src="{{ asset('assets/img/product-packaging-banner3.png') }}"
+            <img class="opacity-25 md:opacity-100" src="{{ asset('assets/img/product-packaging-banner3.png') }}"
                 alt="">
         </div>
         <div class="max-w-[800px] z-10">
@@ -44,7 +44,7 @@
             </div>
         </div>
     </div>
-    <div class="-translate-y-2">
+    <div>
         <div class="flex">
             <div class="flex-[1]">
                 <img src="{{ asset('assets/img/product-packaging-banner4.png') }}" alt="">
@@ -66,7 +66,7 @@
                 </x-slot:label>
             </x-button>
         </div>
-        <p class="text-center mt-10 mb-16 font-DK font-semibold text-2xl text-black">
+        <p class="text-center mt-10 mb-16 font-DK font-semibold text-2xl text-black dark:text-white">
             Unlocking Your Product's Potential with Inspired Packaging Solutions!
         </p>
     </div>
