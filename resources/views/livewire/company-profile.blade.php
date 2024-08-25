@@ -10,7 +10,7 @@
             </x-button>
         </div>
     </div>
-    <div class="flex justify-evenly gap-20 mb-40">
+    <div class="flex flex-col md:flex-row justify-evenly gap-20 mb-40">
         <div class="max-w-2xl space-y-10 flex flex-col justify-center items-end text-black dark:text-white">
             <p class="font-semibold text-lg">
                 <span class="font-bold text-lg">Company Profile</span> adalah gambaran umum tentang sebuah
