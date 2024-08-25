@@ -1,5 +1,5 @@
 <div>
-    <div class="flex gap-10 absolute right-0 top-[3%] mt-16">
+    <div class="flex flex-col md:flex-row gap-10 absolute right-0 top-[3%] mt-16">
         <div class="flex flex-col justify-end max-w-xs">
             <p class="inline-block text-3xl md:text-4xl font-bold whitespace-nowrap">LOGO DESIGN</p>
             <p class="text-lg mt-10">
@@ -16,8 +16,8 @@
         </div>
         <img src="{{ asset('assets/img/digital-design-banner.png') }}" alt="">
     </div>
-    <div class="flex gap-10 mb-32 mt-[45%]">
-        <img class="max-w-2xl" src="{{ asset('assets/img/digital-design-banner2.png') }}" alt="">
+    <div class="flex flex-col md:flex-row gap-10 mb-32 mt-[150%] md:mt-[45%]">
+        <img class="max-w-full md:max-w-lg" src="{{ asset('assets/img/digital-design-banner2.png') }}" alt="">
         <div class="flex flex-col justify-end max-w-xs">
             <p class="inline-block text-3xl md:text-4xl font-bold whitespace-nowrap">LOGO DESIGN</p>
             <p class="text-lg mt-10">
