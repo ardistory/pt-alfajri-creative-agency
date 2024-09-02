@@ -36,7 +36,7 @@ class OrderProduct extends Component
     public string $detailOrder = '';
     #[Validate('nullable')]
     public ?string $noResi = '';
-    public array $sortBy = ['column' => 'no_invoice', 'direction' => 'asc'];
+    public array $sortBy = ['column' => 'id', 'direction' => 'desc'];
     public bool $showDrawerEdit = false;
     public bool $showDrawerAdd = false;
     public bool $showDrawerFilter = false;

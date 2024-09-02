@@ -68,8 +68,6 @@
                         ])>
                             <!-- BULLET -->
                             <div>
-                                <x-icon name="phosphor.warning"
-                                    class="w-9 h-9 text-red-600 dark:text-primary absolute -translate-x-24" />
                                 <div @class([
                                     'w-4 h-4 -mb-5 -ms-[41px] rounded-full bg-red-600 dark:bg-primary text-white',
                                     'bg-primary' => false, //pending
@@ -240,7 +238,7 @@
                         </div>
                     </div>
                     {{-- 4 --}}
-                    <div class="@if ($orderProduct['tahap'] < 5 && $orderProduct['tahap'] > 2) @else hidden @endif">
+                    <div class="@if ($orderProduct['tahap'] < 5 && $orderProduct['tahap'] > 3) @else hidden @endif">
                         <!-- Last item `border cut` -->
                         <div @class([
                             'border-s-2 border-s-base-300 h-5 -mb-5' => true, //last

@@ -89,7 +89,7 @@
             <x-input label="Nomor Handphone" value="{{ $orderEdit['no_hp'] ?? '' }}" disabled />
             <x-input label="Detail Order" prefix="get.paper.id/" value="{{ $orderEdit['detail_order'] ?? '' }}"
                 disabled />
-            <x-input label="Nomor Resi (Jika Barang Dikirim)" value="{{ $orderEdit['no_resi'] ?? '' }}" disabled />
+            <x-input label="Nomor Resi (Jika Barang Dikirim)" value="{{ $orderEdit['no_resi'] ?? '' }}" />
             <x-select label="Tahap" :options="$tahap" option-value="value" option-label="desc"
                 placeholder="Update tahap" placeholder-value="0" icon="phosphor.stairs" wire:model='editTahap' />
             <x-slot:actions>

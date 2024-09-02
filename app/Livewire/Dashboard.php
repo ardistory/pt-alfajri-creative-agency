@@ -25,7 +25,7 @@ class Dashboard extends Component
     use WithFileUploads;
 
     public string $search = '';
-    public array $sortBy = ['column' => 'name', 'direction' => 'asc'];
+    public array $sortBy = ['column' => 'id', 'direction' => 'desc'];
     public bool $showDrawerAdd = false;
     #[Validate('required|min:3')]
     public string $name = '';
