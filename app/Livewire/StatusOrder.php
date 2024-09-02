@@ -17,9 +17,9 @@ class StatusOrder extends Component
 
     public bool $isValid = false;
     #[Validate('required', as: 'Nomor Invoice')]
-    public string $noInvoice = 'OL-1995';
+    public string $noInvoice = '';
     #[Validate('required', as: 'Nomor Handphone')]
-    public string $noHandphone = '08123456789';
+    public string $noHandphone = '';
     public $orderProduct = [];
 
     public function checkOrder()

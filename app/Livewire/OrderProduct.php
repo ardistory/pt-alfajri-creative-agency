@@ -19,7 +19,13 @@ class OrderProduct extends Component
     use Toast;
     use WithPagination;
 
-    public string $search = '';
+    public $searchNoInvoice = '';
+    public $searchTglOrder = '';
+    public $searchName = '';
+    public $searchNoHp = '';
+    public $searchNoResi = '';
+
+
     #[Validate('required', as: 'Nomor Invoice')]
     public string $noInvoice = '';
     #[Validate('required', as: 'Nama')]
@@ -33,6 +39,7 @@ class OrderProduct extends Component
     public array $sortBy = ['column' => 'no_invoice', 'direction' => 'asc'];
     public bool $showDrawerEdit = false;
     public bool $showDrawerAdd = false;
+    public bool $showDrawerFilter = false;
 
     public $orderEdit;
     public int $editTahap;
@@ -88,8 +95,20 @@ class OrderProduct extends Component
     public function getOrderProducts(): LengthAwarePaginator
     {
         return ModelsOrderProduct::query()
-            ->when($this->search, function (Builder $builder) {
-                return $builder->where('order_product.no_invoice', 'like', "%$this->search%");
+            ->when($this->searchNoInvoice, function (Builder $builder) {
+                return $builder->where('order_product.no_invoice', 'like', "%$this->searchNoInvoice%");
+            })
+            ->when($this->searchTglOrder, function (Builder $builder) {
+                return $builder->whereDate('order_product.tgl_order1', $this->searchTglOrder);
+            })
+            ->when($this->searchName, function (Builder $builder) {
+                return $builder->where('order_product.name', 'like', "%$this->searchName%");
+            })
+            ->when($this->searchNoHp, function (Builder $builder) {
+                return $builder->where('order_product.no_hp', 'like', "%$this->searchNoHp%");
+            })
+            ->when($this->searchNoResi, function (Builder $builder) {
+                return $builder->where('order_product.no_resi', 'like', "%$this->searchNoResi%");
             })
             ->orderBy(...array_values($this->sortBy))
             ->select('order_product.id', 'order_product.no_invoice', 'order_product.tgl_order1', 'order_product.name', 'order_product.no_hp', 'order_product.detail_order', 'order_product.no_resi', 'order_product.tahap')
@@ -189,7 +208,7 @@ class OrderProduct extends Component
 
     public function clear()
     {
-        $this->reset('search');
+        $this->reset(['searchNoInvoice', 'searchTglOrder', 'searchName', 'searchNoHp', 'searchNoResi']);
     }
 
     public function updatedSearch()

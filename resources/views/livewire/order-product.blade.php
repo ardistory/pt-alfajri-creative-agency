@@ -26,11 +26,16 @@
     </div>
     <x-header title="Order Produk" class="mt-10" separator>
         <x-slot:middle class="!justify-end">
-            <x-input icon="phosphor.magnifying-glass" placeholder="Cari Invoice" wire:model.live.debounce="search"
-                clearable />
+            <x-input icon="phosphor.magnifying-glass" placeholder="Cari Invoice"
+                wire:model.live.debounce="searchNoInvoice" clearable />
         </x-slot:middle>
         <x-slot:actions>
-            <x-button icon="o-plus" class="btn-primary" @click="$wire.showDrawerAdd = true" />
+            <x-button label="Add" icon="o-plus"
+                class="bg-gradient-to-bl from-error to-warning hover:ring hover:ring-primary text-white"
+                @click="$wire.showDrawerAdd = true" />
+            <x-button label="Filters" icon="phosphor.funnel"
+                class="bg-gradient-to-br from-error to-primary hover:ring hover:ring-primary text-white"
+                @click="$wire.showDrawerFilter = true" />
         </x-slot:actions>
     </x-header>
     @if (count($orderProducts) > 0)
@@ -104,5 +109,25 @@
                 <x-button label="Tambah Order" class="btn-primary" type="submit" spinner="addOrder" />
             </x-slot:actions>
         </x-form>
+    </x-drawer>
+
+    <x-drawer wire:model="showDrawerFilter" title="Filters" right separator with-close-button class="lg:w-1/3">
+        <x-form>
+            <x-input label="Nomor Invoice" wire:model.live.debounce="searchNoInvoice" icon="o-magnifying-glass"
+                @keydown.enter="$wire.showDrawerFilter = false" />
+            <x-datetime label="Tanggal Order" wire:model.live="searchTglOrder" icon="o-calendar" />
+            <x-input label="Nama" wire:model.live.debounce="searchName" icon="o-magnifying-glass"
+                @keydown.enter="$wire.showDrawerFilter = false" />
+            <x-input label="Nomor HP" wire:model.live.debounce="searchNoHp" icon="o-magnifying-glass"
+                @keydown.enter="$wire.showDrawerFilter = false" />
+            <x-input label="Nomor Resi" wire:model.live.debounce="searchNoResi" icon="o-magnifying-glass"
+                @keydown.enter="$wire.showDrawerFilter = false" />
+        </x-form>
+
+        <x-slot:actions>
+            <x-button label="Reset" icon="o-x-mark" wire:click="clear" spinner />
+            <x-button label="Done" icon="o-check" class="btn-primary"
+                x-on:click="$wire.showDrawerFilter = false" />
+        </x-slot:actions>
     </x-drawer>
 </div>
