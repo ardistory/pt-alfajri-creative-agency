@@ -19,7 +19,7 @@
                     <x-icon name="phosphor.map-pin" class="w-10 h-10" />
                     <div>
                         <p class="text-md font-semibold">Jalan Lembang Baru II No. 26, RT 03 / RW 09,
-                            Sudirman
+                            Sudimara
                             Barat,
                             Ciledug, Kota
                             Tangerang, 15151.</p>
