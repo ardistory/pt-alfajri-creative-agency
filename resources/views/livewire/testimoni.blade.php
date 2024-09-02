@@ -1,9 +1,9 @@
 <div>
-    <div class="flex justify-center gap-10 mt-10 mb-24">
+    <div class="flex flex-col md:flex-row justify-center gap-10 mt-10 mb-24">
         <div class="font-bold text-5xl underline text-black dark:text-white flex items-center">
             TESTIMONI
         </div>
-        <div class="grid grid-cols-6 grid-rows-2 w-2/3 h-[500px]">
+        <div class="grid grid-cols-6 grid-rows-2 w-2/3 md:w-full h-[500px]">
             <div class="col-span-1 row-span-2 hover:scale-y-110">
                 <img class="w-full h-full object-none" src="{{ asset('assets/img/digital-design-banner2.png') }}">
             </div>
