@@ -1,20 +1,27 @@
 <div>
     <x-header title="Stats" separator />
-    <div class="grid grid-cols-4 gap-5">
-        <x-card class="shadow-xl col-span-5 md:col-span-1">
+    <div class="grid grid-cols-6 gap-5">
+        <x-card class="shadow-xl col-span-6 md:col-span-1">
             <x-stat title="Total Order" value="{{ $totalOrderProduct['totalOrder'] }}" icon="phosphor.shopping-cart" />
         </x-card>
-        <x-card class="shadow-xl col-span-5 md:col-span-1">
+        <x-card class="shadow-xl col-span-6 md:col-span-1">
             <x-stat title="Order Tahap 1" value="{{ $totalOrderProduct['totalTahap1'] }}"
                 icon="phosphor.number-circle-one" />
         </x-card>
-        <x-card class="shadow-xl col-span-5 md:col-span-1">
+        <x-card class="shadow-xl col-span-6 md:col-span-1">
             <x-stat title="Order Tahap 2" value="{{ $totalOrderProduct['totalTahap2'] }}"
                 icon="phosphor.number-circle-two" />
         </x-card>
-        <x-card class="shadow-xl col-span-5 md:col-span-1">
+        <x-card class="shadow-xl col-span-6 md:col-span-1">
             <x-stat title="Order Tahap 3" value="{{ $totalOrderProduct['totalTahap3'] }}"
                 icon="phosphor.number-circle-three" />
+        </x-card>
+        <x-card class="shadow-xl col-span-6 md:col-span-1">
+            <x-stat title="Order Tahap 4" value="{{ $totalOrderProduct['totalTahap4'] }}"
+                icon="phosphor.number-circle-four" />
+        </x-card>
+        <x-card class="shadow-xl col-span-6 md:col-span-1">
+            <x-stat title="Order Batal" value="{{ $totalOrderProduct['totalTahap5'] }}" icon="phosphor.x" />
         </x-card>
     </div>
     <x-header title="Order Produk" class="mt-10" separator>
@@ -40,6 +47,14 @@
                 @scope('cell_detail_order', $order)
                     <a class="text-blue-500" href="https://get.paper.id/{{ $order->detail_order }}"
                         target="_blank">get.paper.id/{{ $order->detail_order }}</a>
+                @endscope
+
+                @scope('cell_tahap', $order)
+                    @if ($order->tahap == 5)
+                        <span class="text-white bg-red-500 px-2 rounded-full ring ring-red-200">Batal</span>
+                    @else
+                        <span>{{ $order->tahap }}</span>
+                    @endif
                 @endscope
 
                 @scope('actions', $order)

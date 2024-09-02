@@ -1,4 +1,4 @@
-<div class="flex flex-col justify-center items-center min-h-svh">
+<div class="flex flex-col justify-center items-center min-h-full">
     <div class="@if ($isValid) hidden @else @endif">
         <p class="text-red-600 text-center dark:text-white text-xl font-bold">
             STATUS ORDER</p>
@@ -48,148 +48,245 @@
             <p class="font-bold text-xl">STATUS PESANAN</p>
         </div>
         <div class="p-6 translate-x-10 md:translate-x-20 mt-5">
-            {{-- 1 --}}
             @isset($orderProduct['tahap'])
-                <div class="@if ($orderProduct['tahap'] < 4 && $orderProduct['tahap'] > 0) @else hidden @endif">
-                    <!-- Last item `border cut` -->
-                    <div @class([
-                        'border-s-2 border-s-red-600 h-5 -mb-5' => false, //last
-                        '!border-s-primary' => false, //pending
-                    ])>
-                    </div>
+                @if ($orderProduct['tahap'] == 5)
+                    {{-- 5 --}}
+                    <div class="@if ($orderProduct['tahap'] < 6 && $orderProduct['tahap'] > 4) @else hidden @endif">
+                        <!-- Last item `border cut` -->
+                        <div @class([
+                            'border-s-2 border-s-base-300 h-5 -mb-5' => true, //last
+                            '!border-s-primary' => false, //pending
+                        ])>
+                        </div>
 
-                    <!-- WRAPPER THAT ALSO ACTS A LINE CONNECTOR -->
-                    <div @class([
-                        'border-s-2 border-s-red-600 dark:border-s-primary ps-8 py-3',
-                        '!border-s-primary' => false, //pending
-                        'pt-0' => true, //first
-                        '!border-s-0' => false, //last
-                    ])>
-                        <!-- BULLET -->
-                        <div>
-                            <x-icon name="phosphor.paint-brush"
-                                class="w-9 h-9 text-red-600 dark:text-primary absolute -translate-x-24" />
-                            <div @class([
-                                'w-4 h-4 -mb-5 -ms-[41px] rounded-full bg-red-600 dark:bg-primary text-white',
-                                'bg-primary' => false, //pending
-                                '!-ms-[39px]' => true, //last
-                                'w-8 h-8 !-ms-[48px] -mb-7' => true, //icon
-                            ])>
-                                <!-- ICON PENDING-->
-                                <x-mary-icon name="phosphor.check" class="ms-[2px] mt-[2px] w-7 h-7" />
+                        <!-- WRAPPER THAT ALSO ACTS A LINE CONNECTOR -->
+                        <div @class([
+                            'border-s-2 border-s-base-300 ps-8 py-3',
+                            '!border-s-primary' => false, //pending
+                            'pt-0' => true, //first
+                            '!border-s-0' => true, //last
+                        ])>
+                            <!-- BULLET -->
+                            <div>
+                                <x-icon name="phosphor.warning"
+                                    class="w-9 h-9 text-red-600 dark:text-primary absolute -translate-x-24" />
+                                <div @class([
+                                    'w-4 h-4 -mb-5 -ms-[41px] rounded-full bg-red-600 dark:bg-primary text-white',
+                                    'bg-primary' => false, //pending
+                                    '!-ms-[39px]' => true, //last
+                                    'w-8 h-8 !-ms-[48px] -mb-7' => true, //icon
+                                ])>
+                                    <!-- ICON PENDING-->
+                                    <x-mary-icon name="phosphor.x" class="ms-[2px] mt-[2px] w-7 h-7" />
+                                </div>
+                            </div>
+
+                            <!-- TITLE -->
+                            <div @class(['font-bold mb-1 text-red-600 dark:text-primary'])>
+                                {{ $orderProduct['formattedDate5'] ?? '' }}
+                            </div>
+
+                            <!-- SUBTITLE -->
+                            <div class="text-xs text-gray-500/50 font-bold">
+                                <p class="md:absolute md:translate-x-96">{{ $orderProduct['formattedTime5'] ?? '' }}</p>
+                            </div>
+
+                            <!-- DESCRIPTION -->
+                            <div class="text-xs font-semibold mt-2">
+                                Pesanan Di Batalkan
                             </div>
                         </div>
-
-                        <!-- TITLE -->
-                        <div @class(['font-bold mb-1 text-red-600 dark:text-primary'])>
-                            {{ $orderProduct['formattedDate1'] ?? '' }}
-                        </div>
-
-                        <!-- SUBTITLE -->
-                        <div class="text-xs text-gray-500/50 font-bold">
-                            <p class="md:absolute md:translate-x-96">{{ $orderProduct['formattedTime1'] ?? '' }}</p>
-                        </div>
-
-                        <!-- DESCRIPTION -->
-                        <div class="text-xs font-semibold mt-2">
-                            Pesanan Anda Sedang Proses Desain / Setting
-                        </div>
                     </div>
-                </div>
-                {{-- 2 --}}
-                <div class="@if ($orderProduct['tahap'] < 4 && $orderProduct['tahap'] > 1) @else hidden @endif">
-                    <!-- Last item `border cut` -->
-                    <div @class([
-                        'border-s-2 border-s-red-600 h-5 -mb-5' => false, //last
-                        '!border-s-primary' => false, //pending
-                    ])>
-                    </div>
+                @else
+                    {{-- 1 --}}
+                    <div class="@if ($orderProduct['tahap'] < 5 && $orderProduct['tahap'] > 0) @else hidden @endif">
+                        <!-- Last item `border cut` -->
+                        <div @class([
+                            'border-s-2 border-s-red-600 h-5 -mb-5' => false, //last
+                            '!border-s-primary' => false, //pending
+                        ])>
+                        </div>
 
-                    <!-- WRAPPER THAT ALSO ACTS A LINE CONNECTOR -->
-                    <div @class([
-                        'border-s-2 border-s-red-600 dark:border-s-primary ps-8 py-3',
-                        '!border-s-primary' => false, //pending
-                        'pt-0' => true, //first
-                        '!border-s-0' => false, //last
-                    ])>
-                        <!-- BULLET -->
-                        <div>
-                            <x-icon name="phosphor.gear"
-                                class="w-9 h-9 text-red-600 dark:text-primary absolute -translate-x-24" />
-                            <div @class([
-                                'w-4 h-4 -mb-5 -ms-[41px] rounded-full bg-red-600 dark:bg-primary text-white',
-                                'bg-primary' => false, //pending
-                                '!-ms-[39px]' => false, //last
-                                'w-8 h-8 !-ms-[48px] -mb-7' => true, //icon
-                            ])>
-                                <!-- ICON PENDING-->
-                                <x-mary-icon name="phosphor.check" class="ms-[2px] mt-[2px] w-7 h-7" />
+                        <!-- WRAPPER THAT ALSO ACTS A LINE CONNECTOR -->
+                        <div @class([
+                            'border-s-2 border-s-red-600 dark:border-s-primary ps-8 py-3',
+                            '!border-s-primary' => false, //pending
+                            'pt-0' => true, //first
+                            '!border-s-0' => false, //last
+                        ])>
+                            <!-- BULLET -->
+                            <div>
+                                <x-icon name="phosphor.paint-brush"
+                                    class="w-9 h-9 text-red-600 dark:text-primary absolute -translate-x-24" />
+                                <div @class([
+                                    'w-4 h-4 -mb-5 -ms-[41px] rounded-full bg-red-600 dark:bg-primary text-white',
+                                    'bg-primary' => false, //pending
+                                    '!-ms-[39px]' => true, //last
+                                    'w-8 h-8 !-ms-[48px] -mb-7' => true, //icon
+                                ])>
+                                    <!-- ICON PENDING-->
+                                    <x-mary-icon name="phosphor.check" class="ms-[2px] mt-[2px] w-7 h-7" />
+                                </div>
+                            </div>
+
+                            <!-- TITLE -->
+                            <div @class(['font-bold mb-1 text-red-600 dark:text-primary'])>
+                                {{ $orderProduct['formattedDate1'] ?? '' }}
+                            </div>
+
+                            <!-- SUBTITLE -->
+                            <div class="text-xs text-gray-500/50 font-bold">
+                                <p class="md:absolute md:translate-x-96">{{ $orderProduct['formattedTime1'] ?? '' }}</p>
+                            </div>
+
+                            <!-- DESCRIPTION -->
+                            <div class="text-xs font-semibold mt-2">
+                                Pesanan Anda Sedang Proses Desain / Setting
                             </div>
                         </div>
-
-                        <!-- TITLE -->
-                        <div @class(['font-bold mb-1 text-red-600 dark:text-primary'])>
-                            {{ $orderProduct['formattedDate2'] ?? '' }}
-                        </div>
-
-                        <!-- SUBTITLE -->
-                        <div class="text-xs text-gray-500/50 font-bold">
-                            <p class="md:absolute md:translate-x-96">{{ $orderProduct['formattedTime2'] ?? '' }}</p>
-                        </div>
-
-                        <!-- DESCRIPTION -->
-                        <div class="text-xs font-semibold mt-2">
-                            Pesanan Anda Sedang Proses Produksi
-                        </div>
                     </div>
-                </div>
-                {{-- 3 --}}
-                <div class="@if ($orderProduct['tahap'] < 4 && $orderProduct['tahap'] > 2) @else hidden @endif">
-                    <!-- Last item `border cut` -->
-                    <div @class([
-                        'border-s-2 border-s-base-300 h-5 -mb-5' => true, //last
-                        '!border-s-primary' => false, //pending
-                    ])>
-                    </div>
+                    {{-- 2 --}}
+                    <div class="@if ($orderProduct['tahap'] < 5 && $orderProduct['tahap'] > 1) @else hidden @endif">
+                        <!-- Last item `border cut` -->
+                        <div @class([
+                            'border-s-2 border-s-red-600 h-5 -mb-5' => false, //last
+                            '!border-s-primary' => false, //pending
+                        ])>
+                        </div>
 
-                    <!-- WRAPPER THAT ALSO ACTS A LINE CONNECTOR -->
-                    <div @class([
-                        'border-s-2 border-s-base-300 ps-8 py-3',
-                        '!border-s-primary' => false, //pending
-                        'pt-0' => true, //first
-                        '!border-s-0' => true, //last
-                    ])>
-                        <!-- BULLET -->
-                        <div>
-                            <x-icon name="phosphor.package"
-                                class="w-9 h-9 text-red-600 dark:text-primary absolute -translate-x-24" />
-                            <div @class([
-                                'w-4 h-4 -mb-5 -ms-[41px] rounded-full bg-red-600 dark:bg-primary text-white',
-                                'bg-primary' => false, //pending
-                                '!-ms-[39px]' => true, //last
-                                'w-8 h-8 !-ms-[48px] -mb-7' => true, //icon
-                            ])>
-                                <!-- ICON PENDING-->
-                                <x-mary-icon name="phosphor.check" class="ms-[2px] mt-[2px] w-7 h-7" />
+                        <!-- WRAPPER THAT ALSO ACTS A LINE CONNECTOR -->
+                        <div @class([
+                            'border-s-2 border-s-red-600 dark:border-s-primary ps-8 py-3',
+                            '!border-s-primary' => false, //pending
+                            'pt-0' => true, //first
+                            '!border-s-0' => false, //last
+                        ])>
+                            <!-- BULLET -->
+                            <div>
+                                <x-icon name="phosphor.gear"
+                                    class="w-9 h-9 text-red-600 dark:text-primary absolute -translate-x-24" />
+                                <div @class([
+                                    'w-4 h-4 -mb-5 -ms-[41px] rounded-full bg-red-600 dark:bg-primary text-white',
+                                    'bg-primary' => false, //pending
+                                    '!-ms-[39px]' => false, //last
+                                    'w-8 h-8 !-ms-[48px] -mb-7' => true, //icon
+                                ])>
+                                    <!-- ICON PENDING-->
+                                    <x-mary-icon name="phosphor.check" class="ms-[2px] mt-[2px] w-7 h-7" />
+                                </div>
+                            </div>
+
+                            <!-- TITLE -->
+                            <div @class(['font-bold mb-1 text-red-600 dark:text-primary'])>
+                                {{ $orderProduct['formattedDate2'] ?? '' }}
+                            </div>
+
+                            <!-- SUBTITLE -->
+                            <div class="text-xs text-gray-500/50 font-bold">
+                                <p class="md:absolute md:translate-x-96">{{ $orderProduct['formattedTime2'] ?? '' }}</p>
+                            </div>
+
+                            <!-- DESCRIPTION -->
+                            <div class="text-xs font-semibold mt-2">
+                                Pesanan Anda Sedang Proses Produksi
                             </div>
                         </div>
-
-                        <!-- TITLE -->
-                        <div @class(['font-bold mb-1 text-red-600 dark:text-primary'])>
-                            {{ $orderProduct['formattedDate3'] ?? '' }}
+                    </div>
+                    {{-- 3 --}}
+                    <div class="@if ($orderProduct['tahap'] < 5 && $orderProduct['tahap'] > 2) @else hidden @endif">
+                        <!-- Last item `border cut` -->
+                        <div @class([
+                            'border-s-2 border-s-base-300 h-5 -mb-5' => false, //last
+                            '!border-s-primary' => false, //pending
+                        ])>
                         </div>
 
-                        <!-- SUBTITLE -->
-                        <div class="text-xs text-gray-500/50 font-bold">
-                            <p class="md:absolute md:translate-x-96">{{ $orderProduct['formattedTime3'] ?? '' }}</p>
-                        </div>
+                        <!-- WRAPPER THAT ALSO ACTS A LINE CONNECTOR -->
+                        <div @class([
+                            'border-s-2 border-s-red-600 dark:border-s-primary ps-8 py-3',
+                            '!border-s-primary' => false, //pending
+                            'pt-0' => true, //first
+                            '!border-s-0' => false, //last
+                        ])>
+                            <!-- BULLET -->
+                            <div>
+                                <x-icon name="phosphor.package"
+                                    class="w-9 h-9 text-red-600 dark:text-primary absolute -translate-x-24" />
+                                <div @class([
+                                    'w-4 h-4 -mb-5 -ms-[41px] rounded-full bg-red-600 dark:bg-primary text-white',
+                                    'bg-primary' => false, //pending
+                                    '!-ms-[39px]' => false, //last
+                                    'w-8 h-8 !-ms-[48px] -mb-7' => true, //icon
+                                ])>
+                                    <!-- ICON PENDING-->
+                                    <x-mary-icon name="phosphor.check" class="ms-[2px] mt-[2px] w-7 h-7" />
+                                </div>
+                            </div>
 
-                        <!-- DESCRIPTION -->
-                        <div class="text-xs font-semibold mt-2">
-                            Pesanan Anda Sudah Bisa Diambil
+                            <!-- TITLE -->
+                            <div @class(['font-bold mb-1 text-red-600 dark:text-primary'])>
+                                {{ $orderProduct['formattedDate3'] ?? '' }}
+                            </div>
+
+                            <!-- SUBTITLE -->
+                            <div class="text-xs text-gray-500/50 font-bold">
+                                <p class="md:absolute md:translate-x-96">{{ $orderProduct['formattedTime3'] ?? '' }}</p>
+                            </div>
+
+                            <!-- DESCRIPTION -->
+                            <div class="text-xs font-semibold mt-2">
+                                Pesanan Anda Sudah Bisa Diambil
+                            </div>
                         </div>
                     </div>
-                </div>
+                    {{-- 4 --}}
+                    <div class="@if ($orderProduct['tahap'] < 5 && $orderProduct['tahap'] > 2) @else hidden @endif">
+                        <!-- Last item `border cut` -->
+                        <div @class([
+                            'border-s-2 border-s-base-300 h-5 -mb-5' => true, //last
+                            '!border-s-primary' => false, //pending
+                        ])>
+                        </div>
+
+                        <!-- WRAPPER THAT ALSO ACTS A LINE CONNECTOR -->
+                        <div @class([
+                            'border-s-2 border-s-base-300 ps-8 py-3',
+                            '!border-s-primary' => false, //pending
+                            'pt-0' => true, //first
+                            '!border-s-0' => true, //last
+                        ])>
+                            <!-- BULLET -->
+                            <div>
+                                <x-icon name="phosphor.shield-check"
+                                    class="w-9 h-9 text-red-600 dark:text-primary absolute -translate-x-24" />
+                                <div @class([
+                                    'w-4 h-4 -mb-5 -ms-[41px] rounded-full bg-red-600 dark:bg-primary text-white',
+                                    'bg-primary' => false, //pending
+                                    '!-ms-[39px]' => true, //last
+                                    'w-8 h-8 !-ms-[48px] -mb-7' => true, //icon
+                                ])>
+                                    <!-- ICON PENDING-->
+                                    <x-mary-icon name="phosphor.check" class="ms-[2px] mt-[2px] w-7 h-7" />
+                                </div>
+                            </div>
+
+                            <!-- TITLE -->
+                            <div @class(['font-bold mb-1 text-red-600 dark:text-primary'])>
+                                {{ $orderProduct['formattedDate4'] ?? '' }}
+                            </div>
+
+                            <!-- SUBTITLE -->
+                            <div class="text-xs text-gray-500/50 font-bold">
+                                <p class="md:absolute md:translate-x-96">{{ $orderProduct['formattedTime4'] ?? '' }}</p>
+                            </div>
+
+                            <!-- DESCRIPTION -->
+                            <div class="text-xs font-semibold mt-2">
+                                Pesanan Sudah Di Ambil
+                            </div>
+                        </div>
+                    </div>
+                @endif
             @endisset
             {{-- end --}}
         </div>

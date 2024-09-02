@@ -14,10 +14,10 @@
                 </x-slot:label>
             </x-button>
         </div>
-        <img src="{{ asset('assets/img/digital-design-banner.png') }}" alt="">
+        <img class="max-w-full md:w-1/2" src="{{ asset('assets/img/digital-design-banner.png') }}" alt="">
     </div>
     <div class="flex flex-col md:flex-row justify-center gap-10 mb-32 ">
-        <img class="max-w-full md:max-w-xl" src="{{ asset('assets/img/digital-design-banner2.png') }}" alt="">
+        <img class="max-w-full md:w-1/2" src="{{ asset('assets/img/digital-design-banner2.png') }}" alt="">
         <div class="flex flex-col justify-end max-w-xs">
             <p class="inline-block text-3xl md:text-4xl font-bold whitespace-nowrap">LOGO DESIGN</p>
             <p class="text-lg mt-10">

@@ -56,6 +56,8 @@ class OrderProduct extends Component
         $totalTahap1 = 0;
         $totalTahap2 = 0;
         $totalTahap3 = 0;
+        $totalTahap4 = 0;
+        $totalTahap5 = 0;
 
         $orders = ModelsOrderProduct::all(['no_invoice', 'tahap']);
 
@@ -66,6 +68,10 @@ class OrderProduct extends Component
                 $totalTahap2++;
             } elseif ($order['tahap'] == 3) {
                 $totalTahap3++;
+            } elseif ($order['tahap'] == 4) {
+                $totalTahap4++;
+            } elseif ($order['tahap'] == 5) {
+                $totalTahap5++;
             }
         }
 
@@ -74,6 +80,8 @@ class OrderProduct extends Component
             'totalTahap1' => $totalTahap1,
             'totalTahap2' => $totalTahap2,
             'totalTahap3' => $totalTahap3,
+            'totalTahap4' => $totalTahap4,
+            'totalTahap5' => $totalTahap5,
         ];
     }
 
@@ -119,6 +127,14 @@ class OrderProduct extends Component
             [
                 'desc' => '3 - Sudah Bisa Diambil',
                 'value' => 3
+            ],
+            [
+                'desc' => '4 - Pesanan Sudah Di Ambil',
+                'value' => 4
+            ],
+            [
+                'desc' => 'Batalkan Pesanan',
+                'value' => 5
             ]
         ];
     }
@@ -147,6 +163,16 @@ class OrderProduct extends Component
         } elseif ($this->editTahap == 3) {
             ModelsOrderProduct::query()->where('id', '=', $orderId)->update([
                 'tgl_order3' => Carbon::now(),
+                'tahap' => $this->editTahap
+            ]);
+        } elseif ($this->editTahap == 4) {
+            ModelsOrderProduct::query()->where('id', '=', $orderId)->update([
+                'tgl_order4' => Carbon::now(),
+                'tahap' => $this->editTahap
+            ]);
+        } elseif ($this->editTahap == 5) {
+            ModelsOrderProduct::query()->where('id', '=', $orderId)->update([
+                'tgl_order5' => Carbon::now(),
                 'tahap' => $this->editTahap
             ]);
         }

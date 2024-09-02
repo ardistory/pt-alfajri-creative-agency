@@ -16,6 +16,8 @@ return new class extends Migration {
             $table->timestamp('tgl_order1')->nullable();
             $table->timestamp('tgl_order2')->nullable();
             $table->timestamp('tgl_order3')->nullable();
+            $table->timestamp('tgl_order4')->nullable();
+            $table->timestamp('tgl_order5')->nullable();
             $table->string('name');
             $table->string('no_hp');
             $table->string('detail_order');

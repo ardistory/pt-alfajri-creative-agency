@@ -11,13 +11,13 @@
             @endscope
         </x-carousel>
     </div>
-    <div class="flex justify-center mt-10 md:mt-[5%] z-10">
+    <div class="flex justify-center mt-10 md:mt-[5%]">
         <span class="text-white text-4xl font-bold tracking-wide">
             We Deliver Your
             <span class="font-DK">Story</span>
         </span>
     </div>
-    <div class="flex flex-col justify-center items-center mt-40 md:mt-[20%] z-50">
+    <div class="flex flex-col justify-center items-center mt-40 md:mt-[20%]">
         <span class="text-white text-xl md:text-4xl font-bold tracking-wide z-[1]">VALUE OF ALFAJRI CREATIVE
             AGENCY</span>
         <div class="mt-5 md:mt-10 flex gap-5 md:gap-20">
@@ -35,7 +35,7 @@
             </div>
         </div>
     </div>
-    <div class="grid grid-cols-12 gap-5 mt-32 md:mt-72">
+    <div class="grid grid-cols-12 gap-5 mt-32 md:mt-72 z-50">
         <x-card class="col-span-12 md:col-span-6 rounded-none dark:rounded-xl dark:shadow-sm dark:shadow-white">
             <x-slot:title>
                 <span class="text-4xl font-extrabold text-red-700 dark:text-white">OUR STORY</span>
@@ -53,7 +53,7 @@
             </x-slot:figure>
             <x-slot:actions>
                 <x-button icon-right="phosphor.paper-plane-right" label="Mulai Sekarang"
-                    class="btn-error rounded-none text-white bg-red-700 mt-5" />
+                    class="btn-error rounded-none text-white bg-red-700 mt-5 z-10" />
             </x-slot:actions>
         </x-card>
         <x-card class="col-span-12 md:col-span-6 rounded-none dark:rounded-xl dark:shadow-sm dark:shadow-white">
@@ -72,8 +72,8 @@
                 <img src="{{ asset('assets/img/testimoni-banner.png') }}" />
             </x-slot:figure>
             <x-slot:actions>
-                <x-button icon-right="phosphor.paper-plane-right" label="Mulai Sekarang"
-                    class="btn-error rounded-none text-white bg-red-700 mt-5" />
+                <x-button link="{{ route('testimoni') }}" icon-right="phosphor.paper-plane-right" label="Mulai Sekarang"
+                    class="btn-error rounded-none text-white bg-red-700 mt-5 z-10" />
             </x-slot:actions>
         </x-card>
     </div>

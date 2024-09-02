@@ -23,6 +23,7 @@ use App\Livewire\OrderProduct;
 use App\Livewire\ProductPackaging;
 use App\Livewire\SosialMediaManagement;
 use App\Livewire\StatusOrder;
+use App\Livewire\Testimoni;
 use App\Livewire\VideoProduction;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
@@ -62,5 +63,6 @@ Route::get('/about-us', AboutUs::class)->name('about-us');
 Route::get('/contact', Contact::class)->name('contact');
 Route::get('/status-order', StatusOrder::class)->name('status-order');
 Route::get('/faq', Faq::class)->name('faq');
+Route::get('/testimoni', Testimoni::class)->name('testimoni');
 
 Route::fallback(Fallback::class);
