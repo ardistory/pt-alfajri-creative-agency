@@ -90,7 +90,7 @@
             <x-input label="Detail Order" prefix="get.paper.id/" value="{{ $orderEdit['detail_order'] ?? '' }}"
                 disabled />
             <x-input label="Nomor Resi (Jika Barang Dikirim)" value="{{ $orderEdit['no_resi'] ?? '' }}"
-                wire:model='noResi' />
+                wire:model='editNoResi' />
             <x-select label="Tahap" :options="$tahap" option-value="value" option-label="desc"
                 placeholder="Update tahap" placeholder-value="0" icon="phosphor.stairs" wire:model='editTahap' />
             <x-slot:actions>

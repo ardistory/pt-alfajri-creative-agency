@@ -42,7 +42,8 @@ class OrderProduct extends Component
     public bool $showDrawerFilter = false;
 
     public $orderEdit;
-    public int $editTahap;
+    public int $editTahap = 1;
+    public string $editNoResi;
 
     public function getHeaders(): array
     {
@@ -165,6 +166,8 @@ class OrderProduct extends Component
         $orderEdit = ModelsOrderProduct::findOrFail($orderId);
 
         $this->orderEdit = $orderEdit;
+        $this->editTahap = $this->orderEdit['tahap'];
+        $this->editNoResi = $this->orderEdit['no_resi'];
     }
 
     public function editOrder($orderId)
@@ -173,31 +176,31 @@ class OrderProduct extends Component
             ModelsOrderProduct::query()->where('id', '=', $orderId)->update([
                 'tgl_order1' => Carbon::now(),
                 'tahap' => $this->editTahap,
-                'no_resi' => $this->noResi,
+                'no_resi' => $this->editNoResi,
             ]);
         } elseif ($this->editTahap == 2) {
             ModelsOrderProduct::query()->where('id', '=', $orderId)->update([
                 'tgl_order2' => Carbon::now(),
                 'tahap' => $this->editTahap,
-                'no_resi' => $this->noResi,
+                'no_resi' => $this->editNoResi,
             ]);
         } elseif ($this->editTahap == 3) {
             ModelsOrderProduct::query()->where('id', '=', $orderId)->update([
                 'tgl_order3' => Carbon::now(),
                 'tahap' => $this->editTahap,
-                'no_resi' => $this->noResi,
+                'no_resi' => $this->editNoResi,
             ]);
         } elseif ($this->editTahap == 4) {
             ModelsOrderProduct::query()->where('id', '=', $orderId)->update([
                 'tgl_order4' => Carbon::now(),
                 'tahap' => $this->editTahap,
-                'no_resi' => $this->noResi,
+                'no_resi' => $this->editNoResi,
             ]);
         } elseif ($this->editTahap == 5) {
             ModelsOrderProduct::query()->where('id', '=', $orderId)->update([
                 'tgl_order5' => Carbon::now(),
                 'tahap' => $this->editTahap,
-                'no_resi' => $this->noResi,
+                'no_resi' => $this->editNoResi,
             ]);
         }
 
