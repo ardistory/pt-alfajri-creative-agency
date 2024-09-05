@@ -55,7 +55,7 @@
                 <img src="{{ asset('assets/img/our-story-banner.png') }}" />
             </x-slot:figure>
             <x-slot:actions>
-                <x-button icon-right="phosphor.paper-plane-right" label="Mulai Sekarang"
+                <x-button icon-right="phosphor.telegram-logo" label="Mulai Sekarang"
                     class="btn-error rounded-none text-white bg-red-700 mt-5 z-10" />
             </x-slot:actions>
         </x-card>
@@ -75,7 +75,7 @@
                 <img src="{{ asset('assets/img/testimoni-banner.png') }}" />
             </x-slot:figure>
             <x-slot:actions>
-                <x-button link="{{ route('testimoni') }}" icon-right="phosphor.paper-plane-right" label="Mulai Sekarang"
+                <x-button link="{{ route('testimoni') }}" icon-right="phosphor.telegram-logo" label="Mulai Sekarang"
                     class="btn-error rounded-none text-white bg-red-700 mt-5 z-10" />
             </x-slot:actions>
         </x-card>

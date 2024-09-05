@@ -188,10 +188,10 @@
             <x-slot:content>
                 {{ $slot }}
                 <footer
-                    class="w-full h-auto bg-red-700 dark:bg-base-100 absolute left-0 flex flex-col md:flex-row justify-center gap-10 p-[2%]">
+                    class="w-full h-auto bg-red-700 dark:bg-base-100 absolute left-0 flex flex-col md:flex-row justify-center gap-10 p-[10%] md:p-[2%]">
                     <div>
                         <div class="flex items-center gap-2">
-                            <x-icon name="phosphor.paper-plane-tilt" class="text-white w-5 h-5" />
+                            <x-icon name="phosphor.telegram-logo" class="text-white w-5 h-5" />
                             <h2 class="text-xs font-bold text-white">ABOUT ALFAJRI</h2>
                         </div>
 
