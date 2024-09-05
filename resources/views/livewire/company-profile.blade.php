@@ -37,34 +37,52 @@
     </div>
     <div class="mb-32">
         <div class="mb-20">
-            <p class="text-black dark:text-white text-center text-5xl font-medium">ISI <span
+            <p class="text-black dark:text-white text-center text-2xl md:text-5xl font-medium">ISI <span
                     class="underline font-bold">COMPANY
                     PROFILE</span></p>
         </div>
-        <div class="text-black dark:text-white grid grid-cols-3 gap-32">
-            <div class="flex flex-col items-center">
-                <img class="w-[100px] h-auto" src="{{ asset('assets/icon/company-profile-icon4.png') }}" alt="">
-                <p class="font-bold text-sm mt-3">Sejarah Perusahaan</p>
+        <div class="mt-20 grid grid-cols-3 grid-rows-3 gap-7">
+            <div class="flex flex-col items-center gap-4 col-span-1 row-span-1">
+                <img class="w-[70px] h-[70px] md:w-[100px] md:h-[100px]"
+                    src="{{ asset('assets/icon/company-profile-icon4.png') }}" alt="">
+                <span class="text-black dark:text-white text-xs md:text-2xl font-bold">
+                    Sejarah Perusahaan
+                </span>
             </div>
-            <div class="flex flex-col items-center">
-                <img class="w-[100px] h-auto" src="{{ asset('assets/icon/company-profile-icon3.png') }}" alt="">
-                <p class="font-bold text-sm mt-3">Visi, Misi, dan Nilai Perusahaan</p>
+            <div class="flex flex-col items-center gap-4 col-span-1 row-span-1">
+                <img class="w-[70px] h-[70px] md:w-[100px] md:h-[100px]"
+                    src="{{ asset('assets/icon/company-profile-icon3.png') }}" alt="">
+                <span class="text-black dark:text-white text-xs md:text-2xl font-bold">
+                    Visi, Misi, dan Nilai Perusahaan
+                </span>
             </div>
-            <div class="flex flex-col items-center">
-                <img class="w-[100px] h-auto" src="{{ asset('assets/icon/company-profile-icon2.png') }}" alt="">
-                <p class="font-bold text-sm mt-3">Produk atau Layanan</p>
+            <div class="flex flex-col items-center gap-4 col-span-1 row-span-1">
+                <img class="w-[70px] h-[70px] md:w-[100px] md:h-[100px]"
+                    src="{{ asset('assets/icon/company-profile-icon2.png') }}" alt="">
+                <span class="text-black dark:text-white text-xs md:text-2xl font-bold">
+                    Produk atau Layanan
+                </span>
             </div>
-            <div class="flex flex-col items-center">
-                <img class="w-[100px] h-auto" src="{{ asset('assets/icon/company-profile-icon.png') }}" alt="">
-                <p class="font-bold text-sm mt-3">Pencapaian dan Penghargaan</p>
+            <div class="flex flex-col items-center gap-4 col-span-1 row-span-1">
+                <img class="w-[70px] h-[70px] md:w-[100px] md:h-[100px]"
+                    src="{{ asset('assets/icon/company-profile-icon.png') }}" alt="">
+                <span class="text-black dark:text-white text-xs md:text-2xl font-bold">
+                    Pencapaian dan Penghargaan
+                </span>
             </div>
-            <div class="flex flex-col items-center">
-                <img class="w-[100px] h-auto" src="{{ asset('assets/icon/company-profile-icon5.png') }}" alt="">
-                <p class="font-bold text-sm mt-3">Informasi Kontak & Alamat</p>
+            <div class="flex flex-col items-center gap-4 col-span-1 row-span-1">
+                <img class="w-[70px] h-[70px] md:w-[100px] md:h-[100px]"
+                    src="{{ asset('assets/icon/company-profile-icon5.png') }}" alt="">
+                <span class="text-black dark:text-white text-xs md:text-2xl font-bold">
+                    Informasi Kontak & Alamat
+                </span>
             </div>
-            <div class="flex flex-col items-center">
-                <img class="w-[100px] h-auto" src="{{ asset('assets/icon/company-profile-icon6.png') }}" alt="">
-                <p class="font-bold text-sm mt-3">Logo dan Identitas Visual</p>
+            <div class="flex flex-col items-center gap-4 col-span-1 row-span-1">
+                <img class="w-[70px] h-[70px] md:w-[100px] md:h-[100px]"
+                    src="{{ asset('assets/icon/company-profile-icon6.png') }}" alt="">
+                <span class="text-black dark:text-white text-xs md:text-2xl font-bold">
+                    Logo dan Identitas Visual
+                </span>
             </div>
         </div>
     </div>

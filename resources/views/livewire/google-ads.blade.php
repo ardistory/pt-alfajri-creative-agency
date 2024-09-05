@@ -1,5 +1,5 @@
 <div>
-    <div class="text-black flex flex-col items-center justify-center mb-32">
+    <div class="text-black dark:text-white flex flex-col items-center justify-center mb-32">
         <p class="font-semibold text-xl md:text-4xl mb-8">
             APA ITU <span class="underline font-bold">GOOGLE ADS?</span>
         </p>
@@ -16,12 +16,12 @@
         <img class="w-[140px] h-auto" src="{{ asset('assets/icon/google-ads-icon.png') }}" alt="">
     </div>
     <div class="flex flex-col gap-20 md:gap-0 md:flex-row justify-evenly mb-32">
-        <div class="text-black">
+        <div class="text-black dark:text-white">
             <p class="font-semibold text-4xl text-end">APA SAJA MANFAAT</p>
             <p class="underline font-bold text-4xl text-end">GOOGLE ADS?</p>
         </div>
         <div class="space-y-5">
-            <div class="flex items-center gap-8 text-black">
+            <div class="flex items-center gap-8 text-black dark:text-white">
                 <img class="w-[100px] h-auto" src="{{ asset('assets/icon/google-ads-icon2.png') }}" alt="">
                 <div>
                     <div>
@@ -37,7 +37,7 @@
                     </div>
                 </div>
             </div>
-            <div class="flex items-center gap-8 text-black">
+            <div class="flex items-center gap-8 text-black dark:text-white">
                 <img class="w-[100px] h-auto" src="{{ asset('assets/icon/google-ads-icon3.png') }}" alt="">
                 <div>
                     <div>
@@ -49,7 +49,7 @@
                     </div>
                 </div>
             </div>
-            <div class="flex items-center gap-8 text-black">
+            <div class="flex items-center gap-8 text-black dark:text-white">
                 <img class="w-[100px] h-auto" src="{{ asset('assets/icon/google-ads-icon4.png') }}" alt="">
                 <div>
                     <div>
@@ -65,7 +65,7 @@
         </div>
     </div>
     <div class="flex flex-col gap-10 md:gap-0 md:flex-row justify-evenly items-center mb-32">
-        <div class="text-black">
+        <div class="text-black dark:text-white">
             <p class="font-bold text-4xl">Elevate Your Online Presence</p>
             <p class="font-bold text-2xl">Powered By Google Ads</p>
         </div>

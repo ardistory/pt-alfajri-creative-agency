@@ -12,6 +12,7 @@
         rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
         rel="stylesheet">
+    <link rel="shortcut icon" href="{{ asset('assets/img/favicon.png') }}" type="image/x-icon">
     <title>{{ isset($title) ? 'PT. ALFAJRI CREATIVE AGENCY' . ' - ' . $title : 'PT. ALFAJRI CREATIVE AGENCY' }}</title>
 
     @vite(['resources/css/app.css', 'resources/js/app.js'])

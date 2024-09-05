@@ -24,7 +24,7 @@
             </div>
         </div>
     </div>
-    <div>
+    <div class="text-black">
         <div class="bg-green-200 pt-10 flex">
             <div class="w-1/3 flex items-end">
                 <img src="{{ asset('assets/img/testimoni-ilustrasi-1.png') }}">

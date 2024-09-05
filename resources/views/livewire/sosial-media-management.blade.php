@@ -45,7 +45,9 @@
                     Instagram
                     AndaTingkatkan keterlibatan pengguna dan bangun kesadaran merek yang kuat.
                 </p>
-                <x-button class="btn-error bg-red-900 btn-sm mt-5 rounded-none">
+                <x-button
+                    link="https://api.whatsapp.com/send/?phone=6282123131995&text=Hay, Admin&type=phone_number&app_absent=0"
+                    class="btn-error bg-red-900 btn-sm mt-5 rounded-none" external>
                     <x-slot:label>
                         <span class="underline text-white">Mulai Sekarang</span>
                     </x-slot:label>
@@ -61,7 +63,9 @@
                     audiens baru, meningkatkan keterlibatan. Dari perencanaan posting hingga analisis kinerja, kami siap
                     membantu Anda memanfaatkan TikTok sebagai platform pemasaran yang efektif.
                 </p>
-                <x-button class="btn-error bg-red-900 btn-sm mt-5 rounded-none">
+                <x-button
+                    link="https://api.whatsapp.com/send/?phone=6282123131995&text=Hay, Admin&type=phone_number&app_absent=0"
+                    class="btn-error bg-red-900 btn-sm mt-5 rounded-none" external>
                     <x-slot:label>
                         <span class="underline text-white">Mulai Sekarang</span>
                     </x-slot:label>

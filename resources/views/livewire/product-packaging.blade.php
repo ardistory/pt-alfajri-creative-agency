@@ -45,24 +45,24 @@
         </div>
     </div>
     <div>
-        <div class="flex">
-            <div class="flex-[1]">
+        <div class="flex flex-col md:flex-row">
+            <div class="flex-[1] md:flex-[1]">
                 <img src="{{ asset('assets/img/product-packaging-banner4.png') }}" alt="">
             </div>
-            <div class="flex-[1.5]">
+            <div class="flex-[1] md:flex-[1.5]">
                 <img src="{{ asset('assets/img/product-packaging-banner.png') }}" alt="">
             </div>
-            <div class="flex-[1]">
+            <div class="flex-[1] md:flex-[1]">
                 <img src="{{ asset('assets/img/product-packaging-banner2.png') }}" alt="">
             </div>
         </div>
         <div class="w-full -translate-y-6 flex justify-center">
             <x-button
-                class="py-2 w-1/6 btn-error bg-red-700 dark:bg-primary dark:btn-primary text-white dark:text-black rounded-none"
+                class="md:w-1/6 btn-error bg-red-700 dark:bg-primary dark:btn-primary text-white dark:text-black rounded-none px-3 py-1"
                 type="submit" spinner="checkOrder"
                 link="https://api.whatsapp.com/send/?phone=6282123131995&text&type=phone_number&app_absent=0" external>
                 <x-slot:label>
-                    <span class="underline">Hubungi Kami</span>
+                    <span class="underline text-xs whitespace-nowrap">Hubungi Kami</span>
                 </x-slot:label>
             </x-button>
         </div>

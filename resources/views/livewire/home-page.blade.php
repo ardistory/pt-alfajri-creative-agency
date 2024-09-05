@@ -1,5 +1,5 @@
 <div class="relative">
-    <img class="w-auto h-[85%] absolute top-[10%] left-[50%] translate-x-[-50%]"
+    <img class="hidden md:block w-auto h-[85%] absolute top-[10%] left-[50%] translate-x-[-50%]"
         src="{{ asset('assets/img/paper-airplane.png') }}">
     <div class="mt-4">
         <x-carousel :slides="$slides" without-indicators class="!h-[450px]">
@@ -22,15 +22,18 @@
             AGENCY</span>
         <div class="mt-5 md:mt-10 flex gap-5 md:gap-20">
             <div class="flex flex-col items-center gap-4">
-                <img class="w-[150px] h-auto" src="{{ asset('assets/icon/trust-icon.png') }}" alt="">
+                <img class="w-[100px] h-[100px] md:w-[150px] md:h-[150px]"
+                    src="{{ asset('assets/icon/trust-icon.png') }}" alt="">
                 <span class="text-white text-2xl">TRUST</span>
             </div>
             <div class="flex flex-col items-center gap-4">
-                <img class="w-[150px] h-auto" src="{{ asset('assets/icon/growth-icon.png') }}" alt="">
+                <img class="w-[100px] h-[100px] md:w-[150px] md:h-[150px]"
+                    src="{{ asset('assets/icon/growth-icon.png') }}" alt="">
                 <span class="text-white text-2xl">GROWTH</span>
             </div>
             <div class="flex flex-col items-center gap-4">
-                <img class="w-[150px] h-auto" src="{{ asset('assets/icon/creative-icon.png') }}" alt="">
+                <img class="w-[100px] h-[100px] md:w-[150px] md:h-[150px]"
+                    src="{{ asset('assets/icon/creative-icon.png') }}" alt="">
                 <span class="text-white text-2xl">CREATIVITY</span>
             </div>
         </div>
