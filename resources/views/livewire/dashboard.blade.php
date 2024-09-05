@@ -1,5 +1,6 @@
 <div>
-    <x-header title="Stats" separator />
+    <x-header title="Stats" />
+    <x-hr />
     <div class="grid grid-cols-3 gap-5">
         <x-card class="shadow-xl">
             <x-stat title="Total Category" value="{{ $totalCategory }}" icon="phosphor.bookmarks" />

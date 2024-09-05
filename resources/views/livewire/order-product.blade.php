@@ -1,5 +1,6 @@
 <div>
-    <x-header title="Stats" separator />
+    <x-header title="Stats" />
+    <x-hr />
     <div class="grid grid-cols-6 gap-5">
         <x-card class="shadow-xl col-span-6 md:col-span-1">
             <x-stat title="Total Order" value="{{ $totalOrderProduct['totalOrder'] }}" icon="phosphor.shopping-cart" />
@@ -112,7 +113,8 @@
         </x-form>
     </x-drawer>
 
-    <x-drawer wire:model="showDrawerFilter" title="Filters" right separator with-close-button class="lg:w-1/3">
+    <x-drawer wire:model="showDrawerFilter" title="Filters" right no-separator with-close-button class="lg:w-1/3">
+        <x-hr />
         <x-form>
             <x-input label="Nomor Invoice" wire:model.live.debounce="searchNoInvoice" icon="o-magnifying-glass"
                 @keydown.enter="$wire.showDrawerFilter = false" />
@@ -123,6 +125,9 @@
                 @keydown.enter="$wire.showDrawerFilter = false" />
             <x-input label="Nomor Resi" wire:model.live.debounce="searchNoResi" icon="o-magnifying-glass"
                 @keydown.enter="$wire.showDrawerFilter = false" />
+            <x-select label="Tahap" :options="$tahap" option-value="value" option-label="desc"
+                placeholder="Filter By Tahap" placeholder-value="0" icon="phosphor.stairs"
+                wire:model.live.debounce='searchTahap' />
         </x-form>
 
         <x-slot:actions>

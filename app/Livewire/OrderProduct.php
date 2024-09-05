@@ -24,6 +24,7 @@ class OrderProduct extends Component
     public $searchName = '';
     public $searchNoHp = '';
     public $searchNoResi = '';
+    public $searchTahap = '';
 
 
     #[Validate('required', as: 'Nomor Invoice')]
@@ -111,6 +112,9 @@ class OrderProduct extends Component
             ->when($this->searchNoResi, function (Builder $builder) {
                 return $builder->where('order_product.no_resi', 'like', "%$this->searchNoResi%");
             })
+            ->when($this->searchTahap, function (Builder $builder) {
+                return $builder->where('order_product.tahap', 'like', "%$this->searchTahap%");
+            })
             ->orderBy(...array_values($this->sortBy))
             ->select('order_product.id', 'order_product.no_invoice', 'order_product.tgl_order1', 'order_product.name', 'order_product.no_hp', 'order_product.detail_order', 'order_product.no_resi', 'order_product.tahap')
             ->paginate(5);
@@ -153,7 +157,7 @@ class OrderProduct extends Component
                 'value' => 4
             ],
             [
-                'desc' => 'Batalkan Pesanan',
+                'desc' => 'Cancel',
                 'value' => 5
             ]
         ];
@@ -216,7 +220,7 @@ class OrderProduct extends Component
 
     public function clear()
     {
-        $this->reset(['searchNoInvoice', 'searchTglOrder', 'searchName', 'searchNoHp', 'searchNoResi']);
+        $this->reset(['searchNoInvoice', 'searchTglOrder', 'searchName', 'searchNoHp', 'searchNoResi', 'searchTahap']);
     }
 
     public function updatedSearch()
