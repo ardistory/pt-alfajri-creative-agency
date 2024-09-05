@@ -1,5 +1,5 @@
 <div>
-    <div class="flex flex-col md:flex-row text-black gap-20 mb-32">
+    <div class="flex flex-col md:flex-row text-black dark:text-white gap-20 mb-32">
         <div class="flex gap-8 flex-[1] justify-center items-center">
             <div>
                 <p class="font-medium text-4xl text-start">
@@ -28,7 +28,7 @@
             <img src="{{ asset('assets/img/sosial-media-management-banner.png') }}" alt="">
         </div>
     </div>
-    <div class="text-black">
+    <div class="text-black dark:text-white">
         <div class="mb-10">
             <p class="underline font-semibold text-4xl text-center">OUR SERVICES</p>
         </div>
