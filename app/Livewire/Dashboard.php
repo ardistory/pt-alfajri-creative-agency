@@ -17,7 +17,7 @@ use Livewire\WithFileUploads;
 use Livewire\WithPagination;
 use Mary\Traits\Toast;
 
-#[Lazy()]
+// #[Lazy()]
 class Dashboard extends Component
 {
     use Toast;

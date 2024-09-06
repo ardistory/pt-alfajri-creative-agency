@@ -13,7 +13,7 @@ use Livewire\Component;
 use Livewire\WithPagination;
 use Mary\Traits\Toast;
 
-#[Lazy()]
+// #[Lazy()]
 class OrderProduct extends Component
 {
     use Toast;

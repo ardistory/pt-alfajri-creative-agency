@@ -6,7 +6,7 @@ use Livewire\Attributes\Lazy;
 use Livewire\Attributes\Title;
 use Livewire\Component;
 
-#[Lazy()]
+// #[Lazy()]
 class Faq extends Component
 {
     #[Title('Faq')]

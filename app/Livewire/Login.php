@@ -9,7 +9,7 @@ use Livewire\Attributes\Validate;
 use Livewire\Component;
 use Mary\Traits\Toast;
 
-#[Lazy()]
+// #[Lazy()]
 class Login extends Component
 {
     use Toast;

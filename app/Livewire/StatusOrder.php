@@ -10,7 +10,7 @@ use Livewire\Attributes\Validate;
 use Livewire\Component;
 use Mary\Traits\Toast;
 
-#[Lazy()]
+// #[Lazy()]
 class StatusOrder extends Component
 {
     use Toast;

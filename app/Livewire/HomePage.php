@@ -8,7 +8,7 @@ use Livewire\Attributes\Title;
 use Livewire\Component;
 use Mary\Traits\Toast;
 
-#[Lazy()]
+// #[Lazy()]
 class HomePage extends Component
 {
     use Toast;

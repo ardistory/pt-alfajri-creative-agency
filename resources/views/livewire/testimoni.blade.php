@@ -3,24 +3,30 @@
         <div class="font-bold text-5xl underline text-black dark:text-white flex items-center">
             TESTIMONI
         </div>
-        <div class="grid grid-cols-6 grid-rows-2 w-2/3 md:w-full h-[500px]">
-            <div class="col-span-1 row-span-2 hover:scale-y-110">
-                <img class="w-full h-full object-none" src="{{ asset('assets/img/digital-design-banner2.png') }}">
+        <div class="grid grid-cols-6 grid-rows-2 w-full md:w-2/3 h-[500px]">
+            <div class="group col-span-1 row-span-2 hover:scale-y-110 relative">
+                <img class="w-full h-full object-cover" src="{{ asset('assets/img/testimoni-2.png') }}">
+                <div class="bg-black w-full h-full absolute top-0 left-0 opacity-50 group-hover:opacity-0"></div>
             </div>
-            <div class="bg-green-400 col-span-1 row-span-2 hover:scale-y-110">
-                <img class="w-full h-full object-none" src="{{ asset('assets/img/digital-design-banner2.png') }}">
+            <div class="group col-span-1 row-span-2 hover:scale-y-110 relative">
+                <img class="w-full h-full object-cover" src="{{ asset('assets/img/testimoni-1.png') }}">
+                <div class="bg-black w-full h-full absolute top-0 left-0 opacity-50 group-hover:opacity-0"></div>
             </div>
-            <div class="bg-green-500 col-span-1 row-span-2 hover:scale-y-110">
-                <img class="w-full h-full object-none" src="{{ asset('assets/img/digital-design-banner2.png') }}">
+            <div class="group col-span-1 row-span-2 hover:scale-y-110 relative">
+                <img class="w-full h-full object-cover" src="{{ asset('assets/img/testimoni-4.png') }}">
+                <div class="bg-black w-full h-full absolute top-0 left-0 opacity-50 group-hover:opacity-0"></div>
             </div>
-            <div class="bg-green-600 col-span-1 row-span-2 hover:scale-y-110">
-                <img class="w-full h-full object-none" src="{{ asset('assets/img/digital-design-banner2.png') }}">
+            <div class="group col-span-1 row-span-2 hover:scale-y-110 relative">
+                <img class="w-full h-full object-cover" src="{{ asset('assets/img/testimoni-5.png') }}">
+                <div class="bg-black w-full h-full absolute top-0 left-0 opacity-50 group-hover:opacity-0"></div>
             </div>
-            <div class="bg-green-700 col-span-1 row-span-2 hover:scale-y-110">
-                <img class="w-full h-full object-none" src="{{ asset('assets/img/digital-design-banner2.png') }}">
+            <div class="group col-span-1 row-span-2 hover:scale-y-110 relative">
+                <img class="w-full h-full object-cover" src="{{ asset('assets/img/testimoni-3.png') }}">
+                <div class="bg-black w-full h-full absolute top-0 left-0 opacity-50 group-hover:opacity-0"></div>
             </div>
-            <div class="bg-green-800 col-span-1 row-span-2 hover:scale-y-110">
-                <img class="w-full h-full object-none" src="{{ asset('assets/img/digital-design-banner2.png') }}">
+            <div class="group col-span-1 row-span-2 hover:scale-y-110 relative">
+                <img class="w-full h-full object-cover" src="{{ asset('assets/img/testimoni-6.png') }}">
+                <div class="bg-black w-full h-full absolute top-0 left-0 opacity-50 group-hover:opacity-0"></div>
             </div>
         </div>
     </div>

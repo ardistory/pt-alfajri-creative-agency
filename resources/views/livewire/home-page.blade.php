@@ -55,7 +55,9 @@
                 <img src="{{ asset('assets/img/our-story-banner.png') }}" />
             </x-slot:figure>
             <x-slot:actions>
-                <x-button icon-right="phosphor.telegram-logo" label="Mulai Sekarang"
+                <x-button
+                    link="https://api.whatsapp.com/send/?phone=6282123131995&text=Hallo,%20Admin%20Alfajri%20Creative%20Agency&type=phone_number&app_absent=0"
+                    external icon-right="phosphor.telegram-logo" label="Mulai Sekarang"
                     class="btn-error rounded-none text-white bg-red-700 mt-5 z-10" />
             </x-slot:actions>
         </x-card>
