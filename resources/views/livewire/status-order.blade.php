@@ -2,7 +2,7 @@
     <div class="@if ($isValid) hidden @else @endif">
         <p class="text-red-600 text-center dark:text-white text-xl font-bold">
             STATUS ORDER</p>
-        <x-form wire:submit="checkOrder" class="mt-5 w-96" no-separator>
+        <x-form wire:submit="checkOrder" class="mt-5 mb-10 w-96" no-separator>
             <x-input label="Nomor Invoice" class="input-error border-black/80 dark:input-primary" placeholder="OL-1995"
                 wire:model="noInvoice" />
             <x-input label="Nomor Handphone" class="input-error border-black/80 dark:input-primary"

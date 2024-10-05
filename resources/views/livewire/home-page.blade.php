@@ -22,17 +22,17 @@
             AGENCY</span>
         <div class="mt-5 md:mt-10 flex gap-5 md:gap-20">
             <div class="flex flex-col items-center gap-4">
-                <img class="w-[100px] h-[100px] md:w-[150px] md:h-[150px]"
-                    src="{{ asset('assets/icon/trust-icon.png') }}" alt="">
+                <img class="w-[70px] h-[70px] md:w-[150px] md:h-[150px]" src="{{ asset('assets/icon/trust-icon.png') }}"
+                    alt="">
                 <span class="text-white text-2xl">TRUST</span>
             </div>
             <div class="flex flex-col items-center gap-4">
-                <img class="w-[100px] h-[100px] md:w-[150px] md:h-[150px]"
+                <img class="w-[70px] h-[70px] md:w-[150px] md:h-[150px]"
                     src="{{ asset('assets/icon/growth-icon.png') }}" alt="">
                 <span class="text-white text-2xl">GROWTH</span>
             </div>
             <div class="flex flex-col items-center gap-4">
-                <img class="w-[100px] h-[100px] md:w-[150px] md:h-[150px]"
+                <img class="w-[70px] h-[70px] md:w-[150px] md:h-[150px]"
                     src="{{ asset('assets/icon/creative-icon.png') }}" alt="">
                 <span class="text-white text-2xl">CREATIVITY</span>
             </div>
