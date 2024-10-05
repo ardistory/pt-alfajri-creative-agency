@@ -98,7 +98,7 @@ class OrderProduct extends Component
     {
         return ModelsOrderProduct::query()
             ->when($this->searchNoInvoice, function (Builder $builder) {
-                return $builder->where('order_product.no_invoice', 'like', "%$this->searchNoInvoice%");
+                return $builder->where('order_product.no_invoice', 'like', "%$this->searchNoInvoice%")->orWhere('order_product.no_invoice', '=', $this->searchNoInvoice);
             })
             ->when($this->searchTglOrder, function (Builder $builder) {
                 return $builder->whereDate('order_product.tgl_order1', $this->searchTglOrder);
