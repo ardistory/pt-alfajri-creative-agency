@@ -58,7 +58,7 @@ Route::get('/sosial-media-management', SosialMediaManagement::class)->name('sosi
 Route::get('/video-production', VideoProduction::class)->name('video-production');
 Route::get('/google-ads', GoogleAds::class)->name('google-ads');
 
-Route::get('/', HomePage::class)->name('home-page');
+Route::inertia('/', 'HomePage')->name('home-page');
 Route::get('/about-us', AboutUs::class)->name('about-us');
 Route::get('/contact', Contact::class)->name('contact');
 Route::get('/status-order', StatusOrder::class)->name('status-order');
